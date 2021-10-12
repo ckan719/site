@@ -93,8 +93,6 @@
 #banner {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 1em;
-    color: rgb(85, 85, 85);
-    font-size: $base_font_size;
 
     a.date {
         display: block;
@@ -116,14 +114,8 @@
     #time {
         text-align: center;
         display: block;
-    }
-
-    div#details ul {
-        margin-bottom: 0;
-        list-style: none;
-        p {
-            margin: 0;
-        }
+        color: rgb(85, 85, 85);
+        font-size: $base_font_size;
     }
 }
 
@@ -174,10 +166,6 @@
     .contest-block {
         text-align: left;
         padding: 0.5em 0.5em 0.5em 1em;
-    }
-
-    a.contest-sort-link {
-        color: white;
     }
 }
 

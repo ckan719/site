@@ -4,7 +4,6 @@ DMOJ: Modern Online Judge [![Build Status](https://github.com/DMOJ/online-judge/
 A modern [open-source](https://github.com/DMOJ/online-judge/blob/master/LICENSE) online judge and contest platform system. It has been used to host hundreds of competitions, including several national olympiads.
 
 See it live at [dmoj.ca](https://dmoj.ca/)!
-## DEV NC Nhat
 
 ## Features
 
@@ -18,7 +17,7 @@ See it live at [dmoj.ca](https://dmoj.ca/)!
    * Supports ICPC/IOI/AtCoder/ECOO formats out-of-the box
    * **System testing** supported
    * **Hidden scoreboards** and **virtual participation**
-   * [Elo-MMR](https://arxiv.org/abs/2101.00400)-style **rating**
+   * Topcoder-style **rating**
    * **Plagiarism detection** via [Stanford MOSS](https://theory.stanford.edu/~aiken/moss/)
    * Restricting contest access to particular organizations or users
 * Rich problem statements, with support for **LaTeX math and diagrams**
@@ -83,7 +82,7 @@ Announcements from administrators, ongoing contests, recent comments and new pro
 
 
 ### Internationalized interface
-Use the site in whatever language you're most comfortable in &mdash; visit [translate.dmoj.ca](https://translate.dmoj.ca/) to check the translation status of your preferred language. Problem authors can provide statements in multiple languages, and DMOJ will display the most relevant one to a reader.
+Use the site in whatever language you're most comfortable in &mdash; currently fully supporting English, Simplified Chinese, and Romanian. Problem authors can provide statements in multiple languages, and DMOJ will display the most relevant one to a reader.
 
 
 ![](https://i.imgur.com/OeuI0o5.png)
@@ -100,10 +99,10 @@ The DMOJ admin interface is highly versatile, and can be efficiently used for an
 
 ## Supported Languages
 
-Check out [**DMOJ/judge-server**](https://github.com/DMOJ/judge-server) for more judging backend details.
+Check out [**DMOJ/judge**](https://github.com/DMOJ/judge) for more judging backend details.
 
 Supported languages include:
-* C++ 11/14/17/20 (GCC and Clang)
+* C++ 11/14/17 (GCC and Clang)
 * C 99/11
 * Java 8/9/10/11
 * Python 2/3

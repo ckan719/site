@@ -27,7 +27,7 @@ class LanguageForm(ModelForm):
 
 
 class LanguageAdmin(VersionAdmin):
-    fields = ('key', 'name', 'short_name', 'common_name', 'ace', 'pygments', 'info', 'extension', 'description',
+    fields = ('key', 'name', 'short_name', 'common_name', 'ace', 'pygments', 'info', 'description',
               'template', 'problems')
     list_display = ('key', 'name', 'common_name', 'info')
     form = LanguageForm
@@ -49,19 +49,22 @@ class GenerateKeyTextInput(TextInput):
     def render(self, name, value, attrs=None, renderer=None):
         text = super(TextInput, self).render(name, value, attrs)
         return mark_safe(text + format_html(
-            """\
+            '''\
 <a href="#" onclick="return false;" class="button" id="id_{0}_regen">Regenerate</a>
 <script type="text/javascript">
 django.jQuery(document).ready(function ($) {{
     $('#id_{0}_regen').click(function () {{
-        var rand = new Uint8Array(75);
-        window.crypto.getRandomValues(rand);
-        var key = btoa(String.fromCharCode.apply(null, rand));
+        var length = 100,
+            charset = "abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()_+-=|[]{{}};:,<>./?",
+            key = "";
+        for (var i = 0, n = charset.length; i < length; ++i) {{
+            key += charset.charAt(Math.floor(Math.random() * n));
+        }}
         $('#id_{0}').val(key);
     }});
 }});
 </script>
-""", name))
+''', name))
 
 
 class JudgeAdminForm(ModelForm):

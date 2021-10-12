@@ -6,7 +6,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.http import Http404, HttpResponsePermanentRedirect
 from django.templatetags.static import static
 from django.urls import path, reverse
-from django.utils.functional import lazy
+from django.utils.functional import lazystr
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import RedirectView
 from martor.views import markdown_search_user
@@ -56,7 +56,7 @@ register_patterns = [
     url(r'^password/change/done/$', auth_views.PasswordChangeDoneView.as_view(
         template_name='registration/password_change_done.html',
     ), name='password_change_done'),
-    url(r'^password/reset/$', user.CustomPasswordResetView.as_view(
+    url(r'^password/reset/$', auth_views.PasswordResetView.as_view(
         template_name='registration/password_reset.html',
         html_email_template_name='registration/password_reset_email.html',
         email_template_name='registration/password_reset_email.txt',
@@ -75,12 +75,10 @@ register_patterns = [
 
     url(r'^2fa/$', two_factor.TwoFactorLoginView.as_view(), name='login_2fa'),
     url(r'^2fa/enable/$', two_factor.TOTPEnableView.as_view(), name='enable_2fa'),
-    url(r'^2fa/refresh/$', two_factor.TOTPRefreshView.as_view(), name='refresh_2fa'),
     url(r'^2fa/disable/$', two_factor.TOTPDisableView.as_view(), name='disable_2fa'),
     url(r'^2fa/webauthn/attest/$', two_factor.WebAuthnAttestationView.as_view(), name='webauthn_attest'),
     url(r'^2fa/webauthn/assert/$', two_factor.WebAuthnAttestView.as_view(), name='webauthn_assert'),
     url(r'^2fa/webauthn/delete/(?P<pk>\d+)$', two_factor.WebAuthnDeleteView.as_view(), name='webauthn_delete'),
-    url(r'^2fa/scratchcode/generate/$', user.generate_scratch_codes, name='generate_scratch_codes'),
 
     url(r'api/token/generate/$', user.generate_api_token, name='generate_api_token'),
     url(r'api/token/remove/$', user.remove_api_token, name='remove_api_token'),
@@ -123,7 +121,7 @@ urlpatterns = [
 
         url(r'^/rank/', paged_list_view(ranked_submission.RankedSubmissions, 'ranked_submissions')),
         url(r'^/submissions/', paged_list_view(submission.ProblemSubmissions, 'chronological_submissions')),
-        url(r'^/submissions/(?P<user>[\w-]+)/', paged_list_view(submission.UserProblemSubmissions, 'user_submissions')),
+        url(r'^/submissions/(?P<user>\w+)/', paged_list_view(submission.UserProblemSubmissions, 'user_submissions')),
 
         url(r'^/$', lambda _, problem: HttpResponsePermanentRedirect(reverse('problem_detail', args=[problem]))),
 
@@ -150,7 +148,7 @@ urlpatterns = [
     ])),
 
     url(r'^submissions/', paged_list_view(submission.AllSubmissions, 'all_submissions')),
-    url(r'^submissions/user/(?P<user>[\w-]+)/', paged_list_view(submission.AllUserSubmissions, 'all_user_submissions')),
+    url(r'^submissions/user/(?P<user>\w+)/', paged_list_view(submission.AllUserSubmissions, 'all_user_submissions')),
 
     url(r'^src/(?P<submission>\d+)$', submission.SubmissionSource.as_view(), name='submission_source'),
     url(r'^src/(?P<submission>\d+)/raw$', submission.SubmissionSourceRaw.as_view(), name='submission_source_raw'),
@@ -169,9 +167,7 @@ urlpatterns = [
 
     url(r'^user$', user.UserAboutPage.as_view(), name='user_page'),
     url(r'^edit/profile/$', user.edit_profile, name='user_edit_profile'),
-    url(r'^data/prepare/$', user.UserPrepareData.as_view(), name='user_prepare_data'),
-    url(r'^data/download/$', user.UserDownloadData.as_view(), name='user_download_data'),
-    url(r'^user/(?P<user>[\w-]+)', include([
+    url(r'^user/(?P<user>\w+)', include([
         url(r'^$', user.UserAboutPage.as_view(), name='user_page'),
         url(r'^/solved', include([
             url(r'^$', user.UserProblemsPage.as_view(), name='user_problems'),
@@ -216,13 +212,11 @@ urlpatterns = [
         url(r'^/rank/(?P<problem>\w+)/',
             paged_list_view(ranked_submission.ContestRankedSubmission, 'contest_ranked_submissions')),
 
-        url(r'^/submissions/(?P<user>[\w-]+)/',
-            paged_list_view(submission.UserAllContestSubmissions, 'contest_all_user_submissions')),
-        url(r'^/submissions/(?P<user>[\w-]+)/(?P<problem>\w+)/',
+        url(r'^/submissions/(?P<user>\w+)/(?P<problem>\w+)/',
             paged_list_view(submission.UserContestSubmissions, 'contest_user_submissions')),
 
         url(r'^/participations$', contests.ContestParticipationList.as_view(), name='contest_participation_own'),
-        url(r'^/participations/(?P<user>[\w-]+)$',
+        url(r'^/participations/(?P<user>\w+)$',
             contests.ContestParticipationList.as_view(), name='contest_participation'),
         url(r'^/participation/disqualify$', contests.ContestParticipationDisqualify.as_view(),
             name='contest_participation_disqualify'),
@@ -264,8 +258,8 @@ urlpatterns = [
         url(r'^problem/list$', api.api_v1_problem_list),
         url(r'^problem/info/(\w+)$', api.api_v1_problem_info),
         url(r'^user/list$', api.api_v1_user_list),
-        url(r'^user/info/([\w-]+)$', api.api_v1_user_info),
-        url(r'^user/submissions/([\w-]+)$', api.api_v1_user_submissions),
+        url(r'^user/info/(\w+)$', api.api_v1_user_info),
+        url(r'^user/submissions/(\w+)$', api.api_v1_user_submissions),
         url(r'^user/ratings/(\d+)$', api.api_v1_user_ratings),
         url(r'^v2/', include([
             url(r'^contests$', api.api_v2.APIContestList.as_view()),
@@ -273,13 +267,11 @@ urlpatterns = [
             url(r'^problems$', api.api_v2.APIProblemList.as_view()),
             url(r'^problem/(?P<problem>\w+)$', api.api_v2.APIProblemDetail.as_view()),
             url(r'^users$', api.api_v2.APIUserList.as_view()),
-            url(r'^user/(?P<user>[\w-]+)$', api.api_v2.APIUserDetail.as_view()),
+            url(r'^user/(?P<user>\w+)$', api.api_v2.APIUserDetail.as_view()),
             url(r'^submissions$', api.api_v2.APISubmissionList.as_view()),
             url(r'^submission/(?P<submission>\d+)$', api.api_v2.APISubmissionDetail.as_view()),
             url(r'^organizations$', api.api_v2.APIOrganizationList.as_view()),
             url(r'^participations$', api.api_v2.APIContestParticipationList.as_view()),
-            url(r'^languages$', api.api_v2.APILanguageList.as_view()),
-            url(r'^judges$', api.api_v2.APIJudgeList.as_view()),
         ])),
     ])),
 
@@ -399,10 +391,9 @@ favicon_paths = ['apple-touch-icon-180x180.png', 'apple-touch-icon-114x114.png',
                  'mstile-310x150.png', 'apple-touch-icon-144x144.png', 'browserconfig.xml', 'manifest.json',
                  'apple-touch-icon-120x120.png', 'mstile-310x310.png']
 
-static_lazy = lazy(static, str)
 for favicon in favicon_paths:
     urlpatterns.append(url(r'^%s$' % favicon, RedirectView.as_view(
-        url=static_lazy('icons/' + favicon),
+        url=lazystr(lambda: static('icons/' + favicon)),
     )))
 
 handler404 = 'judge.views.error.error404'

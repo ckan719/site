@@ -83,21 +83,11 @@ class BaseContestFormat(six.with_metaclass(ABCMeta)):
         raise NotImplementedError()
 
     @abstractmethod
-    def get_label_for_problem(self, index):
+    def get_contest_problem_label_script(self):
         """
-        Returns the problem label for a given zero-indexed index.
+        Returns the default Lua script to generate contest problem labels.
 
-        :param index: The zero-indexed problem index.
-        :return: A string, the problem label.
-        """
-        raise NotImplementedError()
-
-    @abstractmethod
-    def get_short_form_display(self):
-        """
-        Returns a generator of Markdown strings to display the contest format's settings in short form.
-
-        :return: A generator, where each item is an individual line.
+        :return: A string, the Lua script.
         """
         raise NotImplementedError()
 

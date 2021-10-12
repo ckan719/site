@@ -39,7 +39,6 @@
                     $reply_form.prepend('<a class="close">x</a>');
                     $reply_form.find('form.comment-submit-form input#id_parent').val(parent);
                     $reply_form.appendTo($comment_reply);
-                    register_dmmd_preview($('#' + reply_id + ' #id_body-preview'));
                 }
                 $comment_reply.fadeIn();
 
@@ -75,10 +74,6 @@
                 var revision_ajax = $comment.attr("data-revision-ajax");
                 var show_revision = cur_revision + offset;
 
-                // Do nothing if desired revision is out of buonds
-                if (show_revision < 0 || show_revision > max_revision)
-                    return;
-
                 $comment.attr("data-revision", show_revision);
 
                 $.get(revision_ajax, {
@@ -86,7 +81,7 @@
                 }).done(function (body) {
                     $comment.find('.previous-revision').css({visibility: show_revision == 0 ? 'hidden' : ''});
                     $comment.find('.next-revision').css({visibility: show_revision == max_revision ? 'hidden' : ''});
-                    var $content = $comment.find('.content').html(body);
+                    $comment.find('.content').html(body);
 
                     var edit_text = '{{ _('edit {edits}') }}'.replace("{edits}", show_revision);
 
@@ -97,9 +92,7 @@
                     }
 
                     $comment.find('.comment-edit-text').text(' ' + edit_text + ' ');
-                    update_math($content);
-                    if (window.add_code_copy_buttons)
-                        window.add_code_copy_buttons($content);
+                    update_math($comment);
                 });
             };
 
@@ -193,8 +186,6 @@
                                 var $area = $comment.find('.comment-body').first();
                                 $area.html(data);
                                 update_math($comment);
-                                if (window.add_code_copy_buttons)
-                                    window.add_code_copy_buttons($area);
                                 var $edits = $comment.find('.comment-edits').first();
                                 $edits.text('updated');
                             }).fail(function () {

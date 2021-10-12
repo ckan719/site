@@ -38,7 +38,7 @@ class Language(models.Model):
                                 help_text=_('Code template to display in submission editor.'), blank=True)
     info = models.CharField(max_length=50, verbose_name=_('runtime info override'), blank=True,
                             help_text=_("Do not set this unless you know what you're doing! It will override the "
-                                        'usually more specific, judge-provided runtime info!'))
+                                        "usually more specific, judge-provided runtime info!"))
     description = models.TextField(verbose_name=_('language description'),
                                    help_text=_('Use this field to inform users of quirks with your environment, '
                                                'additional restrictions, etc.'), blank=True)
@@ -146,22 +146,20 @@ class Judge(models.Model):
 
     disconnect.alters_data = True
 
-    @classmethod
-    def runtime_versions(cls):
-        qs = (RuntimeVersion.objects.filter(judge__online=True)
-              .values('judge__name', 'language__key', 'language__name', 'version', 'name')
+    @cached_property
+    def runtime_versions(self):
+        qs = (self.runtimeversion_set.values('language__key', 'language__name', 'version', 'name')
               .order_by('language__key', 'priority'))
 
-        ret = defaultdict(OrderedDict)
+        ret = OrderedDict()
 
         for data in qs:
-            judge = data['judge__name']
             key = data['language__key']
             if key not in ret:
-                ret[judge][key] = {'name': data['language__name'], 'runtime': []}
-            ret[judge][key]['runtime'].append((data['name'], (data['version'],)))
+                ret[key] = {'name': data['language__name'], 'runtime': []}
+            ret[key]['runtime'].append((data['name'], (data['version'],)))
 
-        return {judge: list(data.items()) for judge, data in ret.items()}
+        return list(ret.items())
 
     @cached_property
     def uptime(self):

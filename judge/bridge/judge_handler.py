@@ -245,6 +245,10 @@ class JudgeHandler(ZlibPacketHandler):
         if self.name:
             logger.warning('Judge seems dead: %s: %s', self.name, self._working)
 
+    def malformed_packet(self, exception):
+        logger.exception('Judge sent malformed packet: %s', self.name)
+        super(JudgeHandler, self).malformed_packet(exception)
+
     def on_submission_processing(self, packet):
         _ensure_connection()
 
@@ -259,8 +263,6 @@ class JudgeHandler(ZlibPacketHandler):
 
     def on_submission_wrong_acknowledge(self, packet, expected, got):
         json_log.error(self._make_json_log(packet, action='processing', info='wrong-acknowledge', expected=expected))
-        Submission.objects.filter(id=expected).update(status='IE', result='IE', error=None)
-        Submission.objects.filter(id=got, status='QU').update(status='IE', result='IE', error=None)
 
     def on_submission_acknowledged(self, packet):
         if not packet.get('submission-id', None) == self._working:
@@ -396,10 +398,8 @@ class JudgeHandler(ZlibPacketHandler):
             problem=problem.code, finish=True,
         ))
 
-        if problem.is_public and not problem.is_organization_private:
-            submission.user._updating_stats_only = True
-            submission.user.calculate_points()
-
+        submission.user._updating_stats_only = True
+        submission.user.calculate_points()
         problem._updating_stats_only = True
         problem.update_stats()
         submission.update_contest()
@@ -469,7 +469,7 @@ class JudgeHandler(ZlibPacketHandler):
         logger.info('%s: Submission aborted: %s', self.name, packet['submission-id'])
         self._free_self(packet)
 
-        if Submission.objects.filter(id=packet['submission-id']).update(status='AB', result='AB', points=0):
+        if Submission.objects.filter(id=packet['submission-id']).update(status='AB', result='AB'):
             event.post('sub_%s' % Submission.get_id_secret(packet['submission-id']), {'type': 'aborted-submission'})
             self._post_update_submission(packet['submission-id'], 'terminated', done=True)
             json_log.info(self._make_json_log(packet, action='aborted', finish=True, result='AB'))
@@ -579,6 +579,7 @@ class JudgeHandler(ZlibPacketHandler):
         self._update_ping()
 
     def _free_self(self, packet):
+        self._working = False
         self.judges.on_judge_free(self, packet['submission-id'])
 
     def _ping_thread(self):
@@ -609,7 +610,7 @@ class JudgeHandler(ZlibPacketHandler):
             data = self._submission_cache
         else:
             self._submission_cache = data = Submission.objects.filter(id=id).values(
-                'problem__is_public', 'contest_object_id',
+                'problem__is_public', 'contest_object__key',
                 'user_id', 'problem_id', 'status', 'language__key',
             ).get()
             self._submission_cache_id = id
@@ -618,7 +619,7 @@ class JudgeHandler(ZlibPacketHandler):
             event.post('submissions', {
                 'type': 'done-submission' if done else 'update-submission',
                 'state': state, 'id': id,
-                'contest': data['contest_object_id'],
+                'contest': data['contest_object__key'],
                 'user': data['user_id'], 'problem': data['problem_id'],
                 'status': data['status'], 'language': data['language__key'],
             })

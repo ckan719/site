@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import datetime
 import os
 import tempfile
 
@@ -36,8 +35,6 @@ SITE_LONG_NAME = 'DMOJ: Modern Online Judge'
 SITE_ADMIN_EMAIL = False
 
 DMOJ_REQUIRE_STAFF_2FA = True
-# Display warnings that admins will not perform 2FA recovery.
-DMOJ_2FA_HARDCORE = False
 
 # Set to 1 to use HTTPS if request was made to https://
 # Set to 2 to always use HTTPS for links
@@ -66,24 +63,16 @@ DMOJ_PROBLEM_MIN_MEMORY_LIMIT = 0  # kilobytes
 DMOJ_PROBLEM_MAX_MEMORY_LIMIT = 1048576  # kilobytes
 DMOJ_PROBLEM_MIN_PROBLEM_POINTS = 0
 DMOJ_PROBLEM_HOT_PROBLEM_COUNT = 7
-DMOJ_PROBLEM_STATEMENT_DISALLOWED_CHARACTERS = {'“', '”', '‘', '’'}
 DMOJ_RATING_COLORS = True
 DMOJ_EMAIL_THROTTLING = (10, 60)
 DMOJ_STATS_LANGUAGE_THRESHOLD = 10
 DMOJ_SUBMISSIONS_REJUDGE_LIMIT = 10
 # Maximum number of submissions a single user can queue without the `spam_submission` permission
 DMOJ_SUBMISSION_LIMIT = 2
-# Whether to allow users to view source code: 'all' | 'all-solved' | 'only-own'
-DMOJ_SUBMISSION_SOURCE_VISIBILITY = 'all-solved'
 DMOJ_BLOG_NEW_PROBLEM_COUNT = 7
 DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT = 7
 DMOJ_TOTP_TOLERANCE_HALF_MINUTES = 1
-DMOJ_SCRATCH_CODES_COUNT = 5
 DMOJ_USER_MAX_ORGANIZATION_COUNT = 3
-# Whether to allow users to download their data
-DMOJ_USER_DATA_DOWNLOAD = False
-DMOJ_USER_DATA_CACHE = ''
-DMOJ_USER_DATA_DOWNLOAD_RATELIMIT = datetime.timedelta(days=1)
 DMOJ_COMMENT_VOTE_HIDE_THRESHOLD = -5
 DMOJ_PDF_PROBLEM_CACHE = ''
 DMOJ_PDF_PROBLEM_TEMP_DIR = tempfile.gettempdir()
@@ -95,9 +84,6 @@ DMOJ_STATS_SUBMISSION_RESULT_COLORS = {
     'ERR': '#ffa71c',
 }
 DMOJ_API_PAGE_SIZE = 1000
-
-DMOJ_PASSWORD_RESET_LIMIT_WINDOW = 3600
-DMOJ_PASSWORD_RESET_LIMIT_COUNT = 10
 
 MARKDOWN_STYLES = {}
 MARKDOWN_DEFAULT_STYLE = {}
@@ -257,7 +243,6 @@ INSTALLED_APPS += (
     'impersonate',
     'django_jinja',
     'martor',
-    'adminsortable2',
 )
 
 MIDDLEWARE = (
@@ -367,7 +352,6 @@ LOCALE_PATHS = [
 ]
 
 LANGUAGES = [
-    ('ca', _('Catalan')),
     ('de', _('German')),
     ('en', _('English')),
     ('es', _('Spanish')),
@@ -385,46 +369,6 @@ LANGUAGES = [
     ('zh-hans', _('Simplified Chinese')),
     ('zh-hant', _('Traditional Chinese')),
 ]
-
-BLEACH_USER_SAFE_TAGS = [
-    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-    'b', 'i', 'strong', 'em', 'tt', 'del', 'kbd', 's', 'abbr', 'cite', 'mark', 'q', 'samp', 'small',
-    'u', 'var', 'wbr', 'dfn', 'ruby', 'rb', 'rp', 'rt', 'rtc', 'sub', 'sup', 'time', 'data',
-    'p', 'br', 'pre', 'span', 'div', 'blockquote', 'code', 'hr',
-    'ul', 'ol', 'li', 'dd', 'dl', 'dt', 'address', 'section',
-    'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption', 'colgroup', 'col', 'tfoot',
-    'img', 'audio', 'video', 'source',
-    'a',
-    'style', 'noscript', 'center',
-]
-
-BLEACH_USER_SAFE_ATTRS = {
-    '*': ['id', 'class', 'style'],
-    'img': ['src', 'alt', 'title', 'width', 'height', 'data-src'],
-    'a': ['href', 'alt', 'title'],
-    'abbr': ['title'],
-    'dfn': ['title'],
-    'time': ['datetime'],
-    'data': ['value'],
-    'td':  ['colspan', 'rowspan'],
-    'th':  ['colspan', 'rowspan'],
-    'audio': ['autoplay', 'controls', 'crossorigin', 'muted', 'loop', 'preload', 'src'],
-    'video': ['autoplay', 'controls', 'crossorigin', 'height', 'muted', 'loop', 'poster', 'preload', 'src', 'width'],
-    'source': ['src', 'srcset', 'type'],
-}
-
-MARKDOWN_STAFF_EDITABLE_STYLE = {
-    'safe_mode': False,
-    'use_camo': True,
-    'texoid': True,
-    'math': True,
-    'bleach': {
-        'tags': BLEACH_USER_SAFE_TAGS,
-        'attributes': BLEACH_USER_SAFE_ATTRS,
-        'styles': True,
-        'mathml': True,
-    },
-}
 
 MARKDOWN_ADMIN_EDITABLE_STYLE = {
     'safe_mode': False,
@@ -451,16 +395,15 @@ MARKDOWN_STYLES = {
     'default': MARKDOWN_DEFAULT_STYLE,
     'comment': MARKDOWN_DEFAULT_STYLE,
     'self-description': MARKDOWN_USER_LARGE_STYLE,
-    'problem': MARKDOWN_STAFF_EDITABLE_STYLE,
-    'problem-full': MARKDOWN_ADMIN_EDITABLE_STYLE,
-    'contest': MARKDOWN_STAFF_EDITABLE_STYLE,
+    'problem': MARKDOWN_ADMIN_EDITABLE_STYLE,
+    'contest': MARKDOWN_ADMIN_EDITABLE_STYLE,
     'flatpage': MARKDOWN_ADMIN_EDITABLE_STYLE,
-    'language': MARKDOWN_STAFF_EDITABLE_STYLE,
-    'license': MARKDOWN_STAFF_EDITABLE_STYLE,
-    'judge': MARKDOWN_STAFF_EDITABLE_STYLE,
-    'blog': MARKDOWN_STAFF_EDITABLE_STYLE,
-    'solution': MARKDOWN_STAFF_EDITABLE_STYLE,
-    'contest_tag': MARKDOWN_STAFF_EDITABLE_STYLE,
+    'language': MARKDOWN_ADMIN_EDITABLE_STYLE,
+    'license': MARKDOWN_ADMIN_EDITABLE_STYLE,
+    'judge': MARKDOWN_ADMIN_EDITABLE_STYLE,
+    'blog': MARKDOWN_ADMIN_EDITABLE_STYLE,
+    'solution': MARKDOWN_ADMIN_EDITABLE_STYLE,
+    'contest_tag': MARKDOWN_ADMIN_EDITABLE_STYLE,
     'organization-about': MARKDOWN_USER_LARGE_STYLE,
     'ticket': MARKDOWN_USER_LARGE_STYLE,
 }
@@ -468,7 +411,7 @@ MARKDOWN_STYLES = {
 MARTOR_ENABLE_CONFIGS = {
     'imgur': 'true',
     'mention': 'true',
-    'jquery': 'false',
+    'jquery': 'true',
     'living': 'false',
     'spellcheck': 'false',
     'hljs': 'false',

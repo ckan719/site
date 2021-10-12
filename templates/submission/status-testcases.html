@@ -96,7 +96,7 @@
             {% if print_case_output or case.extended_feedback %}
                 <tr id="{{ case.id }}-output" style="display:none" class="case-feedback toggled">
                     {% if print_case_output %}
-                        <td colspan="5" class="case-output">
+                        <td colspan="5">
                             <div class="case-info">
                                 <strong>{{ _('Your output (clipped)') }}</strong>
                                 {% if prefix_length is none %}
@@ -134,11 +134,6 @@
                 {% endif %}
                 {{ submission.memory|kbdetailformat }}
                 <br>
-                {% if submission.result == "AC" %}
-                    <b>{{ _('Maximum runtime on single test case:') }}</b>
-                    <span title="{{ max_execution_time }}s">{{ max_execution_time|floatformat(3) }}s</span>
-                    <br>
-                {% endif %}
                 {% if is_pretest %}
                     <b>{{ _('Final pretest score:') }}</b>
                 {% else %}

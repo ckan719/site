@@ -106,7 +106,8 @@
 
         .message {
             display: flex;
-            padding-top: 15px;
+            margin-top: -40px;
+            padding-top: 55px;
         }
 
         .message .info {
@@ -319,7 +320,7 @@
 {% block body %}
     <div class="container">
         <div class="ticket-messages">
-            <main id="messages">
+            <main id="messages" class="messages">
                 {% for message in ticket_messages %}
                     {% include "ticket/message.html" %}
                 {% endfor %}
@@ -329,7 +330,7 @@
                 <div class="info">
                     <a href="{{ url('user_page', request.user.username) }}" class="user">
                         <img src="{{ gravatar(request.user, 135) }}" class="gravatar">
-                        <div class="username {{ request.profile.css_class }}">{{ request.profile.display_name }}</div>
+                        <div class="username {{ request.profile.css_class }}">{{ request.user.username }}</div>
                     </a>
                 </div>
                 <div class="detail">
@@ -356,13 +357,7 @@
                     </div>
                 </div>
                 <div class="info-box">
-                    <div class="info-title">
-                        {% trans trimmed count=assignees|length %}
-                            Assignee
-                        {% pluralize %}
-                            Assignees
-                        {% endtrans %}
-                    </div>
+                    <div class="info-title">{{ _('Assignees') }}</div>
                     <div class="info-data">
                         {% if assignees %}
                             {{ link_users(assignees) }}

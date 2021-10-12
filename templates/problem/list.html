@@ -168,8 +168,10 @@
 {% endblock %}
 
 {% block body %}
-    {% if page_obj.has_other_pages() %}
-        <div class="top-pagination-bar">{% include "list-pages.html" %}</div>
+    {% if page_obj.num_pages > 1 %}
+        <div style="margin-bottom: 7px; margin-top: 11px;">
+            {% include "list-pages.html" %}
+        </div>
     {% endif %}
 
     <div id="common-content">
@@ -273,7 +275,7 @@
                             {% endif %}
                         {% endif %}
                         <td class="problem">
-                            <a href="{{ url('problem_detail', problem.code) }}">{{ problem.i18n_name or problem.name }}</a>
+                            <a href="{{ url('problem_detail', problem.code) }}">{{ problem.i18n_name }}</a>
                         </td>
                         <td class="category">{{ problem.group.full_name }}</td>
                         {% if show_types %}
@@ -300,9 +302,10 @@
                 {% endfor %}
                 </tbody>
             </table>
+            {% if page_obj.num_pages > 1 %}
+                <div style="margin-top:10px;">{% include "list-pages.html" %}</div>
+            {% endif %}
         </div>
     </div>
-   {% if page_obj.has_other_pages() %}
-       <div class="bottom-pagination-bar">{% include "list-pages.html" %}</div>
-   {% endif %}
+    <br>
 {% endblock %}

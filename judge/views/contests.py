@@ -12,7 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.core.cache import cache
 from django.core.exceptions import ImproperlyConfigured, ObjectDoesNotExist
 from django.db import IntegrityError
-from django.db.models import Case, Count, F, FloatField, IntegerField, Max, Min, Q, Sum, Value, When
+from django.db.models import Case, Count, FloatField, IntegerField, Max, Min, Q, Sum, Value, When
 from django.db.models.expressions import CombinedExpression
 from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
@@ -26,7 +26,6 @@ from django.utils.timezone import make_aware
 from django.utils.translation import gettext as _, gettext_lazy
 from django.views.generic import ListView, TemplateView
 from django.views.generic.detail import BaseDetailView, DetailView, SingleObjectMixin, View
-from reversion import revisions
 
 from judge import event_poster as event
 from judge.comments import CommentedDetailView
@@ -39,8 +38,7 @@ from judge.utils.opengraph import generate_opengraph
 from judge.utils.problems import _get_result_data
 from judge.utils.ranker import ranker
 from judge.utils.stats import get_bar_chart, get_pie_chart
-from judge.utils.views import DiggPaginatorMixin, QueryStringSortMixin, SingleObjectFormView, TitleMixin, \
-    generic_message
+from judge.utils.views import DiggPaginatorMixin, SingleObjectFormView, TitleMixin, generic_message
 
 __all__ = ['ContestList', 'ContestDetail', 'ContestRanking', 'ContestJoin', 'ContestLeave', 'ContestCalendar',
            'ContestClone', 'ContestStats', 'ContestMossView', 'ContestMossDelete', 'contest_ranking_ajax',
@@ -64,25 +62,23 @@ class ContestListMixin(object):
         return Contest.get_visible_contests(self.request.user)
 
 
-class ContestList(QueryStringSortMixin, DiggPaginatorMixin, TitleMixin, ContestListMixin, ListView):
+class ContestList(DiggPaginatorMixin, TitleMixin, ContestListMixin, ListView):
     model = Contest
     paginate_by = 20
     template_name = 'contest/list.html'
     title = gettext_lazy('Contests')
     context_object_name = 'past_contests'
-    all_sorts = frozenset(('name', 'user_count', 'start_time'))
-    default_desc = frozenset(('name', 'user_count'))
-    default_sort = '-start_time'
 
     @cached_property
     def _now(self):
         return timezone.now()
 
     def _get_queryset(self):
-        return super().get_queryset().prefetch_related('tags', 'organizations', 'authors', 'curators', 'testers')
+        return super(ContestList, self).get_queryset() \
+            .order_by('-start_time', 'key').prefetch_related('tags', 'organizations', 'organizers')
 
     def get_queryset(self):
-        return self._get_queryset().order_by(self.order, 'key').filter(end_time__lt=self._now)
+        return self._get_queryset().filter(end_time__lt=self._now)
 
     def get_context_data(self, **kwargs):
         context = super(ContestList, self).get_context_data(**kwargs)
@@ -96,24 +92,18 @@ class ContestList(QueryStringSortMixin, DiggPaginatorMixin, TitleMixin, ContestL
         if self.request.user.is_authenticated:
             for participation in ContestParticipation.objects.filter(virtual=0, user=self.request.profile,
                                                                      contest_id__in=present) \
-                    .select_related('contest') \
-                    .prefetch_related('contest__authors', 'contest__curators', 'contest__testers') \
-                    .annotate(key=F('contest__key')):
+                    .select_related('contest').prefetch_related('contest__organizers'):
                 if not participation.ended:
                     active.append(participation)
                     present.remove(participation.contest)
 
-        active.sort(key=attrgetter('end_time', 'key'))
-        present.sort(key=attrgetter('end_time', 'key'))
+        active.sort(key=attrgetter('end_time'))
         future.sort(key=attrgetter('start_time'))
         context['active_participations'] = active
         context['current_contests'] = present
         context['future_contests'] = future
         context['now'] = self._now
         context['first_page_href'] = '.'
-        context['page_suffix'] = '#past-contests'
-        context.update(self.get_sort_context())
-        context.update(self.get_sort_paginate_context())
         return context
 
 
@@ -132,16 +122,10 @@ class ContestMixin(object):
     slug_url_kwarg = 'contest'
 
     @cached_property
-    def is_editor(self):
+    def is_organizer(self):
         if not self.request.user.is_authenticated:
             return False
-        return self.request.profile.id in self.object.editor_ids
-
-    @cached_property
-    def is_tester(self):
-        if not self.request.user.is_authenticated:
-            return False
-        return self.request.profile.id in self.object.tester_ids
+        return self.object.organizers.filter(id=self.request.profile.id).exists()
 
     @cached_property
     def can_edit(self):
@@ -167,8 +151,7 @@ class ContestMixin(object):
             context['has_joined'] = False
 
         context['now'] = timezone.now()
-        context['is_editor'] = self.is_editor
-        context['is_tester'] = self.is_tester
+        context['is_organizer'] = self.is_organizer
         context['can_edit'] = self.can_edit
 
         if not self.object.og_image or not self.object.summary:
@@ -234,24 +217,6 @@ class ContestDetail(ContestMixin, TitleMixin, CommentedDetailView):
             .annotate(has_public_editorial=Sum(Case(When(solution__is_public=True, then=1),
                                                     default=0, output_field=IntegerField()))) \
             .add_i18n_name(self.request.LANGUAGE_CODE)
-        context['metadata'] = {
-            'has_public_editorials': any(
-                problem.is_public and problem.has_public_editorial for problem in context['contest_problems']
-            ),
-        }
-        context['metadata'].update(
-            **self.object.contest_problems
-            .annotate(
-                partials_enabled=F('partial').bitand(F('problem__partial')),
-                pretests_enabled=F('is_pretested').bitand(F('contest__run_pretests_only')),
-            )
-            .aggregate(
-                has_partials=Sum('partials_enabled'),
-                has_pretests=Sum('pretests_enabled'),
-                has_submission_cap=Sum('max_submissions'),
-                problem_count=Count('id'),
-            ),
-        )
         return context
 
 
@@ -269,28 +234,23 @@ class ContestClone(ContestMixin, PermissionRequiredMixin, TitleMixin, SingleObje
         private_contestants = contest.private_contestants.all()
         view_contest_scoreboard = contest.view_contest_scoreboard.all()
         contest_problems = contest.contest_problems.all()
-        old_key = contest.key
 
         contest.pk = None
         contest.is_visible = False
         contest.user_count = 0
-        contest.locked_after = None
         contest.key = form.cleaned_data['key']
-        with revisions.create_revision(atomic=True):
-            contest.save()
-            contest.tags.set(tags)
-            contest.organizations.set(organizations)
-            contest.private_contestants.set(private_contestants)
-            contest.view_contest_scoreboard.set(view_contest_scoreboard)
-            contest.authors.add(self.request.profile)
+        contest.save()
 
-            for problem in contest_problems:
-                problem.contest = contest
-                problem.pk = None
-            ContestProblem.objects.bulk_create(contest_problems)
+        contest.tags.set(tags)
+        contest.organizations.set(organizations)
+        contest.private_contestants.set(private_contestants)
+        contest.view_contest_scoreboard.set(view_contest_scoreboard)
+        contest.organizers.add(self.request.profile)
 
-            revisions.set_user(self.request.user)
-            revisions.set_comment(_('Cloned contest from %s') % old_key)
+        for problem in contest_problems:
+            problem.contest = contest
+            problem.pk = None
+        ContestProblem.objects.bulk_create(contest_problems)
 
         return HttpResponseRedirect(reverse('admin:judge_contest_change', args=(contest.id,)))
 
@@ -325,7 +285,7 @@ class ContestJoin(LoginRequiredMixin, ContestMixin, BaseDetailView):
     def join_contest(self, request, access_code=None):
         contest = self.object
 
-        if not contest.can_join and not (self.is_editor or self.is_tester):
+        if not contest.can_join and not self.is_organizer:
             return generic_message(request, _('Contest not ongoing'),
                                    _('"%s" is not currently ongoing.') % contest.name)
 
@@ -362,14 +322,14 @@ class ContestJoin(LoginRequiredMixin, ContestMixin, BaseDetailView):
             LIVE = ContestParticipation.LIVE
             try:
                 participation = ContestParticipation.objects.get(
-                    contest=contest, user=profile, virtual=(SPECTATE if self.is_editor or self.is_tester else LIVE),
+                    contest=contest, user=profile, virtual=(SPECTATE if self.is_organizer else LIVE),
                 )
             except ContestParticipation.DoesNotExist:
                 if requires_access_code:
                     raise ContestAccessDenied()
 
                 participation = ContestParticipation.objects.create(
-                    contest=contest, user=profile, virtual=(SPECTATE if self.is_editor or self.is_tester else LIVE),
+                    contest=contest, user=profile, virtual=(SPECTATE if self.is_organizer else LIVE),
                     real_start=timezone.now(),
                 )
             else:
@@ -467,7 +427,7 @@ class ContestCalendar(TitleMixin, ContestListMixin, TemplateView):
         except ValueError:
             raise Http404()
         else:
-            context['title'] = _('Contests in %(month)s') % {'month': date_filter(month, _('F Y'))}
+            context['title'] = _('Contests in %(month)s') % {'month': date_filter(month, _("F Y"))}
 
         dates = Contest.objects.aggregate(min=Min('start_time'), max=Max('end_time'))
         min_month = (self.today.year, self.today.month)
@@ -580,7 +540,7 @@ class ContestStats(TitleMixin, ContestMixin, DetailView):
 ContestRankingProfile = namedtuple(
     'ContestRankingProfile',
     'id user css_class username points cumtime tiebreaker organization participation '
-    'participation_rating problem_cells result_cell display_name',
+    'participation_rating problem_cells result_cell',
 )
 
 BestSolutionData = namedtuple('BestSolutionData', 'code points time state is_pretested')
@@ -609,7 +569,6 @@ def make_contest_ranking_profile(contest, participation, contest_problems):
         problem_cells=[display_user_problem(contest_problem) for contest_problem in contest_problems],
         result_cell=contest.format.display_participation_result(participation),
         participation=participation,
-        display_name=user.display_name,
     )
 
 
@@ -619,7 +578,7 @@ def base_contest_ranking_list(contest, problems, queryset):
 
 
 def contest_ranking_list(contest, problems):
-    return base_contest_ranking_list(contest, problems, contest.users.filter(virtual=0)
+    return base_contest_ranking_list(contest, problems, contest.users.filter(virtual=0, user__is_unlisted=False)
                                      .prefetch_related('user__organizations')
                                      .order_by('is_disqualified', '-score', 'cumtime', 'tiebreaker'))
 

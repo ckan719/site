@@ -5,6 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.cache import cache
 from django.core.cache.utils import make_template_fragment_key
 from django.core.exceptions import PermissionDenied
+from django.db import transaction
 from django.db.models import Count, Q
 from django.forms import Form, modelformset_factory
 from django.http import Http404, HttpResponsePermanentRedirect, HttpResponseRedirect
@@ -52,14 +53,14 @@ class OrganizationMixin(object):
         if not self.request.user.is_authenticated:
             return False
         profile_id = self.request.profile.id
-        return org.admins.filter(id=profile_id).exists()
+        return org.admins.filter(id=profile_id).exists() or org.registrant_id == profile_id
 
 
 class OrganizationDetailView(OrganizationMixin, DetailView):
     def get(self, request, *args, **kwargs):
         self.object = self.get_object()
         if self.object.slug != kwargs['slug']:
-            return HttpResponsePermanentRedirect(reverse('organization_home', args=(self.object.id, self.object.slug)))
+            return HttpResponsePermanentRedirect(request.get_full_path().replace(kwargs['slug'], self.object.slug))
         context = self.get_context_data(object=self.object)
         return self.render_to_response(context)
 
@@ -198,7 +199,8 @@ class OrganizationRequestBaseView(LoginRequiredMixin, SingleObjectTemplateRespon
 
     def get_object(self, queryset=None):
         organization = super(OrganizationRequestBaseView, self).get_object(queryset)
-        if not organization.admins.filter(id=self.request.profile.id).exists():
+        if not (organization.admins.filter(id=self.request.profile.id).exists() or
+                organization.registrant_id == self.request.profile.id):
             raise PermissionDenied()
         return organization
 
@@ -293,7 +295,7 @@ class EditOrganization(LoginRequiredMixin, TitleMixin, OrganizationMixin, Update
         return form
 
     def form_valid(self, form):
-        with revisions.create_revision(atomic=True):
+        with transaction.atomic(), revisions.create_revision():
             revisions.set_comment(_('Edited from site'))
             revisions.set_user(self.request.user)
             return super(EditOrganization, self).form_valid(form)

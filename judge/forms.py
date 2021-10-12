@@ -1,5 +1,5 @@
 import json
-from operator import attrgetter, itemgetter
+from operator import attrgetter
 
 import pyotp
 import webauthn
@@ -9,32 +9,16 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 from django.db.models import Q
-from django.forms import BooleanField, CharField, ChoiceField, Form, ModelForm, MultipleChoiceField
+from django.forms import CharField, ChoiceField, Form, ModelForm
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
 from django_ace import AceWidget
-from judge.models import Contest, Language, Organization, Problem, Profile, Submission, WebAuthnCredential
+from judge.models import Contest, Language, Organization, PrivateMessage, Problem, Profile, Submission, \
+    WebAuthnCredential
 from judge.utils.subscription import newsletter_id
-from judge.widgets import HeavyPreviewPageDownWidget, Select2MultipleWidget, Select2Widget
-
-TOTP_CODE_LENGTH = 6
-
-two_factor_validators_by_length = {
-    TOTP_CODE_LENGTH: {
-        'regex_validator': RegexValidator(
-            f'^[0-9]{{{TOTP_CODE_LENGTH}}}$',
-            _(f'Two-factor authentication tokens must be {TOTP_CODE_LENGTH} decimal digits.'),
-        ),
-        'verify': lambda code, profile: not profile.check_totp_code(code),
-        'err': _('Invalid two-factor authentication token.'),
-    },
-    16: {
-        'regex_validator': RegexValidator('^[A-Z0-9]{16}$', _('Scratch codes must be 16 base32 characters.')),
-        'verify': lambda code, profile: code not in json.loads(profile.scratch_codes),
-        'err': _('Invalid scratch code.'),
-    },
-}
+from judge.widgets import HeavyPreviewPageDownWidget, MathJaxPagedownWidget, PagedownWidget, Select2MultipleWidget, \
+    Select2Widget
 
 
 def fix_unicode(string, unsafe=tuple('\u202a\u202b\u202d\u202e')):
@@ -67,11 +51,6 @@ class ProfileForm(ModelForm):
                 attrs={'style': 'max-width:700px;min-width:700px;width:700px'},
             )
 
-    def clean_about(self):
-        if 'about' in self.changed_data and not self.instance.has_any_solves:
-            raise ValidationError(_('You must solve at least one problem before you can update your profile.'))
-        return self.cleaned_data['about']
-
     def clean(self):
         organizations = self.cleaned_data.get('organizations') or []
         max_orgs = settings.DMOJ_USER_MAX_ORGANIZATION_COUNT
@@ -89,38 +68,6 @@ class ProfileForm(ModelForm):
             self.fields['organizations'].queryset = Organization.objects.filter(
                 Q(is_open=True) | Q(id__in=user.profile.organizations.all()),
             )
-        if not self.fields['organizations'].queryset:
-            self.fields.pop('organizations')
-
-
-class DownloadDataForm(Form):
-    comment_download = BooleanField(required=False, label=_('Download comments?'))
-    submission_download = BooleanField(required=False, label=_('Download submissions?'))
-    submission_problem_glob = CharField(initial='*', label=_('Filter by problem code glob:'), max_length=100)
-    submission_results = MultipleChoiceField(
-        required=False,
-        widget=Select2MultipleWidget(
-            attrs={'style': 'width: 260px', 'data-placeholder': _('Leave empty to include all submissions')},
-        ),
-        choices=sorted(map(itemgetter(0, 0), Submission.RESULT)),
-        label=_('Filter by result:'),
-    )
-
-    def clean(self):
-        can_download = ('comment_download', 'submission_download')
-        if not any(self.cleaned_data[v] for v in can_download):
-            raise ValidationError(_('Please select at least one thing to download.'))
-        return self.cleaned_data
-
-    def clean_submission_problem_glob(self):
-        if not self.cleaned_data['submission_download']:
-            return '*'
-        return self.cleaned_data['submission_problem_glob']
-
-    def clean_submission_result(self):
-        if not self.cleaned_data['submission_download']:
-            return ()
-        return self.cleaned_data['submission_result']
 
 
 class ProblemSubmitForm(ModelForm):
@@ -153,6 +100,15 @@ class EditOrganizationForm(ModelForm):
             widgets['about'] = HeavyPreviewPageDownWidget(preview=reverse_lazy('organization_preview'))
 
 
+class NewMessageForm(ModelForm):
+    class Meta:
+        model = PrivateMessage
+        fields = ['title', 'content']
+        widgets = {}
+        if PagedownWidget is not None:
+            widgets['content'] = MathJaxPagedownWidget()
+
+
 class CustomAuthenticationForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super(CustomAuthenticationForm, self).__init__(*args, **kwargs)
@@ -178,34 +134,20 @@ class NoAutoCompleteCharField(forms.CharField):
 class TOTPForm(Form):
     TOLERANCE = settings.DMOJ_TOTP_TOLERANCE_HALF_MINUTES
 
-    totp_or_scratch_code = NoAutoCompleteCharField(required=False)
+    totp_token = NoAutoCompleteCharField(validators=[
+        RegexValidator('^[0-9]{6}$', _('Two-factor authentication tokens must be 6 decimal digits.')),
+    ], required=False)
+    webauthn_response = forms.CharField(widget=forms.HiddenInput(), required=False)
 
     def __init__(self, *args, **kwargs):
         self.profile = kwargs.pop('profile')
         super().__init__(*args, **kwargs)
 
     def clean(self):
-        totp_or_scratch_code = self.cleaned_data.get('totp_or_scratch_code')
-        try:
-            validator = two_factor_validators_by_length[len(totp_or_scratch_code)]
-        except KeyError:
-            raise ValidationError(_('Invalid code length.'))
-        validator['regex_validator'](totp_or_scratch_code)
-        if validator['verify'](totp_or_scratch_code, self.profile):
-            raise ValidationError(validator['err'])
-
-
-class TOTPEnableForm(TOTPForm):
-    def __init__(self, *args, **kwargs):
-        self.totp_key = kwargs.pop('totp_key')
-        super().__init__(*args, **kwargs)
-
-    def clean(self):
-        totp_validate = two_factor_validators_by_length[TOTP_CODE_LENGTH]
-        code = self.cleaned_data.get('totp_or_scratch_code')
-        totp_validate['regex_validator'](code)
-        if not pyotp.TOTP(self.totp_key).verify(code, valid_window=settings.DMOJ_TOTP_TOLERANCE_HALF_MINUTES):
-            raise ValidationError(totp_validate['err'])
+        if (not self.cleaned_data.get('totp_token') or
+                not pyotp.TOTP(self.profile.totp_key).verify(self.cleaned_data['totp_token'],
+                                                             valid_window=self.TOLERANCE)):
+            raise ValidationError(_('Invalid two-factor authentication token.'))
 
 
 class TwoFactorLoginForm(TOTPForm):
@@ -217,7 +159,6 @@ class TwoFactorLoginForm(TOTPForm):
         super().__init__(*args, **kwargs)
 
     def clean(self):
-        totp_or_scratch_code = self.cleaned_data.get('totp_or_scratch_code')
         if self.profile.is_webauthn_enabled and self.cleaned_data.get('webauthn_response'):
             if len(self.cleaned_data['webauthn_response']) > 65536:
                 raise ValidationError(_('Invalid WebAuthn response.'))
@@ -249,19 +190,10 @@ class TwoFactorLoginForm(TOTPForm):
 
             credential.counter = sign_count
             credential.save(update_fields=['counter'])
-        elif totp_or_scratch_code:
-            if self.profile.is_totp_enabled and self.profile.check_totp_code(totp_or_scratch_code):
+        elif self.profile.is_totp_enabled and self.cleaned_data.get('totp_token'):
+            if pyotp.TOTP(self.profile.totp_key).verify(self.cleaned_data['totp_token'], valid_window=self.TOLERANCE):
                 return
-            elif self.profile.scratch_codes and totp_or_scratch_code in json.loads(self.profile.scratch_codes):
-                scratch_codes = json.loads(self.profile.scratch_codes)
-                scratch_codes.remove(totp_or_scratch_code)
-                self.profile.scratch_codes = json.dumps(scratch_codes)
-                self.profile.save(update_fields=['scratch_codes'])
-                return
-            elif self.profile.is_totp_enabled:
-                raise ValidationError(_('Invalid two-factor authentication token or scratch code.'))
-            else:
-                raise ValidationError(_('Invalid scratch code.'))
+            raise ValidationError(_('Invalid two-factor authentication token.'))
         else:
             raise ValidationError(_('Must specify either totp_token or webauthn_response.'))
 

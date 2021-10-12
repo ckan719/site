@@ -5,7 +5,7 @@
     font-size: 1.9em;
 }
 
-.facebook-this, .tweet-this {
+.facebook-this, .tweet-this, .gplus-this {
     display: inline;
 }
 
@@ -15,6 +15,10 @@
 
 .facebook-this it {
     color: #133783;
+}
+
+.gplus-this i {
+    color: #DD4B38;
 }
 
 .social {
@@ -91,10 +95,6 @@ input {
 
     &[type=number] {
         padding: 2px 0 2px 5px;
-    }
-
-    &[type=checkbox] {
-        vertical-align: middle;
     }
 }
 
@@ -320,16 +320,6 @@ ul.pagination {
             }
         }
     }
-}
-
-.top-pagination-bar {
-    margin-top: 11px;
-    margin-bottom: 7px;
-    display: flex;
-}
-
-.bottom-pagination-bar {
-    margin-top: 10px;
 }
 
 .alert {

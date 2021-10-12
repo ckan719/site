@@ -2,7 +2,6 @@ from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import gettext as _
 
-from judge.models import Language
 from judge.utils.problems import get_result_data
 from judge.utils.raw_sql import join_sql_subquery
 from judge.views.submission import ForceContestMixin, ProblemSubmissions
@@ -15,29 +14,19 @@ class RankedSubmissions(ProblemSubmissions):
     dynamic_update = False
 
     def get_queryset(self):
-        params = [self.problem.id]
         if self.in_contest:
-            contest_join = """INNER JOIN judge_contestsubmission AS cs ON (sub.id = cs.submission_id)
-                              INNER JOIN judge_contestparticipation AS cp ON (cs.participation_id = cp.id)"""
+            contest_join = '''INNER JOIN judge_contestsubmission AS cs ON (sub.id = cs.submission_id)
+                              INNER JOIN judge_contestparticipation AS cp ON (cs.participation_id = cp.id)'''
             points = 'cs.points'
-            constraint = ' AND cp.contest_id = %s'
-            params.append(self.contest.id)
+            constraint = 'AND cp.contest_id = %s'
         else:
             contest_join = ''
             points = 'sub.points'
             constraint = ''
-
-        if self.selected_languages:
-            lang_ids = Language.objects.filter(key__in=self.selected_languages).values_list('id', flat=True)
-            if lang_ids:
-                constraint += f' AND sub.language_id IN ({", ".join(["%s"] * len(lang_ids))})'
-                params.extend(lang_ids)
-            self.selected_languages = set()
-
         queryset = super(RankedSubmissions, self).get_queryset().filter(user__is_unlisted=False)
         join_sql_subquery(
             queryset,
-            subquery="""
+            subquery='''
                 SELECT sub.id AS id
                 FROM (
                     SELECT sub.user_id AS uid, MAX(sub.points) AS points
@@ -54,8 +43,9 @@ class RankedSubmissions(ProblemSubmissions):
                         ON (sub.user_id = fastest.uid AND sub.time = fastest.time) {contest_join}
                 WHERE sub.problem_id = %s AND {points} > 0 {constraint}
                 GROUP BY sub.user_id
-            """.format(points=points, contest_join=contest_join, constraint=constraint),
-            params=params * 3, alias='best_subs', join_fields=[('id', 'id')],
+            '''.format(points=points, contest_join=contest_join, constraint=constraint),
+            params=[self.problem.id, self.contest.id] * 3 if self.in_contest else [self.problem.id] * 3,
+            alias='best_subs', join_fields=[('id', 'id')],
         )
 
         if self.in_contest:
@@ -70,10 +60,8 @@ class RankedSubmissions(ProblemSubmissions):
         return format_html(_('Best solutions for <a href="{1}">{0}</a>'), self.problem_name,
                            reverse('problem_detail', args=[self.problem.code]))
 
-    def _get_result_data(self, queryset=None):
-        if queryset is None:
-            queryset = super(RankedSubmissions, self).get_queryset()
-        return get_result_data(queryset.order_by())
+    def _get_result_data(self):
+        return get_result_data(super(RankedSubmissions, self).get_queryset().order_by())
 
 
 class ContestRankedSubmission(ForceContestMixin, RankedSubmissions):

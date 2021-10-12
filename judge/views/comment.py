@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.exceptions import PermissionDenied
-from django.db import IntegrityError
+from django.db import IntegrityError, transaction
 from django.db.models import F
 from django.forms.models import ModelForm
 from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
@@ -32,19 +32,16 @@ def vote_comment(request, delta):
     if 'id' not in request.POST or len(request.POST['id']) > 10:
         return HttpResponseBadRequest()
 
-    if not request.user.is_staff and not request.profile.has_any_solves:
+    if not request.user.is_staff and not request.profile.submission_set.filter(points=F('problem__points')).exists():
         return HttpResponseBadRequest(_('You must solve at least one problem before you can vote.'),
                                       content_type='text/plain')
-
-    if request.profile.mute:
-        return HttpResponseBadRequest(_('Your part is silent, little toad.'), content_type='text/plain')
 
     try:
         comment_id = int(request.POST['id'])
     except ValueError:
         return HttpResponseBadRequest()
     else:
-        if not Comment.objects.filter(id=comment_id, hidden=False).exists():
+        if not Comment.objects.filter(id=comment_id).exists():
             raise Http404()
 
     vote = CommentVote()
@@ -125,7 +122,7 @@ class CommentEditAjax(LoginRequiredMixin, CommentMixin, UpdateView):
     form_class = CommentEditForm
 
     def form_valid(self, form):
-        with revisions.create_revision(atomic=True):
+        with transaction.atomic(), revisions.create_revision():
             revisions.set_comment(_('Edited from site'))
             revisions.set_user(self.request.user)
             return super(CommentEditAjax, self).form_valid(form)

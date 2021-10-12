@@ -16,7 +16,7 @@ from django.utils.translation import gettext as _
 from django.views.generic import FormView, View
 from django.views.generic.detail import SingleObjectMixin
 
-from judge.forms import TOTPEnableForm, TOTPForm, TwoFactorLoginForm
+from judge.forms import TOTPForm, TwoFactorLoginForm
 from judge.jinja2.gravatar import gravatar
 from judge.models import WebAuthnCredential
 from judge.utils.two_factor import WebAuthnJSONEncoder, webauthn_encode
@@ -47,47 +47,34 @@ class TOTPView(TitleMixin, LoginRequiredMixin, FormView):
 
 class TOTPEnableView(TOTPView):
     title = _('Enable Two-factor Authentication')
-    form_class = TOTPEnableForm
     template_name = 'registration/totp_enable.html'
-    is_refresh = False
 
     def get(self, request, *args, **kwargs):
         profile = self.profile
-        if 'totp_enable_key' not in request.session:
-            request.session['totp_enable_key'] = pyotp.random_base32(length=32)
-        if not profile.scratch_codes:
-            profile.generate_scratch_codes()
+        if not profile.totp_key:
+            profile.totp_key = pyotp.random_base32(length=32)
+            profile.save()
         return self.render_to_response(self.get_context_data())
-
-    def get_form_kwargs(self):
-        kwargs = super().get_form_kwargs()
-        kwargs['totp_key'] = self.request.session['totp_enable_key']
-        return kwargs
 
     def check_skip(self):
         return self.profile.is_totp_enabled
 
     def post(self, request, *args, **kwargs):
-        if not request.session['totp_enable_key']:
+        if not self.profile.totp_key:
             return HttpResponseBadRequest('No TOTP key generated on server side?')
         return super(TOTPEnableView, self).post(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(TOTPEnableView, self).get_context_data(**kwargs)
-        context['totp_key'] = self.request.session['totp_enable_key']
-        context['scratch_codes'] = [] if self.is_refresh else json.loads(self.profile.scratch_codes)
-        context['qr_code'] = self.render_qr_code(self.request.user.username, context['totp_key'])
-        context['is_refresh'] = self.is_refresh
-        context['is_hardcore'] = settings.DMOJ_2FA_HARDCORE
+        context['totp_key'] = self.profile.totp_key
+        context['qr_code'] = self.render_qr_code(self.request.user.username, self.profile.totp_key)
         return context
 
     def form_valid(self, form):
         self.profile.is_totp_enabled = True
-        self.profile.totp_key = self.request.session['totp_enable_key']
-        self.profile.save(update_fields=['is_totp_enabled', 'totp_key'])
+        self.profile.save()
         # Make sure users don't get prompted to enter code right after enabling
         self.request.session['2fa_passed'] = True
-        del self.request.session['totp_enable_key']
         return self.next_page()
 
     @classmethod
@@ -105,14 +92,6 @@ class TOTPEnableView(TOTPView):
         return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode('ascii')
 
 
-class TOTPRefreshView(TOTPEnableView):
-    title = _('Refresh Two-factor Authentication')
-    is_refresh = True
-
-    def check_skip(self):
-        return not self.profile.is_totp_enabled
-
-
 class TOTPDisableView(TOTPView):
     title = _('Disable Two-factor Authentication')
     template_name = 'registration/totp_disable.html'
@@ -125,7 +104,6 @@ class TOTPDisableView(TOTPView):
     def form_valid(self, form):
         self.profile.is_totp_enabled = False
         self.profile.totp_key = None
-        self.profile.scratch_codes = None
         self.profile.save()
         return self.next_page()
 
@@ -222,6 +200,10 @@ class WebAuthnDeleteView(SingleObjectMixin, WebAuthnView):
             return HttpResponseBadRequest(_('Staff may not disable 2FA'))
         credential.delete()
 
+        if count <= 1:
+            request.profile.is_webauthn_enabled = False
+            request.profile.save(update_fields=['is_webauthn_enabled'])
+
         return HttpResponse()
 
 
@@ -252,8 +234,3 @@ class TwoFactorLoginView(SuccessURLAllowedHostsMixin, TOTPView):
     def form_valid(self, form):
         self.request.session['2fa_passed'] = True
         return self.next_page()
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['is_hardcore'] = settings.DMOJ_2FA_HARDCORE
-        return context

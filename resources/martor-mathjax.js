@@ -16,7 +16,7 @@ jQuery(function ($) {
                     dataType: 'script',
                     cache: true,
                     success: function () {
-                        window.MathJax.skipStartupTypeset = true;
+                        window.MathJax.loader = {typeset: false};
                         $.ajax({
                             type: 'GET',
                             url: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML',

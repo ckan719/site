@@ -13,10 +13,6 @@
             min-width: 20em;
         }
 
-        #users-table .rating-column {
-            min-width: 3em;
-        }
-
         #users-table td {
             height: 2.5em;
         }
@@ -81,7 +77,7 @@
             color: red;
         }
 
-        .user-points, .user-points a {
+        .user-points {
             font-weight: bold;
             color: black;
         }
@@ -181,14 +177,27 @@
             });
         </script>
     {% endif %}
+    {% if perms.judge.change_contestparticipation %}
+        <script type="text/javascript">
+            $(function () {
+                $('td.user').find('a.user-name').click(function (e) {
+                    var data = $(this).siblings('.edit-participation');
+                    if (e.altKey && data.length) {
+                        window.open(data.attr('data-link'), '_blank');
+                        return false;
+                    }
+                });
+            });
+        </script>
+    {% endif %}
     {% if not contest.ended %}
         <script type="text/javascript">
             $(function () {
                 window.install_tooltips = function () {
-                    $('td.user-name').find('> span:first-child').each(function () {
+                    $('td.user').find('a.user-name').each(function () {
                         var link = $(this);
                         link.mouseenter(function (e) {
-                            var start_time = link.siblings('.start-time').text().trim();
+                            var start_time = link.siblings('.start-time').text();
                             link.addClass('tooltipped tooltipped-e').attr('aria-label', start_time);
                         }).mouseleave(function (e) {
                             link.removeClass('tooltipped tooltipped-e').removeAttr('aria-label');
@@ -213,17 +222,12 @@
                     url: '{{ url('contest_user_search_select2_ajax', contest.key) }}'
                 },
                 minimumInputLength: 1,
-                templateResult: function (data) {
-                    return $('<span>')
-                        .append($('<img>', {
-                            class: 'user-search-image',
-                            src: data.gravatar_url,
-                            width: 24,
-                            height: 24,
-                        }))
-                        .append($('<span>', {
-                            class: data.display_rank + ' user-search-name',
-                        }).text(data.text));
+                escapeMarkup: function (markup) {
+                    return markup;
+                },
+                templateResult: function (data, container) {
+                    return ('<img class="user-search-image" src="' + data.gravatar_url + '" width="24" height="24">' +
+                        '<span class="' + data.display_rank + ' user-search-name">' + data.text + '</span>');
                 }
             }).on('change', function () {
                 window.location.href = url.replace('__username__', $(this).val());
