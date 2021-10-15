@@ -1,0 +1,2726 @@
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 21:41:49 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55ef65523470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 9 seconds on interpreter 0x55ef65523470 pid: 61166 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 61166)
+spawned uWSGI worker 1 (pid: 61283, cores: 1)
+spawned uWSGI worker 2 (pid: 61284, cores: 1)
+spawned uWSGI worker 3 (pid: 61285, cores: 1)
+spawned uWSGI worker 4 (pid: 61286, cores: 1)
+spawned uWSGI worker 5 (pid: 61287, cores: 1)
+worker 1 killed successfully (pid: 61283)
+uWSGI worker 1 cheaped.
+Fri Oct 15 04:42:01 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 61284)
+uWSGI worker 2 cheaped.
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 04:49:08 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 4 buried after 1 seconds
+Fri Oct 15 04:49:08 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Fri Oct 15 04:49:08 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 2 seconds
+worker 5 buried after 2 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 21:49:09 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55ba79863470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55ba79863470 pid: 62623 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 62623)
+spawned uWSGI worker 1 (pid: 62645, cores: 1)
+spawned uWSGI worker 2 (pid: 62646, cores: 1)
+spawned uWSGI worker 3 (pid: 62647, cores: 1)
+spawned uWSGI worker 4 (pid: 62648, cores: 1)
+spawned uWSGI worker 5 (pid: 62649, cores: 1)
+worker 1 killed successfully (pid: 62645)
+uWSGI worker 1 cheaped.
+Fri Oct 15 04:49:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 62646)
+uWSGI worker 2 cheaped.
+Fri Oct 15 04:49:23 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: epiphyllum719@gmail.com
+Date: Fri, 15 Oct 2021 04:49:26 -0000
+Message-ID: <163427336694.62649.16661395266828545450@ubuntu>
+
+Internal Server Error: /
+
+UncompressableFileError at /
+'libs/fontawesome/font-awesome.css' could not be found in the COMPRESS_ROOT=
+ '/home/hestia/Desktop/site/static' or with staticfiles.
+
+Request Method: GET
+Request URL: http://10.0.2.128/
+Django Version: 2.2.24
+Python Executable: /home/hestia/Desktop/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/hestia/Desktop/site', '/home/hestia/Desktop/site/', '.=
+', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/python3.8/l=
+ib-dynload', '/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages', '=
+/home/hestia/Desktop/dmojsite/src/django-sortedm2m', '/home/hestia/Desktop/=
+dmojsite/src/dmoj-wpadmin', '/home/hestia/Desktop/dmojsite/src/ansi2html', =
+'/home/hestia/Desktop/dmojsite/src/martor']
+Server time: Fri, 15 Oct 2021 11:49:26 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/temp=
+late/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/temp=
+late/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django_jinj=
+a/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django_jinj=
+a/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/jinja2/envi=
+ronment.py" in render
+  1304.             self.environment.handle_exception()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/jinja2/envi=
+ronment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/hestia/Desktop/site/templates/home.html" in top-level template =
+code
+  1. {% extends "blog/list.html" %}
+
+File "/home/hestia/Desktop/site/templates/blog/list.html" in top-level temp=
+late code
+  1. {% extends "base.html" %}
+
+File "/home/hestia/Desktop/site/templates/base.html" in top-level template =
+code
+  50.     {% compress css %}
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+contrib/jinja2ext.py" in _compress
+  83.         return self.render_compressed(context, kind, mode, name, forc=
+ed=3Dforced)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+templatetags/compress.py" in render_compressed
+  111.             cache_key, cache_content =3D self.render_cached(compress=
+or, kind, mode)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+templatetags/compress.py" in render_cached
+  89.         cache_key =3D get_templatetag_cachekey(compressor, mode, kind)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+cache.py" in get_templatetag_cachekey
+  104.         "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/util=
+s/functional.py" in __get__
+  80.         res =3D instance.__dict__[self.name] =3D self.func(instance)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in cachekey
+  200.             [self.content] + self.mtimes).encode(self.charset), 12)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/util=
+s/functional.py" in __get__
+  80.         res =3D instance.__dict__[self.name] =3D self.func(instance)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in mtimes
+  194.                 for kind, value, basename, elem in self.split_conten=
+ts()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+css.py" in split_contents
+  19.                 filename =3D self.get_filename(basename)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in get_filename
+  159.         raise UncompressableFileError(
+
+Exception Type: UncompressableFileError at /
+Exception Value: 'libs/fontawesome/font-awesome.css' could not be found in =
+the COMPRESS_ROOT '/home/hestia/Desktop/site/static' or with staticfiles.
+Request information:
+USER: AnonymousUser
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES: No cookie data
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'RJW5wuuoqokbLuCcVkBH3L3EJrXA1GmMjpD87ot2aY6jJrPJcMPP47bGiU=
+gaBS2B'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,*/*;q=3D0.8'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.5'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_HOST =3D '10.0.2.128'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko=
+/20100101 Firefox/93.0'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '10.0.2.128'
+REMOTE_PORT =3D '59474'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '10.0.2.128'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'ubuntu'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7f2fc466cfd0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('hestia', 'epiphyllum719@gmail.com'),)"
+ALLOWED_HOSTS =3D ['10.0.2.128']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/hestia/Desktop/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'css': ['compressor.filters.css_default.CssAbsoluteFi=
+lter', 'compressor.filters.cssmin.CSSMinFilter'], 'js': ['compressor.filter=
+s.jsmin.JSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7f2fc1187820>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/hestia/Desktop/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7f2fc3a165e0>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/hestia/Desktop/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://10.0.2.128/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://10.0.2.128/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://10.0.2.128:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'German'), ('en', 'English'), ('es', 'Spanish'), ('fr=
+', 'French'), ('hr', 'Croatian'), ('hu', 'Hungarian'), ('ja', 'Japanese'), =
+('ko', 'Korean'), ('pt', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru'=
+, 'Russian'), ('sr-latn', 'Serbian (Latin)'), ('tr', 'Turkish'), ('vi', 'Vi=
+etnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chi=
+nese')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/hestia/Desktop/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.jpg', '.png', '.gif'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DMOJ: Modern Online Judge'
+SITE_NAME =3D 'DMOJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/hestia/Desktop/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.StaticFilesStor=
+age'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/hestia/Desktop/site/static'
+STATIC_ROOT =3D '/home/hestia/Desktop/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/h=
+estia/Desktop/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_exten=
+sion': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_processors=
+': ['django.template.context_processors.media', 'django.template.context_pr=
+ocessors.tz', 'django.template.context_processors.i18n', 'django.template.c=
+ontext_processors.request', 'django.contrib.messages.context_processors.mes=
+sages', 'judge.template_context.comet_location', 'judge.template_context.ge=
+t_resource', 'judge.template_context.general_info', 'judge.template_context=
+.site', 'judge.template_context.site_name', 'judge.template_context.misc_co=
+nfig', 'judge.template_context.math_setting', 'social_django.context_proces=
+sors.backends', 'social_django.context_processors.login_redirect'], 'autoes=
+cape': <function select_autoescape.<locals>.autoescape at 0x7f2fc39e1940>, =
+'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.do',=
+ 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.exten=
+sions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension', 'd=
+jango_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.ext=
+ensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtension=
+', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinja.b=
+uiltins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ext.C=
+ompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spaceless.=
+SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Django=
+Templates', 'APP_DIRS': True, 'DIRS': ['/home/hestia/Desktop/site/templates=
+'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_process=
+ors.auth', 'django.template.context_processors.media', 'django.template.con=
+text_processors.tz', 'django.template.context_processors.i18n', 'django.tem=
+plate.context_processors.request', 'django.contrib.messages.context_process=
+ors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 188583936 bytes/179MB} {rss usage: 99389440 bytes/94MB} [pid: 62649|app: 0|req: 1/1] 10.0.2.128 () {42 vars in 663 bytes} [Fri Oct 15 04:49:23 2021] GET / => generated 926 bytes in 3584 msecs (HTTP/1.1 500) 6 headers in 349 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 04:51:25 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+Fri Oct 15 04:51:26 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 2 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 21:51:27 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56178cc4a470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56178cc4a470 pid: 63037 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63037)
+spawned uWSGI worker 1 (pid: 63045, cores: 1)
+spawned uWSGI worker 2 (pid: 63046, cores: 1)
+spawned uWSGI worker 3 (pid: 63047, cores: 1)
+spawned uWSGI worker 4 (pid: 63048, cores: 1)
+spawned uWSGI worker 5 (pid: 63049, cores: 1)
+worker 1 killed successfully (pid: 63045)
+uWSGI worker 1 cheaped.
+Fri Oct 15 04:51:30 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 63046)
+uWSGI worker 2 cheaped.
+Fri Oct 15 04:51:33 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: epiphyllum719@gmail.com
+Date: Fri, 15 Oct 2021 04:51:35 -0000
+Message-ID: <163427349577.63049.2384406159527861450@ubuntu>
+
+Internal Server Error: /
+
+UncompressableFileError at /
+'libs/fontawesome/font-awesome.css' could not be found in the COMPRESS_ROOT=
+ '/home/hestia/Desktop/site/static' or with staticfiles.
+
+Request Method: GET
+Request URL: http://10.0.2.128/
+Django Version: 2.2.24
+Python Executable: /home/hestia/Desktop/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/hestia/Desktop/site', '/home/hestia/Desktop/site/', '.=
+', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/python3.8/l=
+ib-dynload', '/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages', '=
+/home/hestia/Desktop/dmojsite/src/django-sortedm2m', '/home/hestia/Desktop/=
+dmojsite/src/dmoj-wpadmin', '/home/hestia/Desktop/dmojsite/src/ansi2html', =
+'/home/hestia/Desktop/dmojsite/src/martor']
+Server time: Fri, 15 Oct 2021 11:51:35 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/temp=
+late/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/temp=
+late/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django_jinj=
+a/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django_jinj=
+a/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/jinja2/envi=
+ronment.py" in render
+  1304.             self.environment.handle_exception()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/jinja2/envi=
+ronment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/hestia/Desktop/site/templates/home.html" in top-level template =
+code
+  1. {% extends "blog/list.html" %}
+
+File "/home/hestia/Desktop/site/templates/blog/list.html" in top-level temp=
+late code
+  1. {% extends "base.html" %}
+
+File "/home/hestia/Desktop/site/templates/base.html" in top-level template =
+code
+  50.     {% compress css %}
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+contrib/jinja2ext.py" in _compress
+  83.         return self.render_compressed(context, kind, mode, name, forc=
+ed=3Dforced)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+templatetags/compress.py" in render_compressed
+  111.             cache_key, cache_content =3D self.render_cached(compress=
+or, kind, mode)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+templatetags/compress.py" in render_cached
+  89.         cache_key =3D get_templatetag_cachekey(compressor, mode, kind)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+cache.py" in get_templatetag_cachekey
+  104.         "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/util=
+s/functional.py" in __get__
+  80.         res =3D instance.__dict__[self.name] =3D self.func(instance)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in cachekey
+  200.             [self.content] + self.mtimes).encode(self.charset), 12)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/util=
+s/functional.py" in __get__
+  80.         res =3D instance.__dict__[self.name] =3D self.func(instance)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in mtimes
+  194.                 for kind, value, basename, elem in self.split_conten=
+ts()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+css.py" in split_contents
+  19.                 filename =3D self.get_filename(basename)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in get_filename
+  159.         raise UncompressableFileError(
+
+Exception Type: UncompressableFileError at /
+Exception Value: 'libs/fontawesome/font-awesome.css' could not be found in =
+the COMPRESS_ROOT '/home/hestia/Desktop/site/static' or with staticfiles.
+Request information:
+USER: AnonymousUser
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'RJW5wuuoqokbLuCcVkBH3L3EJrXA1GmMjpD87ot2aY6jJrPJcMPP47bGiUga=
+BS2B'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'RJW5wuuoqokbLuCcVkBH3L3EJrXA1GmMjpD87ot2aY6jJrPJcMPP47bGiU=
+gaBS2B'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,*/*;q=3D0.8'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.5'
+HTTP_CACHE_CONTROL =3D 'max-age=3D0'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DRJW5wuuoqokbLuCcVkBH3L3EJrXA1GmMjpD87ot2aY6jJr=
+PJcMPP47bGiUgaBS2B'
+HTTP_HOST =3D '10.0.2.128'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko=
+/20100101 Firefox/93.0'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '10.0.2.128'
+REMOTE_PORT =3D '59528'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '10.0.2.128'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'ubuntu'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7f14870fffd0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('hestia', 'epiphyllum719@gmail.com'),)"
+ALLOWED_HOSTS =3D ['10.0.2.128']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/hestia/Desktop/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'css': ['compressor.filters.css_default.CssAbsoluteFi=
+lter', 'compressor.filters.cssmin.CSSMinFilter'], 'js': ['compressor.filter=
+s.jsmin.JSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7f1483c1a820>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/hestia/Desktop/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7f14864a95e0>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/hestia/Desktop/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://10.0.2.128/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://10.0.2.128/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://10.0.2.128:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'German'), ('en', 'English'), ('es', 'Spanish'), ('fr=
+', 'French'), ('hr', 'Croatian'), ('hu', 'Hungarian'), ('ja', 'Japanese'), =
+('ko', 'Korean'), ('pt', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru'=
+, 'Russian'), ('sr-latn', 'Serbian (Latin)'), ('tr', 'Turkish'), ('vi', 'Vi=
+etnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chi=
+nese')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/hestia/Desktop/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.gif', '.png', '.jpg'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DMOJ: Modern Online Judge'
+SITE_NAME =3D 'DMOJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/hestia/Desktop/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.StaticFilesStor=
+age'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/hestia/Desktop/site/static'
+STATIC_ROOT =3D '/home/hestia/Desktop/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/h=
+estia/Desktop/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_exten=
+sion': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_processors=
+': ['django.template.context_processors.media', 'django.template.context_pr=
+ocessors.tz', 'django.template.context_processors.i18n', 'django.template.c=
+ontext_processors.request', 'django.contrib.messages.context_processors.mes=
+sages', 'judge.template_context.comet_location', 'judge.template_context.ge=
+t_resource', 'judge.template_context.general_info', 'judge.template_context=
+.site', 'judge.template_context.site_name', 'judge.template_context.misc_co=
+nfig', 'judge.template_context.math_setting', 'social_django.context_proces=
+sors.backends', 'social_django.context_processors.login_redirect'], 'autoes=
+cape': <function select_autoescape.<locals>.autoescape at 0x7f1486474940>, =
+'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.do',=
+ 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.exten=
+sions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension', 'd=
+jango_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.ext=
+ensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtension=
+', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinja.b=
+uiltins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ext.C=
+ompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spaceless.=
+SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Django=
+Templates', 'APP_DIRS': True, 'DIRS': ['/home/hestia/Desktop/site/templates=
+'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_process=
+ors.auth', 'django.template.context_processors.media', 'django.template.con=
+text_processors.tz', 'django.template.context_processors.i18n', 'django.tem=
+plate.context_processors.request', 'django.contrib.messages.context_process=
+ors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 188497920 bytes/179MB} {rss usage: 99598336 bytes/94MB} [pid: 63049|app: 0|req: 1/1] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 04:51:33 2021] GET / => generated 926 bytes in 2018 msecs (HTTP/1.1 500) 6 headers in 349 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 04:51:50 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Fri Oct 15 04:51:50 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 21:51:51 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x561bb778d470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x561bb778d470 pid: 63094 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63094)
+spawned uWSGI worker 1 (pid: 63101, cores: 1)
+spawned uWSGI worker 2 (pid: 63102, cores: 1)
+spawned uWSGI worker 3 (pid: 63103, cores: 1)
+spawned uWSGI worker 4 (pid: 63104, cores: 1)
+spawned uWSGI worker 5 (pid: 63105, cores: 1)
+worker 1 killed successfully (pid: 63101)
+uWSGI worker 1 cheaped.
+Fri Oct 15 04:51:54 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 63102)
+uWSGI worker 2 cheaped.
+Fri Oct 15 04:52:03 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 191926272 bytes/183MB} {rss usage: 106172416 bytes/101MB} [pid: 63103|app: 0|req: 1/1] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 04:52:03 2021] GET / => generated 18119 bytes in 2328 msecs (HTTP/1.1 200) 6 headers in 332 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 04:55:31 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Fri Oct 15 04:55:32 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 21:55:32 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55d637495470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55d637495470 pid: 63607 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63607)
+spawned uWSGI worker 1 (pid: 63638, cores: 1)
+spawned uWSGI worker 2 (pid: 63639, cores: 1)
+spawned uWSGI worker 3 (pid: 63640, cores: 1)
+spawned uWSGI worker 4 (pid: 63641, cores: 1)
+spawned uWSGI worker 5 (pid: 63642, cores: 1)
+worker 1 killed successfully (pid: 63638)
+uWSGI worker 1 cheaped.
+Fri Oct 15 04:55:36 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 63639)
+uWSGI worker 2 cheaped.
+Fri Oct 15 04:55:43 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 190504960 bytes/181MB} {rss usage: 104665088 bytes/99MB} [pid: 63642|app: 0|req: 1/1] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 04:55:43 2021] GET / => generated 18119 bytes in 1764 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+Fri Oct 15 04:55:53 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 190492672 bytes/181MB} {rss usage: 104644608 bytes/99MB} [pid: 63641|app: 0|req: 1/2] 10.0.2.128 () {40 vars in 546 bytes} [Fri Oct 15 04:55:53 2021] GET / => generated 18119 bytes in 1788 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 04:56:53 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 21:56:53 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x560abece7470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x560abece7470 pid: 63772 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63772)
+spawned uWSGI worker 1 (pid: 63779, cores: 1)
+spawned uWSGI worker 2 (pid: 63780, cores: 1)
+spawned uWSGI worker 3 (pid: 63781, cores: 1)
+spawned uWSGI worker 4 (pid: 63782, cores: 1)
+spawned uWSGI worker 5 (pid: 63783, cores: 1)
+worker 1 killed successfully (pid: 63779)
+uWSGI worker 1 cheaped.
+Fri Oct 15 04:56:57 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 63780)
+uWSGI worker 2 cheaped.
+Fri Oct 15 04:56:59 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: epiphyllum719@gmail.com
+Date: Fri, 15 Oct 2021 04:57:01 -0000
+Message-ID: <163427382169.63783.2296580756740931685@ubuntu>
+
+Internal Server Error: /
+
+UncompressableFileError at /
+'libs/fontawesome/font-awesome.css' could not be found in the COMPRESS_ROOT=
+ '/home/hestia/Desktop/site/static' or with staticfiles.
+
+Request Method: GET
+Request URL: http://10.0.2.128/
+Django Version: 2.2.24
+Python Executable: /home/hestia/Desktop/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/hestia/Desktop/site', '/home/hestia/Desktop/site/', '.=
+', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/python3.8/l=
+ib-dynload', '/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages', '=
+/home/hestia/Desktop/dmojsite/src/django-sortedm2m', '/home/hestia/Desktop/=
+dmojsite/src/dmoj-wpadmin', '/home/hestia/Desktop/dmojsite/src/ansi2html', =
+'/home/hestia/Desktop/dmojsite/src/martor']
+Server time: Fri, 15 Oct 2021 11:57:01 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/core=
+/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/temp=
+late/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/temp=
+late/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django_jinj=
+a/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django_jinj=
+a/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/jinja2/envi=
+ronment.py" in render
+  1304.             self.environment.handle_exception()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/jinja2/envi=
+ronment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/hestia/Desktop/site/templates/home.html" in top-level template =
+code
+  1. {% extends "blog/list.html" %}
+
+File "/home/hestia/Desktop/site/templates/blog/list.html" in top-level temp=
+late code
+  1. {% extends "base.html" %}
+
+File "/home/hestia/Desktop/site/templates/base.html" in top-level template =
+code
+  50.     {% compress css %}
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+contrib/jinja2ext.py" in _compress
+  83.         return self.render_compressed(context, kind, mode, name, forc=
+ed=3Dforced)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+templatetags/compress.py" in render_compressed
+  111.             cache_key, cache_content =3D self.render_cached(compress=
+or, kind, mode)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+templatetags/compress.py" in render_cached
+  89.         cache_key =3D get_templatetag_cachekey(compressor, mode, kind)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+cache.py" in get_templatetag_cachekey
+  104.         "templatetag.%s.%s.%s" % (compressor.cachekey, mode, kind))
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/util=
+s/functional.py" in __get__
+  80.         res =3D instance.__dict__[self.name] =3D self.func(instance)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in cachekey
+  200.             [self.content] + self.mtimes).encode(self.charset), 12)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/django/util=
+s/functional.py" in __get__
+  80.         res =3D instance.__dict__[self.name] =3D self.func(instance)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in mtimes
+  194.                 for kind, value, basename, elem in self.split_conten=
+ts()
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+css.py" in split_contents
+  19.                 filename =3D self.get_filename(basename)
+
+File "/home/hestia/Desktop/dmojsite/lib/python3.8/site-packages/compressor/=
+base.py" in get_filename
+  159.         raise UncompressableFileError(
+
+Exception Type: UncompressableFileError at /
+Exception Value: 'libs/fontawesome/font-awesome.css' could not be found in =
+the COMPRESS_ROOT '/home/hestia/Desktop/site/static' or with staticfiles.
+Request information:
+USER: AnonymousUser
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'RJW5wuuoqokbLuCcVkBH3L3EJrXA1GmMjpD87ot2aY6jJrPJcMPP47bGiUga=
+BS2B'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'RJW5wuuoqokbLuCcVkBH3L3EJrXA1GmMjpD87ot2aY6jJrPJcMPP47bGiU=
+gaBS2B'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,*/*;q=3D0.8'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.5'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DRJW5wuuoqokbLuCcVkBH3L3EJrXA1GmMjpD87ot2aY6jJr=
+PJcMPP47bGiUgaBS2B'
+HTTP_HOST =3D '10.0.2.128'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko=
+/20100101 Firefox/93.0'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '10.0.2.128'
+REMOTE_PORT =3D '59590'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '10.0.2.128'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'ubuntu'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7fe92ce44fd0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('hestia', 'epiphyllum719@gmail.com'),)"
+ALLOWED_HOSTS =3D ['10.0.2.128']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/hestia/Desktop/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'js': ['compressor.filters.jsmin.JSMinFilter'], 'css'=
+: ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.=
+cssmin.CSSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7fe92995f820>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/hestia/Desktop/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7fe92c1ee5e0>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/hestia/Desktop/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://10.0.2.128/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://10.0.2.128/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://10.0.2.128:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'German'), ('en', 'English'), ('es', 'Spanish'), ('fr=
+', 'French'), ('hr', 'Croatian'), ('hu', 'Hungarian'), ('ja', 'Japanese'), =
+('ko', 'Korean'), ('pt', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru'=
+, 'Russian'), ('sr-latn', 'Serbian (Latin)'), ('tr', 'Turkish'), ('vi', 'Vi=
+etnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chi=
+nese')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/hestia/Desktop/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.gif', '.jpg', '.png'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DMOJ: Modern Online Judge'
+SITE_NAME =3D 'DMOJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/hestia/Desktop/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.StaticFilesStor=
+age'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/hestia/Desktop/site/static'
+STATIC_ROOT =3D '/home/hestia/Desktop/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/h=
+estia/Desktop/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_exten=
+sion': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_processors=
+': ['django.template.context_processors.media', 'django.template.context_pr=
+ocessors.tz', 'django.template.context_processors.i18n', 'django.template.c=
+ontext_processors.request', 'django.contrib.messages.context_processors.mes=
+sages', 'judge.template_context.comet_location', 'judge.template_context.ge=
+t_resource', 'judge.template_context.general_info', 'judge.template_context=
+.site', 'judge.template_context.site_name', 'judge.template_context.misc_co=
+nfig', 'judge.template_context.math_setting', 'social_django.context_proces=
+sors.backends', 'social_django.context_processors.login_redirect'], 'autoes=
+cape': <function select_autoescape.<locals>.autoescape at 0x7fe92c1b9940>, =
+'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.do',=
+ 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.exten=
+sions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension', 'd=
+jango_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.ext=
+ensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtension=
+', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinja.b=
+uiltins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ext.C=
+ompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spaceless.=
+SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Django=
+Templates', 'APP_DIRS': True, 'DIRS': ['/home/hestia/Desktop/site/templates=
+'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_process=
+ors.auth', 'django.template.context_processors.media', 'django.template.con=
+text_processors.tz', 'django.template.context_processors.i18n', 'django.tem=
+plate.context_processors.request', 'django.contrib.messages.context_process=
+ors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 188497920 bytes/179MB} {rss usage: 99176448 bytes/94MB} [pid: 63783|app: 0|req: 1/1] 10.0.2.128 () {44 vars in 752 bytes} [Fri Oct 15 04:56:59 2021] GET / => generated 926 bytes in 1839 msecs (HTTP/1.1 500) 6 headers in 349 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 04:58:46 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Fri Oct 15 04:58:46 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 21:58:46 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56430856b470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56430856b470 pid: 63915 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 63915)
+spawned uWSGI worker 1 (pid: 63921, cores: 1)
+spawned uWSGI worker 2 (pid: 63922, cores: 1)
+spawned uWSGI worker 3 (pid: 63923, cores: 1)
+spawned uWSGI worker 4 (pid: 63925, cores: 1)
+spawned uWSGI worker 5 (pid: 63926, cores: 1)
+worker 1 killed successfully (pid: 63921)
+uWSGI worker 1 cheaped.
+Fri Oct 15 04:58:50 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 63922)
+uWSGI worker 2 cheaped.
+Fri Oct 15 04:58:57 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 190488576 bytes/181MB} {rss usage: 104636416 bytes/99MB} [pid: 63925|app: 0|req: 1/1] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 04:58:57 2021] GET / => generated 18119 bytes in 1818 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 05:00:53 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Fri Oct 15 05:00:53 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 5 buried after 1 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 22:00:54 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x560d1834f470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x560d1834f470 pid: 64001 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 64001)
+spawned uWSGI worker 1 (pid: 64025, cores: 1)
+spawned uWSGI worker 2 (pid: 64026, cores: 1)
+spawned uWSGI worker 3 (pid: 64027, cores: 1)
+spawned uWSGI worker 4 (pid: 64028, cores: 1)
+spawned uWSGI worker 5 (pid: 64029, cores: 1)
+worker 1 killed successfully (pid: 64025)
+uWSGI worker 1 cheaped.
+Fri Oct 15 05:00:57 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 64026)
+uWSGI worker 2 cheaped.
+Fri Oct 15 05:01:00 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 190488576 bytes/181MB} {rss usage: 104517632 bytes/99MB} [pid: 64029|app: 0|req: 1/1] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 05:01:00 2021] GET / => generated 18119 bytes in 1796 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 190488576 bytes/181MB} {rss usage: 104517632 bytes/99MB} [pid: 64029|app: 0|req: 2/2] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 05:02:19 2021] GET / => generated 18119 bytes in 139 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Oct 15 05:02:34 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Fri Oct 15 05:02:34 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 22:02:35 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55693e05b470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55693e05b470 pid: 64269 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 64269)
+spawned uWSGI worker 1 (pid: 64293, cores: 1)
+spawned uWSGI worker 2 (pid: 64294, cores: 1)
+spawned uWSGI worker 3 (pid: 64295, cores: 1)
+spawned uWSGI worker 4 (pid: 64296, cores: 1)
+spawned uWSGI worker 5 (pid: 64297, cores: 1)
+worker 1 killed successfully (pid: 64293)
+uWSGI worker 1 cheaped.
+Fri Oct 15 05:02:38 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 64294)
+uWSGI worker 2 cheaped.
+Fri Oct 15 05:02:42 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 190500864 bytes/181MB} {rss usage: 104366080 bytes/99MB} [pid: 64297|app: 0|req: 1/1] 10.0.2.128 () {48 vars in 805 bytes} [Fri Oct 15 05:02:42 2021] GET / => generated 18119 bytes in 2333 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 190500864 bytes/181MB} {rss usage: 104366080 bytes/99MB} [pid: 64297|app: 0|req: 2/2] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 05:03:52 2021] GET / => generated 18119 bytes in 97 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+Fri Oct 15 05:04:02 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 190500864 bytes/181MB} {rss usage: 104366080 bytes/99MB} [pid: 64295|app: 0|req: 1/3] 10.0.2.128 () {48 vars in 805 bytes} [Fri Oct 15 05:04:02 2021] GET / => generated 18119 bytes in 1362 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 190500864 bytes/181MB} {rss usage: 104366080 bytes/99MB} [pid: 64295|app: 0|req: 2/4] 10.0.2.128 () {48 vars in 805 bytes} [Fri Oct 15 05:04:16 2021] GET / => generated 18119 bytes in 93 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 22:53:47 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562104f1d470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 18 seconds on interpreter 0x562104f1d470 pid: 65549 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 65549)
+spawned uWSGI worker 1 (pid: 65580, cores: 1)
+spawned uWSGI worker 2 (pid: 65581, cores: 1)
+spawned uWSGI worker 3 (pid: 65582, cores: 1)
+spawned uWSGI worker 4 (pid: 65583, cores: 1)
+spawned uWSGI worker 5 (pid: 65584, cores: 1)
+Fri Oct 15 05:54:12 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Fri Oct 15 05:54:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 1 killed successfully (pid: 65580)
+uWSGI worker 1 cheaped.
+worker 2 killed successfully (pid: 65581)
+uWSGI worker 2 cheaped.
+{address space usage: 190504960 bytes/181MB} {rss usage: 104435712 bytes/99MB} [pid: 65582|app: 0|req: 1/1] 10.0.2.128 () {46 vars in 783 bytes} [Fri Oct 15 05:54:10 2021] GET / => generated 18119 bytes in 10455 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 22:55:29 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56422802d470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 27 seconds on interpreter 0x56422802d470 pid: 65652 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 65652)
+spawned uWSGI worker 1 (pid: 65686, cores: 1)
+spawned uWSGI worker 2 (pid: 65687, cores: 1)
+spawned uWSGI worker 3 (pid: 65688, cores: 1)
+spawned uWSGI worker 4 (pid: 65689, cores: 1)
+spawned uWSGI worker 5 (pid: 65690, cores: 1)
+worker 1 killed successfully (pid: 65686)
+uWSGI worker 1 cheaped.
+Fri Oct 15 05:56:22 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 65687)
+uWSGI worker 2 cheaped.
+Fri Oct 15 05:58:22 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.128) !!!
+{address space usage: 192544768 bytes/183MB} {rss usage: 105734144 bytes/100MB} [pid: 65689|app: 0|req: 1/1] 10.0.2.128 () {44 vars in 752 bytes} [Fri Oct 15 05:58:22 2021] GET / => generated 13870 bytes in 20850 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Oct 14 23:00:25 2021] ***
+compiled with version: 9.3.0 on 15 October 2021 04:32:15
+os: Linux-5.11.0-37-generic #41~20.04.2-Ubuntu SMP Fri Sep 24 09:06:38 UTC 2021
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/hestia/Desktop/site
+writing pidfile to /home/hestia/Desktop/site/dmoj-site.pid
+detected binary path: /home/hestia/Desktop/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/hestia/Desktop/site
+your processes number limit is 15374
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/hestia/Desktop/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/hestia/Desktop/dmojsite
+Set PythonHome to /home/hestia/Desktop/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x561c9250e470
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/hestia/Desktop/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x561c9250e470 pid: 66484 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 66484)
+spawned uWSGI worker 1 (pid: 66492, cores: 1)
+spawned uWSGI worker 2 (pid: 66493, cores: 1)
+spawned uWSGI worker 3 (pid: 66494, cores: 1)
+spawned uWSGI worker 4 (pid: 66495, cores: 1)
+spawned uWSGI worker 5 (pid: 66496, cores: 1)
+worker 1 killed successfully (pid: 66492)
+uWSGI worker 1 cheaped.
+Fri Oct 15 06:00:44 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 66493)
+uWSGI worker 2 cheaped.
+Fri Oct 15 06:01:30 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 10.0.2.1) !!!
+{address space usage: 188186624 bytes/179MB} {rss usage: 102289408 bytes/97MB} [pid: 66496|app: 0|req: 1/1] 10.0.2.1 () {42 vars in 763 bytes} [Fri Oct 15 06:01:30 2021] GET / => generated 13969 bytes in 7863 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 193822720 bytes/184MB} {rss usage: 107610112 bytes/102MB} [pid: 66496|app: 0|req: 2/2] 10.0.2.1 () {46 vars in 910 bytes} [Fri Oct 15 06:01:49 2021] GET /submissions/ => generated 14185 bytes in 14574 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+/home/hestia/Desktop/site/judge/utils/diggpaginator.py:194: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'judge.models.problem.Problem'> TranslatedProblemQuerySet.
+  super(DiggPaginator, self).__init__(*args, **kwargs)
+{address space usage: 190099456 bytes/181MB} {rss usage: 104050688 bytes/99MB} [pid: 66496|app: 0|req: 3/3] 10.0.2.1 () {46 vars in 916 bytes} [Fri Oct 15 06:02:06 2021] GET /problems/ => generated 12266 bytes in 2366 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
