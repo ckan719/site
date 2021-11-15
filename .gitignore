@@ -1,6 +1,7 @@
 .idea
 .vscode
 .sass-cache
+*.log
 *.sqlite3
 *.py[co]
 *.mo
