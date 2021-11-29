@@ -589,6 +589,7 @@ class APISubmissionDetail(APILoginRequiredMixin, APIDetailView):
             'case_points': submission.case_points,
             'case_total': submission.case_total,
             'cases': cases,
+            'source' : submission.source.source,
         }
 
 

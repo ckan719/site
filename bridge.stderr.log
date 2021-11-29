@@ -1,2 +1,131 @@
 INFO 2021-10-15 04:48:59,050 daemon Exiting due to SIGINT
 INFO 2021-11-15 04:57:26,873 daemon Exiting due to SIGINT
+INFO 2021-11-15 07:17:23,116 judge_handler Judge connected from: ('127.0.0.1', 52362)
+INFO 2021-11-15 07:17:23,124 judge_handler Judge authenticated: ('127.0.0.1', 52362) (DAUJ)
+INFO 2021-11-15 07:17:29,024 judge_handler Judge disconnected from: ('127.0.0.1', 52362) with name DAUJ
+INFO 2021-11-15 07:17:34,171 judge_handler Judge connected from: ('127.0.0.1', 52368)
+INFO 2021-11-15 07:17:34,176 judge_handler Judge authenticated: ('127.0.0.1', 52368) (DAUJ)
+INFO 2021-11-15 07:17:59,239 judge_list Specified judge DAUJ is available
+INFO 2021-11-15 07:17:59,239 judge_list Dispatched submission 7 to: DAUJ
+INFO 2021-11-15 07:17:59,256 judge_handler Submission acknowledged: 7
+INFO 2021-11-15 07:18:00,774 judge_handler DAUJ: Submission generated compiler messages: 7
+INFO 2021-11-15 07:18:00,779 judge_handler DAUJ: Grading has begun on: 7
+INFO 2021-11-15 07:18:00,977 judge_handler DAUJ: 2 test case(s) completed on: 7
+INFO 2021-11-15 07:18:01,202 judge_handler DAUJ: 1 test case(s) completed on: 7
+INFO 2021-11-15 07:18:01,219 judge_handler DAUJ: Grading has ended on: 7
+INFO 2021-11-15 07:18:01,219 judge_list Judge available after grading 7: DAUJ
+INFO 2021-11-15 07:18:10,651 judge_list Free judges: 1
+INFO 2021-11-15 07:18:10,652 judge_list Dispatched submission 6 to: DAUJ
+INFO 2021-11-15 07:18:10,665 judge_handler Submission acknowledged: 6
+INFO 2021-11-15 07:18:11,995 judge_handler DAUJ: Submission generated compiler messages: 6
+INFO 2021-11-15 07:18:11,999 judge_handler DAUJ: Grading has begun on: 6
+INFO 2021-11-15 07:18:12,244 judge_handler DAUJ: 2 test case(s) completed on: 6
+INFO 2021-11-15 07:18:12,288 judge_handler DAUJ: 1 test case(s) completed on: 6
+INFO 2021-11-15 07:18:12,311 judge_handler DAUJ: Grading has ended on: 6
+INFO 2021-11-15 07:18:12,311 judge_list Judge available after grading 6: DAUJ
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 52368)
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1927, 'Connection was killed')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.8/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/home/nhat/Desktop/dmoj/site/judge/bridge/base_handler.py", line 49, in __call__
+    handler.on_disconnect()
+  File "/home/nhat/Desktop/dmoj/site/judge/bridge/judge_handler.py", line 89, in on_disconnect
+    self._disconnected()
+  File "/home/nhat/Desktop/dmoj/site/judge/bridge/judge_handler.py", line 132, in _disconnected
+    Judge.objects.filter(id=self.judge.id).update(online=False)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 741, in update
+    rows = query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1471, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1927, 'Connection was killed')
+----------------------------------------
+INFO 2021-11-15 07:33:10,034 daemon Exiting due to SIGINT
+INFO 2021-11-15 07:35:20,206 judge_handler Judge connected from: ('127.0.0.1', 57364)
+INFO 2021-11-15 07:35:20,210 judge_handler Judge authenticated: ('127.0.0.1', 57364) (DAUJ)
+INFO 2021-11-15 08:03:27,410 judge_handler Judge disconnected from: ('127.0.0.1', 57364) with name DAUJ
+INFO 2021-11-15 10:27:10,456 daemon Exiting due to SIGINT
+INFO 2021-11-16 05:15:29,845 daemon Exiting due to SIGINT
+INFO 2021-11-16 09:00:55,030 daemon Exiting due to SIGINT
+INFO 2021-11-16 10:24:33,524 daemon Exiting due to SIGINT
+INFO 2021-11-17 02:03:34,871 daemon Exiting due to SIGINT
+INFO 2021-11-17 06:38:27,407 daemon Exiting due to SIGINT
+INFO 2021-11-17 10:31:01,268 daemon Exiting due to SIGINT
+INFO 2021-11-18 06:36:22,825 daemon Exiting due to SIGINT
+INFO 2021-11-18 07:06:49,390 judge_handler Judge connected from: ('127.0.0.1', 38510)
+INFO 2021-11-18 07:06:49,395 judge_handler Judge authenticated: ('127.0.0.1', 38510) (DAUJ)
+INFO 2021-11-18 07:08:24,811 judge_list Specified judge DAUJ is available
+INFO 2021-11-18 07:08:24,811 judge_list Dispatched submission 8 to: DAUJ
+INFO 2021-11-18 07:08:24,820 judge_handler Submission acknowledged: 8
+INFO 2021-11-18 07:08:26,403 judge_handler DAUJ: Submission generated compiler messages: 8
+INFO 2021-11-18 07:08:26,411 judge_handler DAUJ: Grading has begun on: 8
+INFO 2021-11-18 07:08:26,625 judge_handler DAUJ: 2 test case(s) completed on: 8
+INFO 2021-11-18 07:08:26,675 judge_handler DAUJ: 1 test case(s) completed on: 8
+INFO 2021-11-18 07:08:26,688 judge_handler DAUJ: Grading has ended on: 8
+INFO 2021-11-18 07:08:26,688 judge_list Judge available after grading 8: DAUJ
+INFO 2021-11-18 07:10:54,736 judge_list Free judges: 1
+INFO 2021-11-18 07:10:54,736 judge_list Dispatched submission 9 to: DAUJ
+INFO 2021-11-18 07:10:54,744 judge_handler Submission acknowledged: 9
+INFO 2021-11-18 07:10:55,896 judge_handler DAUJ: Submission failed to compile: 9
+INFO 2021-11-18 07:10:55,897 judge_list Judge available after grading 9: DAUJ
+INFO 2021-11-18 07:11:10,177 judge_list Free judges: 1
+INFO 2021-11-18 07:11:10,177 judge_list Dispatched submission 10 to: DAUJ
+INFO 2021-11-18 07:11:10,186 judge_handler Submission acknowledged: 10
+INFO 2021-11-18 07:11:11,392 judge_handler DAUJ: Submission generated compiler messages: 10
+INFO 2021-11-18 07:11:11,400 judge_handler DAUJ: Grading has begun on: 10
+INFO 2021-11-18 07:11:11,597 judge_handler DAUJ: 2 test case(s) completed on: 10
+INFO 2021-11-18 07:11:11,653 judge_handler DAUJ: 1 test case(s) completed on: 10
+INFO 2021-11-18 07:11:11,666 judge_handler DAUJ: Grading has ended on: 10
+INFO 2021-11-18 07:11:11,666 judge_list Judge available after grading 10: DAUJ
+INFO 2021-11-18 09:28:53,253 judge_handler Judge disconnected from: ('127.0.0.1', 38510) with name DAUJ
+INFO 2021-11-18 10:29:14,429 daemon Exiting due to SIGINT
+INFO 2021-11-19 05:38:13,793 daemon Exiting due to SIGINT
+INFO 2021-11-19 09:13:31,593 daemon Exiting due to SIGINT
+INFO 2021-11-19 10:13:56,835 daemon Exiting due to SIGINT
+INFO 2021-11-22 03:20:59,383 daemon Exiting due to SIGINT
+INFO 2021-11-22 07:04:33,054 daemon Exiting due to SIGINT
+INFO 2021-11-22 08:29:18,700 daemon Exiting due to SIGINT
+INFO 2021-11-22 10:21:05,183 daemon Exiting due to SIGINT
+INFO 2021-11-23 10:08:22,270 daemon Exiting due to SIGINT
+INFO 2021-11-24 10:26:13,500 daemon Exiting due to SIGINT
+INFO 2021-11-25 10:33:53,039 daemon Exiting due to SIGINT
+INFO 2021-11-26 10:30:14,546 daemon Exiting due to SIGINT
+INFO 2021-11-29 07:28:53,485 judge_list Free judges: 0
+INFO 2021-11-29 07:28:53,552 judge_list Queued submission: 10

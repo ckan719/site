@@ -1,0 +1,285 @@
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRNOTAVAIL: address not available 192.168.1.39:15100
+    at Server.setupListenHandle [as _listen2] (net.js:1299:21)
+    at listenInCluster (net.js:1364:12)
+    at doListen (net.js:1501:7)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+Emitted 'error' event on WebSocketServer instance at:
+    at Server.emit (events.js:314:20)
+    at emitErrorNT (net.js:1343:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'EADDRNOTAVAIL',
+  errno: 'EADDRNOTAVAIL',
+  syscall: 'listen',
+  address: '192.168.1.39',
+  port: 15100
+}

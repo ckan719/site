@@ -1,7 +1,9 @@
 import json
+import re
 from collections import namedtuple
 from itertools import groupby
 from operator import attrgetter
+from diff_match_patch import diff_match_patch
 
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -77,6 +79,31 @@ class SubmissionSource(SubmissionDetailBase):
         submission = self.object
         context['raw_source'] = submission.source.source.rstrip('\n')
         context['highlighted_source'] = highlight_code(submission.source.source, submission.language.pygments)
+        return context
+
+class SimulationDetail(SubmissionDetailBase):
+    template_name = 'submission/simulation.html'
+
+    def get_queryset(self):
+        return super().get_queryset().select_related('source')
+    def get_context_data(self, **kwargs):
+        context = super(SimulationDetail, self).get_context_data(**kwargs)
+        submission = self.object
+        context['raw_source'] = submission.source.source.rstrip('\n')
+        context['highlighted_source'] = highlight_code(submission.source.source, submission.language.pygments)
+        list_diff = []
+        arr = Submission.objects.all()
+        for x in arr:
+            if x.user != submission.user :
+                s = str(x.source.source)
+                dmp = diff_match_patch()
+                text1 = submission.source.source
+                diff = dmp.diff_main(text1, s)
+                idiff = dmp.diff_levenshtein(diff)
+                per = 100 - (idiff / max(len(text1), len(s))*100)
+                x.simulation = float("{:.2f}".format(per))
+                list_diff.append(x)
+        context['allsm'] = list_diff
         return context
 
 
@@ -170,6 +197,7 @@ class SubmissionSourceRaw(SubmissionSource):
     def get(self, request, *args, **kwargs):
         submission = self.get_object()
         return HttpResponse(submission.source.source, content_type='text/plain')
+
 
 
 @require_POST

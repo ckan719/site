@@ -13,11 +13,11 @@
 SECRET_KEY = 'df&)ok{ZL^6Up$\y2*">LqHx:D,_f_of#P,~}n&\zs*:y{OTU4CueQNrMz1UH*mhocD'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # Change to False once you are done with runserver testing.
+DEBUG = True  # Change to False once you are done with runserver testing.
 
 # Uncomment and set to the domain names this site is intended to serve.
 # You must do this once you set DEBUG to False.
-ALLOWED_HOSTS = ['192.168.1.39', 'dauj.edu.com']
+# ALLOWED_HOSTS = ['192.168.1.39', 'dauj.edu.com']
 
 # Optional apps that DMOJ can make use of.
 INSTALLED_APPS += (
@@ -135,8 +135,8 @@ STATIC_URL = '/static/'
 ############################################
 
 ## DMOJ site display settings.
-SITE_NAME = 'DMOJ'
-SITE_LONG_NAME = 'DMOJ: Modern Online Judge'
+SITE_NAME = 'DAUJ'
+SITE_LONG_NAME = 'DAUJ: Da Nang Architecture University'
 SITE_ADMIN_EMAIL = 'admin@example.com'
 TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
 
