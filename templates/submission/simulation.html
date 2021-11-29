@@ -22,7 +22,7 @@
 
 {% block body %}
     <br>
-    <h2>Simulation id <a href="{{ url('submission_status', submission.id) }}">{{submission.id}}</a> of user <a href="{{ url('user_page', submission.user) }}">{{submission.user}}</a></h2>
+    <h2>Similar id <a href="{{ url('submission_status', submission.id) }}">{{submission.id}}</a> of user <a href="{{ url('user_page', submission.user) }}">{{submission.user}}</a></h2>
     <br>
     <div id="submissions-table">
         {% set profile_id = request.profile.id if request.user.is_authenticated else 0 %}
