@@ -13,11 +13,11 @@
 SECRET_KEY = 'df&)ok{ZL^6Up$\y2*">LqHx:D,_f_of#P,~}n&\zs*:y{OTU4CueQNrMz1UH*mhocD'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # Change to False once you are done with runserver testing.
+DEBUG = False  # Change to False once you are done with runserver testing.
 
 # Uncomment and set to the domain names this site is intended to serve.
 # You must do this once you set DEBUG to False.
-# ALLOWED_HOSTS = ['192.168.1.39', 'dauj.edu.com']
+ALLOWED_HOSTS = ['192.168.1.39', 'dauj.edu.com']
 
 # Optional apps that DMOJ can make use of.
 INSTALLED_APPS += (
@@ -83,12 +83,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # The following block is included for your convenience, if you want
 # to use Gmail.
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_USE_TLS = True
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = '<your account>@gmail.com'
-#EMAIL_HOST_PASSWORD = '<your password>'
-#EMAIL_PORT = 587
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = 587
 
 # To use Mailgun, uncomment this block.
 # You will need to run `pip install django-mailgun` for to get `MailgunBackend`.

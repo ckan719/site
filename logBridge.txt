@@ -77,3 +77,10 @@ INFO 2021-11-25 10:33:53,039 daemon Exiting due to SIGINT
 INFO 2021-11-26 10:30:14,546 daemon Exiting due to SIGINT
 INFO 2021-11-29 07:28:53,485 judge_list Free judges: 0
 INFO 2021-11-29 07:28:53,552 judge_list Queued submission: 10
+INFO 2021-11-29 10:28:35,637 daemon Exiting due to SIGINT
+INFO 2021-11-30 04:03:17,068 judge_handler Judge connected from: ('127.0.0.1', 34594)
+INFO 2021-11-30 04:03:17,134 judge_handler Judge authenticated: ('127.0.0.1', 34594) (DAUJ)
+INFO 2021-11-30 04:06:16,970 judge_handler Judge disconnected from: ('127.0.0.1', 34594) with name DAUJ
+INFO 2021-11-30 07:07:57,378 judge_handler Judge connected from: ('127.0.0.1', 37706)
+INFO 2021-11-30 07:07:57,383 judge_handler Judge authenticated: ('127.0.0.1', 37706) (DAUJ)
+INFO 2021-11-30 07:23:24,024 judge_handler Judge disconnected from: ('127.0.0.1', 37706) with name DAUJ
