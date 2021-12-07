@@ -18,3 +18,4 @@ from judge.bridge.daemon import judge_daemon  # noqa: E402, I100, I202, django c
 
 if __name__ == '__main__':
     judge_daemon()
+    

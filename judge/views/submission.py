@@ -18,6 +18,7 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import gettext as _, gettext_lazy
 from django.views.decorators.http import require_POST
 from django.views.generic import DetailView, ListView
+from diff_match_patch import diff_match_patch
 
 from judge import event_poster as event
 from judge.highlight_code import highlight_code
@@ -25,8 +26,6 @@ from judge.models import Contest, Language, Problem, ProblemTranslation, Profile
 from judge.utils.problems import get_result_data, user_completed_ids, user_editable_ids, user_tester_ids
 from judge.utils.raw_sql import join_sql_subquery, use_straight_join
 from judge.utils.views import DiggPaginatorMixin, TitleMixin
-
-from diff_match_patch import diff_match_patch
 
 
 def submission_related(queryset):
