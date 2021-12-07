@@ -91,6 +91,7 @@ class TranslatedProblemForeignKeyQuerySet(QuerySet):
                                 output_field=models.CharField())}
         return queryset.annotate(**kwargs)
 
+
 class Problem(models.Model):
     code = models.CharField(max_length=20, verbose_name=_('problem code'), unique=True,
                             validators=[RegexValidator('^[a-z0-9]+$', _('Problem code must be ^[a-z0-9]+$'))],

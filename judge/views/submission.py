@@ -1,9 +1,7 @@
 import json
-import re
 from collections import namedtuple
 from itertools import groupby
 from operator import attrgetter
-from diff_match_patch import diff_match_patch
 
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -27,6 +25,8 @@ from judge.models import Contest, Language, Problem, ProblemTranslation, Profile
 from judge.utils.problems import get_result_data, user_completed_ids, user_editable_ids, user_tester_ids
 from judge.utils.raw_sql import join_sql_subquery, use_straight_join
 from judge.utils.views import DiggPaginatorMixin, TitleMixin
+
+from diff_match_patch import diff_match_patch
 
 
 def submission_related(queryset):
@@ -81,11 +81,13 @@ class SubmissionSource(SubmissionDetailBase):
         context['highlighted_source'] = highlight_code(submission.source.source, submission.language.pygments)
         return context
 
+
 class SimulationDetail(SubmissionDetailBase):
     template_name = 'submission/simulation.html'
 
     def get_queryset(self):
         return super().get_queryset().select_related('source')
+
     def get_context_data(self, **kwargs):
         context = super(SimulationDetail, self).get_context_data(**kwargs)
         submission = self.object
@@ -94,13 +96,13 @@ class SimulationDetail(SubmissionDetailBase):
         list_diff = []
         arr = Submission.objects.all()
         for x in arr:
-            if x.user != submission.user :
+            if x.user != submission.user:
                 s = str(x.source.source)
                 dmp = diff_match_patch()
                 text1 = submission.source.source
                 diff = dmp.diff_main(text1, s)
                 idiff = dmp.diff_levenshtein(diff)
-                per = 100 - (idiff / max(len(text1), len(s))*100)
+                per = 100 - (idiff / max(len(text1), len(s)) * 100)
                 x.simulation = float("{:.2f}".format(per))
                 list_diff.append(x)
         context['allsm'] = list_diff
@@ -197,7 +199,6 @@ class SubmissionSourceRaw(SubmissionSource):
     def get(self, request, *args, **kwargs):
         submission = self.get_object()
         return HttpResponse(submission.source.source, content_type='text/plain')
-
 
 
 @require_POST
