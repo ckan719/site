@@ -3,6 +3,7 @@ from collections import namedtuple
 from itertools import groupby
 from operator import attrgetter
 
+from diff_match_patch import diff_match_patch
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.cache import cache
@@ -18,7 +19,7 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import gettext as _, gettext_lazy
 from django.views.decorators.http import require_POST
 from django.views.generic import DetailView, ListView
-from diff_match_patch import diff_match_patch
+
 
 from judge import event_poster as event
 from judge.highlight_code import highlight_code
