@@ -4311,6 +4311,10 @@ msgstr "Ön testleri geçmek sistem testlerinde tam puan almayı garantilemez."
 msgid "Submission aborted!"
 msgstr "Çözüm iptal edildi!"
 
+#: templates/submission/status.html:64
+msgid "View Simular"
+msgstr ""
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr "Kaynağı görüntüle"

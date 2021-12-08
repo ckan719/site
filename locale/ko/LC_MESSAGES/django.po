@@ -4286,6 +4286,10 @@ msgstr ""
 msgid "Submission aborted!"
 msgstr ""
 
+#: templates/submission/status.html:64
+msgid "View Simular"
+msgstr ""
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr ""

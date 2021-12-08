@@ -4292,6 +4292,10 @@ msgstr "通过预测试不代表程序可以通过完整测试。"
 msgid "Submission aborted!"
 msgstr "评分终止！"
 
+#: templates/submission/status.html:64
+msgid "View Simular"
+msgstr ""
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr "查看源代码"

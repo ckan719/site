@@ -4293,6 +4293,10 @@ msgstr "予備テストに通過したことは、システムテストでの満
 msgid "Submission aborted!"
 msgstr "提出が中断された！"
 
+#: templates/submission/status.html:64
+msgid "View Simular"
+msgstr ""
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr "ソースを表示する"
