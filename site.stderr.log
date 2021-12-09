@@ -12308,3 +12308,2889 @@ cheaper hard rss memory limit exceeded, cheap one of 3 workers
 worker 3 killed successfully (pid: 27472)
 uWSGI worker 3 cheaped.
 {address space usage: 206864384 bytes/197MB} {rss usage: 110297088 bytes/105MB} [pid: 27474|app: 0|req: 5/8] 192.168.1.39 () {46 vars in 894 bytes} [Wed Dec  8 07:42:23 2021] GET /simulation/1 => generated 11190 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Dec  9 08:06:08 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55e1ef9bb120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x55e1ef9bb120 pid: 1761 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1761)
+spawned uWSGI worker 1 (pid: 2728, cores: 1)
+spawned uWSGI worker 2 (pid: 2729, cores: 1)
+spawned uWSGI worker 3 (pid: 2730, cores: 1)
+spawned uWSGI worker 4 (pid: 2731, cores: 1)
+spawned uWSGI worker 5 (pid: 2732, cores: 1)
+worker 1 killed successfully (pid: 2728)
+uWSGI worker 1 cheaped.
+Thu Dec  9 01:06:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 2729)
+uWSGI worker 2 cheaped.
+Thu Dec  9 01:24:03 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.39) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: nhat_1751220075@dau.edu.vn
+Date: Thu, 09 Dec 2021 01:24:04 -0000
+Message-ID: <163901304466.2731.446579183145546114@nhat-Latitude-E6440>
+
+Internal Server Error: /
+
+ValueError at /
+The file 'style.3d1641c5cf1c.css' could not be found with <django.contrib.s=
+taticfiles.storage.CachedStaticFilesStorage object at 0x7f0fe1b638e0>.
+
+Request Method: GET
+Request URL: http://192.168.1.39/
+Django Version: 2.2.24
+Python Executable: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/nhat/Desktop/dmoj/site', '/home/nhat/Desktop/dmoj/site=
+/', '.', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/pytho=
+n3.8/lib-dynload', '/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-pac=
+kages', '/home/nhat/Desktop/dmoj/dmojsite/src/django-sortedm2m', '/home/nha=
+t/Desktop/dmoj/dmojsite/src/dmoj-wpadmin', '/home/nhat/Desktop/dmoj/dmojsit=
+e/src/ansi2html', '/home/nhat/Desktop/dmoj/dmojsite/src/martor']
+Server time: Th=E1=BB=A9 5, 9 Th=C3=A1ng 12 2021 08:24:04 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in render
+  1291.             self.environment.handle_exception()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/nhat/Desktop/dmoj/site/templates/home.html" in top-level templa=
+te code
+  1. {% extends "blog/list.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/blog/list.html" in top-level t=
+emplate code
+  1. {% extends "base.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in top-level templa=
+te code
+  50.     {% compress css %}
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress
+  79.         original_content =3D caller()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/r=
+untime.py" in _invoke
+  828.         rv =3D self._func(*arguments)
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in template
+  51.         <link rel=3D"stylesheet" href=3D"{{ static('style.css') }}">
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/builtins/extensions.py" in _static
+  169.         return staticfiles_storage.url(path)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in url
+  153.         return self._url(self.stored_name, name, force)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in _url
+  132.                 hashed_name =3D hashed_name_func(*args)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in stored_name
+  356.                 self.hashed_name(name, content=3DNone, filename=3Din=
+termediate_name)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in hashed_name
+  93.                 raise ValueError("The file '%s' could not be found wi=
+th %r." % (filename, self))
+
+Exception Type: ValueError at /
+Exception Value: The file 'style.3d1641c5cf1c.css' could not be found with =
+<django.contrib.staticfiles.storage.CachedStaticFilesStorage object at 0x7f=
+0fe1b638e0>.
+Request information:
+USER: nhat
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxyAM=
+Oxuc'
+sessionid =3D 'bprzq5x0zza88p1ore35zaiu1nkjji0s'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxy=
+AMOxuc'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,image/apng,*/*;q=3D0.8,application/signed-exchange;v=3D=
+b3;q=3D0.9'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.9'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DKWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56=
+Xt3mgwi1IWxyAMOxuc; sessionid=3Dbprzq5x0zza88p1ore35zaiu1nkjji0s'
+HTTP_HOST =3D '192.168.1.39'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KH=
+TML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '192.168.1.39'
+REMOTE_PORT =3D '40754'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '192.168.1.39'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'nhat-Latitude-E6440'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7f0fe83421b0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('nhat', 'nhat_1751220075@dau.edu.vn'),)"
+ALLOWED_HOSTS =3D ['192.168.1.39', 'dauj.edu.com']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/nhat/Desktop/dmoj/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'js': ['compressor.filters.jsmin.JSMinFilter'], 'css'=
+: ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.=
+cssmin.CSSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7f0fe46f1430>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7f0fe76d7790>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/nhat/Desktop/dmoj/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://192.168.1.39/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://192.168.1.39/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://192.168.1.39:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'Ti=E1=BA=BFng =C4=90=E1=BB=A9c'), ('en', 'Ti=E1=BA=
+=BFng Anh'), ('es', 'Ti=E1=BA=BFng T=C3=A2y Ban Nha'), ('fr', 'Ti=E1=BA=BFn=
+g Ph=C3=A1p'), ('hr', 'Ti=E1=BA=BFng Croatia'), ('hu', 'Ti=E1=BA=BFng Hung-=
+ga-ri'), ('ja', 'Ti=E1=BA=BFng Nh=E1=BA=ADt B=E1=BA=A3n'), ('ko', 'Ti=E1=BA=
+=BFng H=C3=A0n Qu=E1=BB=91c'), ('pt', 'Ti=E1=BA=BFng Braxin-B=E1=BB=93 =C4=
+=90=C3=A0o Nha'), ('ro', 'Ti=E1=BA=BFng Romania'), ('ru', 'Ti=E1=BA=BFng Ng=
+a'), ('sr-latn', 'Ti=E1=BA=BFng S=C3=A9c-bi (Latin)'), ('tr', 'Ti=E1=BA=BFn=
+g Th=E1=BB=95 Nh=C4=A9 K=E1=BB=B3'), ('vi', 'Ti=E1=BA=BFng Vi=E1=BB=87t'), =
+('zh-hans', 'Ti=E1=BA=BFng Trung (Gi=E1=BA=A3n th=E1=BB=83)'), ('zh-hant', =
+'Ti=E1=BA=BFng Trung ph=E1=BB=93n th=E1=BB=83')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/nhat/Desktop/dmoj/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.gif', '.jpg', '.png'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DAUJ: Da Nang Architecture University'
+SITE_NAME =3D 'DAUJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/nhat/Desktop/dmoj/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.CachedStaticFil=
+esStorage'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/n=
+hat/Desktop/dmoj/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_ex=
+tension': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_process=
+ors': ['django.template.context_processors.media', 'django.template.context=
+_processors.tz', 'django.template.context_processors.i18n', 'django.templat=
+e.context_processors.request', 'django.contrib.messages.context_processors.=
+messages', 'judge.template_context.comet_location', 'judge.template_context=
+.get_resource', 'judge.template_context.general_info', 'judge.template_cont=
+ext.site', 'judge.template_context.site_name', 'judge.template_context.misc=
+_config', 'judge.template_context.math_setting', 'social_django.context_pro=
+cessors.backends', 'social_django.context_processors.login_redirect'], 'aut=
+oescape': <function select_autoescape.<locals>.autoescape at 0x7f0fe762fca0=
+>, 'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.d=
+o', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.ex=
+tensions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension',=
+ 'django_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.=
+extensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtens=
+ion', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinj=
+a.builtins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ex=
+t.CompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spacele=
+ss.SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Dja=
+ngoTemplates', 'APP_DIRS': True, 'DIRS': ['/home/nhat/Desktop/dmoj/site/tem=
+plates'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_p=
+rocessors.auth', 'django.template.context_processors.media', 'django.templa=
+te.context_processors.tz', 'django.template.context_processors.i18n', 'djan=
+go.template.context_processors.request', 'django.contrib.messages.context_p=
+rocessors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 200413184 bytes/191MB} {rss usage: 103096320 bytes/98MB} [pid: 2731|app: 0|req: 1/1] 192.168.1.39 () {44 vars in 880 bytes} [Thu Dec  9 01:24:03 2021] GET / => generated 4854 bytes in 1050 msecs (HTTP/1.1 500) 6 headers in 350 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Thu Dec  9 01:24:53 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Thu Dec  9 01:24:53 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Dec  9 08:24:53 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5642466d5120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5642466d5120 pid: 8807 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8807)
+spawned uWSGI worker 1 (pid: 8826, cores: 1)
+spawned uWSGI worker 2 (pid: 8827, cores: 1)
+spawned uWSGI worker 3 (pid: 8828, cores: 1)
+spawned uWSGI worker 4 (pid: 8829, cores: 1)
+spawned uWSGI worker 5 (pid: 8830, cores: 1)
+worker 1 killed successfully (pid: 8826)
+uWSGI worker 1 cheaped.
+Thu Dec  9 01:24:57 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 8827)
+uWSGI worker 2 cheaped.
+Thu Dec  9 01:25:15 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.39) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: nhat_1751220075@dau.edu.vn
+Date: Thu, 09 Dec 2021 01:25:16 -0000
+Message-ID: <163901311641.8829.6861468152464650273@nhat-Latitude-E6440>
+
+Internal Server Error: /
+
+ValueError at /
+The file 'style.3d1641c5cf1c.css' could not be found with <django.contrib.s=
+taticfiles.storage.CachedStaticFilesStorage object at 0x7f7aab35c8e0>.
+
+Request Method: GET
+Request URL: http://192.168.1.39/
+Django Version: 2.2.24
+Python Executable: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/nhat/Desktop/dmoj/site', '/home/nhat/Desktop/dmoj/site=
+/', '.', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/pytho=
+n3.8/lib-dynload', '/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-pac=
+kages', '/home/nhat/Desktop/dmoj/dmojsite/src/django-sortedm2m', '/home/nha=
+t/Desktop/dmoj/dmojsite/src/dmoj-wpadmin', '/home/nhat/Desktop/dmoj/dmojsit=
+e/src/ansi2html', '/home/nhat/Desktop/dmoj/dmojsite/src/martor']
+Server time: Th=E1=BB=A9 5, 9 Th=C3=A1ng 12 2021 08:25:16 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in render
+  1291.             self.environment.handle_exception()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/nhat/Desktop/dmoj/site/templates/home.html" in top-level templa=
+te code
+  1. {% extends "blog/list.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/blog/list.html" in top-level t=
+emplate code
+  1. {% extends "base.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in top-level templa=
+te code
+  50.     {% compress css %}
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress
+  79.         original_content =3D caller()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/r=
+untime.py" in _invoke
+  828.         rv =3D self._func(*arguments)
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in template
+  51.         <link rel=3D"stylesheet" href=3D"{{ static('style.css') }}">
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/builtins/extensions.py" in _static
+  169.         return staticfiles_storage.url(path)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in url
+  153.         return self._url(self.stored_name, name, force)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in _url
+  132.                 hashed_name =3D hashed_name_func(*args)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in stored_name
+  356.                 self.hashed_name(name, content=3DNone, filename=3Din=
+termediate_name)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in hashed_name
+  93.                 raise ValueError("The file '%s' could not be found wi=
+th %r." % (filename, self))
+
+Exception Type: ValueError at /
+Exception Value: The file 'style.3d1641c5cf1c.css' could not be found with =
+<django.contrib.staticfiles.storage.CachedStaticFilesStorage object at 0x7f=
+7aab35c8e0>.
+Request information:
+USER: nhat
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxyAM=
+Oxuc'
+sessionid =3D 'bprzq5x0zza88p1ore35zaiu1nkjji0s'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxy=
+AMOxuc'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,image/apng,*/*;q=3D0.8,application/signed-exchange;v=3D=
+b3;q=3D0.9'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.9'
+HTTP_CACHE_CONTROL =3D 'max-age=3D0'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DKWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56=
+Xt3mgwi1IWxyAMOxuc; sessionid=3Dbprzq5x0zza88p1ore35zaiu1nkjji0s'
+HTTP_HOST =3D '192.168.1.39'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KH=
+TML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '192.168.1.39'
+REMOTE_PORT =3D '40784'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '192.168.1.39'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'nhat-Latitude-E6440'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7f7ab1b3b1b0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('nhat', 'nhat_1751220075@dau.edu.vn'),)"
+ALLOWED_HOSTS =3D ['192.168.1.39', 'dauj.edu.com']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/nhat/Desktop/dmoj/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'js': ['compressor.filters.jsmin.JSMinFilter'], 'css'=
+: ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.=
+cssmin.CSSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7f7aadeea430>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7f7ab0ec7790>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/nhat/Desktop/dmoj/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://192.168.1.39/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://192.168.1.39/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://192.168.1.39:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'Ti=E1=BA=BFng =C4=90=E1=BB=A9c'), ('en', 'Ti=E1=BA=
+=BFng Anh'), ('es', 'Ti=E1=BA=BFng T=C3=A2y Ban Nha'), ('fr', 'Ti=E1=BA=BFn=
+g Ph=C3=A1p'), ('hr', 'Ti=E1=BA=BFng Croatia'), ('hu', 'Ti=E1=BA=BFng Hung-=
+ga-ri'), ('ja', 'Ti=E1=BA=BFng Nh=E1=BA=ADt B=E1=BA=A3n'), ('ko', 'Ti=E1=BA=
+=BFng H=C3=A0n Qu=E1=BB=91c'), ('pt', 'Ti=E1=BA=BFng Braxin-B=E1=BB=93 =C4=
+=90=C3=A0o Nha'), ('ro', 'Ti=E1=BA=BFng Romania'), ('ru', 'Ti=E1=BA=BFng Ng=
+a'), ('sr-latn', 'Ti=E1=BA=BFng S=C3=A9c-bi (Latin)'), ('tr', 'Ti=E1=BA=BFn=
+g Th=E1=BB=95 Nh=C4=A9 K=E1=BB=B3'), ('vi', 'Ti=E1=BA=BFng Vi=E1=BB=87t'), =
+('zh-hans', 'Ti=E1=BA=BFng Trung (Gi=E1=BA=A3n th=E1=BB=83)'), ('zh-hant', =
+'Ti=E1=BA=BFng Trung ph=E1=BB=93n th=E1=BB=83')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/nhat/Desktop/dmoj/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.gif', '.jpg', '.png'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DAUJ: Da Nang Architecture University'
+SITE_NAME =3D 'DAUJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/nhat/Desktop/dmoj/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.CachedStaticFil=
+esStorage'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/n=
+hat/Desktop/dmoj/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_ex=
+tension': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_process=
+ors': ['django.template.context_processors.media', 'django.template.context=
+_processors.tz', 'django.template.context_processors.i18n', 'django.templat=
+e.context_processors.request', 'django.contrib.messages.context_processors.=
+messages', 'judge.template_context.comet_location', 'judge.template_context=
+.get_resource', 'judge.template_context.general_info', 'judge.template_cont=
+ext.site', 'judge.template_context.site_name', 'judge.template_context.misc=
+_config', 'judge.template_context.math_setting', 'social_django.context_pro=
+cessors.backends', 'social_django.context_processors.login_redirect'], 'aut=
+oescape': <function select_autoescape.<locals>.autoescape at 0x7f7ab0e28ca0=
+>, 'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.d=
+o', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.ex=
+tensions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension',=
+ 'django_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.=
+extensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtens=
+ion', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinj=
+a.builtins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ex=
+t.CompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spacele=
+ss.SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Dja=
+ngoTemplates', 'APP_DIRS': True, 'DIRS': ['/home/nhat/Desktop/dmoj/site/tem=
+plates'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_p=
+rocessors.auth', 'django.template.context_processors.media', 'django.templa=
+te.context_processors.tz', 'django.template.context_processors.i18n', 'djan=
+go.template.context_processors.request', 'django.contrib.messages.context_p=
+rocessors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 200413184 bytes/191MB} {rss usage: 102891520 bytes/98MB} [pid: 8829|app: 0|req: 1/1] 192.168.1.39 () {46 vars in 911 bytes} [Thu Dec  9 01:25:15 2021] GET / => generated 4854 bytes in 959 msecs (HTTP/1.1 500) 6 headers in 350 bytes (1 switches on core 0)
+Thu Dec  9 01:25:18 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.39) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: nhat_1751220075@dau.edu.vn
+Date: Thu, 09 Dec 2021 01:25:19 -0000
+Message-ID: <163901311965.8830.12819982361248697914@nhat-Latitude-E6440>
+
+Internal Server Error: /
+
+ValueError at /
+The file 'style.3d1641c5cf1c.css' could not be found with <django.contrib.s=
+taticfiles.storage.CachedStaticFilesStorage object at 0x7f7aab35c8e0>.
+
+Request Method: GET
+Request URL: http://192.168.1.39/
+Django Version: 2.2.24
+Python Executable: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/nhat/Desktop/dmoj/site', '/home/nhat/Desktop/dmoj/site=
+/', '.', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/pytho=
+n3.8/lib-dynload', '/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-pac=
+kages', '/home/nhat/Desktop/dmoj/dmojsite/src/django-sortedm2m', '/home/nha=
+t/Desktop/dmoj/dmojsite/src/dmoj-wpadmin', '/home/nhat/Desktop/dmoj/dmojsit=
+e/src/ansi2html', '/home/nhat/Desktop/dmoj/dmojsite/src/martor']
+Server time: Th=E1=BB=A9 5, 9 Th=C3=A1ng 12 2021 08:25:19 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in render
+  1291.             self.environment.handle_exception()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/nhat/Desktop/dmoj/site/templates/home.html" in top-level templa=
+te code
+  1. {% extends "blog/list.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/blog/list.html" in top-level t=
+emplate code
+  1. {% extends "base.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in top-level templa=
+te code
+  50.     {% compress css %}
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress
+  79.         original_content =3D caller()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/r=
+untime.py" in _invoke
+  828.         rv =3D self._func(*arguments)
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in template
+  51.         <link rel=3D"stylesheet" href=3D"{{ static('style.css') }}">
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/builtins/extensions.py" in _static
+  169.         return staticfiles_storage.url(path)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in url
+  153.         return self._url(self.stored_name, name, force)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in _url
+  132.                 hashed_name =3D hashed_name_func(*args)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in stored_name
+  356.                 self.hashed_name(name, content=3DNone, filename=3Din=
+termediate_name)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in hashed_name
+  93.                 raise ValueError("The file '%s' could not be found wi=
+th %r." % (filename, self))
+
+Exception Type: ValueError at /
+Exception Value: The file 'style.3d1641c5cf1c.css' could not be found with =
+<django.contrib.staticfiles.storage.CachedStaticFilesStorage object at 0x7f=
+7aab35c8e0>.
+Request information:
+USER: nhat
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxyAM=
+Oxuc'
+sessionid =3D 'bprzq5x0zza88p1ore35zaiu1nkjji0s'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxy=
+AMOxuc'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,image/apng,*/*;q=3D0.8,application/signed-exchange;v=3D=
+b3;q=3D0.9'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.9'
+HTTP_CACHE_CONTROL =3D 'max-age=3D0'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DKWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56=
+Xt3mgwi1IWxyAMOxuc; sessionid=3Dbprzq5x0zza88p1ore35zaiu1nkjji0s'
+HTTP_HOST =3D '192.168.1.39'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KH=
+TML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '192.168.1.39'
+REMOTE_PORT =3D '40784'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '192.168.1.39'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'nhat-Latitude-E6440'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7f7ab1b3b1b0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('nhat', 'nhat_1751220075@dau.edu.vn'),)"
+ALLOWED_HOSTS =3D ['192.168.1.39', 'dauj.edu.com']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/nhat/Desktop/dmoj/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'js': ['compressor.filters.jsmin.JSMinFilter'], 'css'=
+: ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.=
+cssmin.CSSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7f7aadeea430>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7f7ab0ec7790>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/nhat/Desktop/dmoj/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://192.168.1.39/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://192.168.1.39/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://192.168.1.39:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'Ti=E1=BA=BFng =C4=90=E1=BB=A9c'), ('en', 'Ti=E1=BA=
+=BFng Anh'), ('es', 'Ti=E1=BA=BFng T=C3=A2y Ban Nha'), ('fr', 'Ti=E1=BA=BFn=
+g Ph=C3=A1p'), ('hr', 'Ti=E1=BA=BFng Croatia'), ('hu', 'Ti=E1=BA=BFng Hung-=
+ga-ri'), ('ja', 'Ti=E1=BA=BFng Nh=E1=BA=ADt B=E1=BA=A3n'), ('ko', 'Ti=E1=BA=
+=BFng H=C3=A0n Qu=E1=BB=91c'), ('pt', 'Ti=E1=BA=BFng Braxin-B=E1=BB=93 =C4=
+=90=C3=A0o Nha'), ('ro', 'Ti=E1=BA=BFng Romania'), ('ru', 'Ti=E1=BA=BFng Ng=
+a'), ('sr-latn', 'Ti=E1=BA=BFng S=C3=A9c-bi (Latin)'), ('tr', 'Ti=E1=BA=BFn=
+g Th=E1=BB=95 Nh=C4=A9 K=E1=BB=B3'), ('vi', 'Ti=E1=BA=BFng Vi=E1=BB=87t'), =
+('zh-hans', 'Ti=E1=BA=BFng Trung (Gi=E1=BA=A3n th=E1=BB=83)'), ('zh-hant', =
+'Ti=E1=BA=BFng Trung ph=E1=BB=93n th=E1=BB=83')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/nhat/Desktop/dmoj/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.gif', '.jpg', '.png'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DAUJ: Da Nang Architecture University'
+SITE_NAME =3D 'DAUJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/nhat/Desktop/dmoj/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.CachedStaticFil=
+esStorage'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/n=
+hat/Desktop/dmoj/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_ex=
+tension': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_process=
+ors': ['django.template.context_processors.media', 'django.template.context=
+_processors.tz', 'django.template.context_processors.i18n', 'django.templat=
+e.context_processors.request', 'django.contrib.messages.context_processors.=
+messages', 'judge.template_context.comet_location', 'judge.template_context=
+.get_resource', 'judge.template_context.general_info', 'judge.template_cont=
+ext.site', 'judge.template_context.site_name', 'judge.template_context.misc=
+_config', 'judge.template_context.math_setting', 'social_django.context_pro=
+cessors.backends', 'social_django.context_processors.login_redirect'], 'aut=
+oescape': <function select_autoescape.<locals>.autoescape at 0x7f7ab0e28ca0=
+>, 'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.d=
+o', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.ex=
+tensions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension',=
+ 'django_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.=
+extensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtens=
+ion', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinj=
+a.builtins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ex=
+t.CompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spacele=
+ss.SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Dja=
+ngoTemplates', 'APP_DIRS': True, 'DIRS': ['/home/nhat/Desktop/dmoj/site/tem=
+plates'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_p=
+rocessors.auth', 'django.template.context_processors.media', 'django.templa=
+te.context_processors.tz', 'django.template.context_processors.i18n', 'djan=
+go.template.context_processors.request', 'django.contrib.messages.context_p=
+rocessors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 200413184 bytes/191MB} {rss usage: 102891520 bytes/98MB} [pid: 8830|app: 0|req: 1/2] 192.168.1.39 () {46 vars in 911 bytes} [Thu Dec  9 01:25:18 2021] GET / => generated 4854 bytes in 954 msecs (HTTP/1.1 500) 6 headers in 350 bytes (1 switches on core 0)
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: nhat_1751220075@dau.edu.vn
+Date: Thu, 09 Dec 2021 01:25:21 -0000
+Message-ID: <163901312167.8830.3576142940646815379@nhat-Latitude-E6440>
+
+Internal Server Error: /
+
+ValueError at /
+The file 'style.3d1641c5cf1c.css' could not be found with <django.contrib.s=
+taticfiles.storage.CachedStaticFilesStorage object at 0x7f7aab35c8e0>.
+
+Request Method: GET
+Request URL: http://192.168.1.39/
+Django Version: 2.2.24
+Python Executable: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/nhat/Desktop/dmoj/site', '/home/nhat/Desktop/dmoj/site=
+/', '.', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/pytho=
+n3.8/lib-dynload', '/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-pac=
+kages', '/home/nhat/Desktop/dmoj/dmojsite/src/django-sortedm2m', '/home/nha=
+t/Desktop/dmoj/dmojsite/src/dmoj-wpadmin', '/home/nhat/Desktop/dmoj/dmojsit=
+e/src/ansi2html', '/home/nhat/Desktop/dmoj/dmojsite/src/martor']
+Server time: Th=E1=BB=A9 5, 9 Th=C3=A1ng 12 2021 08:25:21 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in render
+  1291.             self.environment.handle_exception()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/nhat/Desktop/dmoj/site/templates/home.html" in top-level templa=
+te code
+  1. {% extends "blog/list.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/blog/list.html" in top-level t=
+emplate code
+  1. {% extends "base.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in top-level templa=
+te code
+  50.     {% compress css %}
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress
+  79.         original_content =3D caller()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/r=
+untime.py" in _invoke
+  828.         rv =3D self._func(*arguments)
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in template
+  51.         <link rel=3D"stylesheet" href=3D"{{ static('style.css') }}">
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/builtins/extensions.py" in _static
+  169.         return staticfiles_storage.url(path)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in url
+  153.         return self._url(self.stored_name, name, force)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in _url
+  132.                 hashed_name =3D hashed_name_func(*args)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in stored_name
+  356.                 self.hashed_name(name, content=3DNone, filename=3Din=
+termediate_name)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in hashed_name
+  93.                 raise ValueError("The file '%s' could not be found wi=
+th %r." % (filename, self))
+
+Exception Type: ValueError at /
+Exception Value: The file 'style.3d1641c5cf1c.css' could not be found with =
+<django.contrib.staticfiles.storage.CachedStaticFilesStorage object at 0x7f=
+7aab35c8e0>.
+Request information:
+USER: nhat
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxyAM=
+Oxuc'
+sessionid =3D 'bprzq5x0zza88p1ore35zaiu1nkjji0s'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'KWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56Xt3mgwi1IWxy=
+AMOxuc'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,image/apng,*/*;q=3D0.8,application/signed-exchange;v=3D=
+b3;q=3D0.9'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.9'
+HTTP_CACHE_CONTROL =3D 'no-cache'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DKWfe3SEwxtI8XlUkNczMMGMqCdExaToczUF1WDYkJ2HI56=
+Xt3mgwi1IWxyAMOxuc; sessionid=3Dbprzq5x0zza88p1ore35zaiu1nkjji0s'
+HTTP_HOST =3D '192.168.1.39'
+HTTP_PRAGMA =3D 'no-cache'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KH=
+TML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '192.168.1.39'
+REMOTE_PORT =3D '40784'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '192.168.1.39'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'nhat-Latitude-E6440'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7f7aac973190>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('nhat', 'nhat_1751220075@dau.edu.vn'),)"
+ALLOWED_HOSTS =3D ['192.168.1.39', 'dauj.edu.com']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/nhat/Desktop/dmoj/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'js': ['compressor.filters.jsmin.JSMinFilter'], 'css'=
+: ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.=
+cssmin.CSSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7f7aadeea430>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7f7ab0ec7790>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/nhat/Desktop/dmoj/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://192.168.1.39/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://192.168.1.39/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://192.168.1.39:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'Ti=E1=BA=BFng =C4=90=E1=BB=A9c'), ('en', 'Ti=E1=BA=
+=BFng Anh'), ('es', 'Ti=E1=BA=BFng T=C3=A2y Ban Nha'), ('fr', 'Ti=E1=BA=BFn=
+g Ph=C3=A1p'), ('hr', 'Ti=E1=BA=BFng Croatia'), ('hu', 'Ti=E1=BA=BFng Hung-=
+ga-ri'), ('ja', 'Ti=E1=BA=BFng Nh=E1=BA=ADt B=E1=BA=A3n'), ('ko', 'Ti=E1=BA=
+=BFng H=C3=A0n Qu=E1=BB=91c'), ('pt', 'Ti=E1=BA=BFng Braxin-B=E1=BB=93 =C4=
+=90=C3=A0o Nha'), ('ro', 'Ti=E1=BA=BFng Romania'), ('ru', 'Ti=E1=BA=BFng Ng=
+a'), ('sr-latn', 'Ti=E1=BA=BFng S=C3=A9c-bi (Latin)'), ('tr', 'Ti=E1=BA=BFn=
+g Th=E1=BB=95 Nh=C4=A9 K=E1=BB=B3'), ('vi', 'Ti=E1=BA=BFng Vi=E1=BB=87t'), =
+('zh-hans', 'Ti=E1=BA=BFng Trung (Gi=E1=BA=A3n th=E1=BB=83)'), ('zh-hant', =
+'Ti=E1=BA=BFng Trung ph=E1=BB=93n th=E1=BB=83')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/nhat/Desktop/dmoj/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.gif', '.jpg', '.png'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DAUJ: Da Nang Architecture University'
+SITE_NAME =3D 'DAUJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/nhat/Desktop/dmoj/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.CachedStaticFil=
+esStorage'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/n=
+hat/Desktop/dmoj/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_ex=
+tension': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_process=
+ors': ['django.template.context_processors.media', 'django.template.context=
+_processors.tz', 'django.template.context_processors.i18n', 'django.templat=
+e.context_processors.request', 'django.contrib.messages.context_processors.=
+messages', 'judge.template_context.comet_location', 'judge.template_context=
+.get_resource', 'judge.template_context.general_info', 'judge.template_cont=
+ext.site', 'judge.template_context.site_name', 'judge.template_context.misc=
+_config', 'judge.template_context.math_setting', 'social_django.context_pro=
+cessors.backends', 'social_django.context_processors.login_redirect'], 'aut=
+oescape': <function select_autoescape.<locals>.autoescape at 0x7f7ab0e28ca0=
+>, 'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.d=
+o', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.ex=
+tensions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension',=
+ 'django_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.=
+extensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtens=
+ion', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinj=
+a.builtins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ex=
+t.CompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spacele=
+ss.SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Dja=
+ngoTemplates', 'APP_DIRS': True, 'DIRS': ['/home/nhat/Desktop/dmoj/site/tem=
+plates'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_p=
+rocessors.auth', 'django.template.context_processors.media', 'django.templa=
+te.context_processors.tz', 'django.template.context_processors.i18n', 'djan=
+go.template.context_processors.request', 'django.contrib.messages.context_p=
+rocessors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 200413184 bytes/191MB} {rss usage: 102891520 bytes/98MB} [pid: 8830|app: 0|req: 2/3] 192.168.1.39 () {48 vars in 933 bytes} [Thu Dec  9 01:25:21 2021] GET / => generated 4854 bytes in 216 msecs (HTTP/1.1 500) 6 headers in 350 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Thu Dec  9 01:28:25 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Thu Dec  9 08:28:26 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a3c8fa8120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a3c8fa8120 pid: 9633 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9633)
+spawned uWSGI worker 1 (pid: 9635, cores: 1)
+spawned uWSGI worker 2 (pid: 9636, cores: 1)
+spawned uWSGI worker 3 (pid: 9637, cores: 1)
+spawned uWSGI worker 4 (pid: 9639, cores: 1)
+spawned uWSGI worker 5 (pid: 9640, cores: 1)
+worker 1 killed successfully (pid: 9635)
+uWSGI worker 1 cheaped.
+Thu Dec  9 01:28:29 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 9636)
+uWSGI worker 2 cheaped.
+Thu Dec  9 01:28:34 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.39) !!!
+{address space usage: 201072640 bytes/191MB} {rss usage: 106725376 bytes/101MB} [pid: 9640|app: 0|req: 1/1] 192.168.1.39 () {46 vars in 911 bytes} [Thu Dec  9 01:28:34 2021] GET / => generated 15476 bytes in 1025 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+Thu Dec  9 01:28:38 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /problems/ (ip 192.168.1.39) !!!
+/home/nhat/Desktop/dmoj/site/judge/utils/diggpaginator.py:194: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'judge.models.problem.Problem'> TranslatedProblemQuerySet.
+  super(DiggPaginator, self).__init__(*args, **kwargs)
+{address space usage: 204587008 bytes/195MB} {rss usage: 107241472 bytes/102MB} [pid: 9637|app: 0|req: 1/2] 192.168.1.39 () {46 vars in 934 bytes} [Thu Dec  9 01:28:38 2021] GET /problems/ => generated 13992 bytes in 916 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 201785344 bytes/192MB} {rss usage: 107524096 bytes/102MB} [pid: 9640|app: 0|req: 2/3] 192.168.1.39 () {46 vars in 949 bytes} [Thu Dec  9 01:28:40 2021] GET /submissions/ => generated 27176 bytes in 136 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 204587008 bytes/195MB} {rss usage: 107241472 bytes/102MB} [pid: 9637|app: 0|req: 2/4] 192.168.1.39 () {46 vars in 946 bytes} [Thu Dec  9 01:28:41 2021] GET /problems/ => generated 13992 bytes in 29 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
