@@ -4328,6 +4328,10 @@ msgstr ""
 msgid "Submission aborted!"
 msgstr "Soluția a fost anulată!"
 
+#: templates/submission/status.html:64
+msgid "View Simular"
+msgstr ""
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr "Vezi sursa"

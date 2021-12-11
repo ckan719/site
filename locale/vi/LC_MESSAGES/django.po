@@ -4290,6 +4290,10 @@ msgstr "Vượt qua các bộ test thử không chắc chắn được toàn b�
 msgid "Submission aborted!"
 msgstr "Bài nộp đã bị huỷ!"
 
+#: templates/submission/status.html:64
+msgid "View Simular"
+msgstr "Xem độ tương đồng"
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr "Xem nguồn"
