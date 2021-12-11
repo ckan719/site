@@ -3,6 +3,8 @@
 .sass-cache
 *.stderr.log
 *.stdout.log
+*.log
+*.txt
 *.sqlite3
 *.py[co]
 *.mo
