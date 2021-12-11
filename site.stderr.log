@@ -12308,3 +12308,2631 @@ cheaper hard rss memory limit exceeded, cheap one of 3 workers
 worker 3 killed successfully (pid: 27472)
 uWSGI worker 3 cheaped.
 {address space usage: 206864384 bytes/197MB} {rss usage: 110297088 bytes/105MB} [pid: 27474|app: 0|req: 5/8] 192.168.1.39 () {46 vars in 894 bytes} [Wed Dec  8 07:42:23 2021] GET /simulation/1 => generated 11190 bytes in 94 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Dec 11 09:03:04 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56517213a120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56517213a120 pid: 14483 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14483)
+spawned uWSGI worker 1 (pid: 14492, cores: 1)
+spawned uWSGI worker 2 (pid: 14493, cores: 1)
+spawned uWSGI worker 3 (pid: 14494, cores: 1)
+spawned uWSGI worker 4 (pid: 14495, cores: 1)
+spawned uWSGI worker 5 (pid: 14496, cores: 1)
+worker 1 killed successfully (pid: 14492)
+uWSGI worker 1 cheaped.
+Sat Dec 11 02:03:07 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 14493)
+uWSGI worker 2 cheaped.
+Sat Dec 11 02:03:14 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.39) !!!
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/site/judge/middleware.py", line 81, in __call__
+    return self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/site/judge/middleware.py", line 65, in __call__
+    return self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/site/judge/timezone.py", line 20, in __call__
+    return self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/site/judge/user_log.py", line 11, in __call__
+    response = self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/site/judge/middleware.py", line 54, in __call__
+    return self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/site/judge/middleware.py", line 93, in __call__
+    return self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/utils/deprecation.py", line 94, in __call__
+    response = response or self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/nhat/Desktop/dmoj/site/judge/middleware.py", line 27, in __call__
+    return self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 141, in __call__
+    response = self.get_response(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/base.py", line 75, in get_response
+    response = self._middleware_chain(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 36, in inner
+    response = response_for_exception(request, exc)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 90, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/core/handlers/exception.py", line 129, in handle_uncaught_exception
+    return callback(request, **param_dict)
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 28, in error500
+    return error(request, {
+  File "/home/nhat/Desktop/dmoj/site/judge/views/error.py", line 8, in error
+    return render(request, 'error.html', context=context, status=status)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 59, in render
+    return mark_safe(self._process_template(self.template.render, context, request))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_jinja/backend.py", line 83, in _process_template
+    context.update(processor(request))
+  File "/home/nhat/Desktop/dmoj/site/judge/template_context.py", line 71, in site
+    return {'site': get_current_site(request)}
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/shortcuts.py", line 13, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 58, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/db/models/query.py", line 406, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.DoesNotExist: Site matching query does not exist.
+{address space usage: 199925760 bytes/190MB} {rss usage: 102653952 bytes/97MB} [pid: 14494|app: 0|req: 1/1] 192.168.1.39 () {44 vars in 802 bytes} [Sat Dec 11 02:03:14 2021] GET / => generated 0 bytes in 722 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Sat Dec 11 02:10:00 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.39) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: nhat_1751220075@dau.edu.vn
+Date: Sat, 11 Dec 2021 02:10:00 -0000
+Message-ID: <163918860099.14496.5460250818651646906@nhat-Latitude-E6440>
+
+Internal Server Error: /
+
+ValueError at /
+The file 'style.3d1641c5cf1c.css' could not be found with <django.contrib.s=
+taticfiles.storage.CachedStaticFilesStorage object at 0x7f33f343b430>.
+
+Request Method: GET
+Request URL: http://192.168.1.39/
+Django Version: 2.2.24
+Python Executable: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/nhat/Desktop/dmoj/site', '/home/nhat/Desktop/dmoj/site=
+/', '.', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/pytho=
+n3.8/lib-dynload', '/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-pac=
+kages', '/home/nhat/Desktop/dmoj/dmojsite/src/django-sortedm2m', '/home/nha=
+t/Desktop/dmoj/dmojsite/src/dmoj-wpadmin', '/home/nhat/Desktop/dmoj/dmojsit=
+e/src/ansi2html', '/home/nhat/Desktop/dmoj/dmojsite/src/martor']
+Server time: Sat, 11 Dec 2021 09:10:00 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in render
+  1291.             self.environment.handle_exception()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/nhat/Desktop/dmoj/site/templates/home.html" in top-level templa=
+te code
+  1. {% extends "blog/list.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/blog/list.html" in top-level t=
+emplate code
+  1. {% extends "base.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in top-level templa=
+te code
+  50.     {% compress css %}
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress
+  79.         original_content =3D caller()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/r=
+untime.py" in _invoke
+  828.         rv =3D self._func(*arguments)
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in template
+  51.         <link rel=3D"stylesheet" href=3D"{{ static('style.css') }}">
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/builtins/extensions.py" in _static
+  169.         return staticfiles_storage.url(path)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in url
+  153.         return self._url(self.stored_name, name, force)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in _url
+  132.                 hashed_name =3D hashed_name_func(*args)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in stored_name
+  356.                 self.hashed_name(name, content=3DNone, filename=3Din=
+termediate_name)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in hashed_name
+  93.                 raise ValueError("The file '%s' could not be found wi=
+th %r." % (filename, self))
+
+Exception Type: ValueError at /
+Exception Value: The file 'style.3d1641c5cf1c.css' could not be found with =
+<django.contrib.staticfiles.storage.CachedStaticFilesStorage object at 0x7f=
+33f343b430>.
+Request information:
+USER: thanh
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'sUHTTDpbPbeCEXEXoHQrOSV8t3TH5cA5HCXzUdxXznTqD1WeCYMmGVMZCXhy=
+ghjV'
+sessionid =3D 'aeg00dwkq6wokjvk9y6pof8pzpb562wh'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'sUHTTDpbPbeCEXEXoHQrOSV8t3TH5cA5HCXzUdxXznTqD1WeCYMmGVMZCX=
+hyghjV'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,*/*;q=3D0.8'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.5'
+HTTP_CACHE_CONTROL =3D 'max-age=3D0'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DsUHTTDpbPbeCEXEXoHQrOSV8t3TH5cA5HCXzUdxXznTqD1=
+WeCYMmGVMZCXhyghjV; sessionid=3Daeg00dwkq6wokjvk9y6pof8pzpb562wh'
+HTTP_HOST =3D '192.168.1.39'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko=
+/20100101 Firefox/95.0'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '192.168.1.39'
+REMOTE_PORT =3D '41888'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '192.168.1.39'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'nhat-Latitude-E6440'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7f33f9c731b0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('nhat', 'nhat_1751220075@dau.edu.vn'),)"
+ALLOWED_HOSTS =3D ['192.168.1.39', 'dauj.edu.com']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/nhat/Desktop/dmoj/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'js': ['compressor.filters.jsmin.JSMinFilter'], 'css'=
+: ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.=
+cssmin.CSSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7f33f6022430>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7f33f9007790>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/nhat/Desktop/dmoj/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://192.168.1.39/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://192.168.1.39/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://192.168.1.39:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'German'), ('en', 'English'), ('es', 'Spanish'), ('fr=
+', 'French'), ('hr', 'Croatian'), ('hu', 'Hungarian'), ('ja', 'Japanese'), =
+('ko', 'Korean'), ('pt', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru'=
+, 'Russian'), ('sr-latn', 'Serbian (Latin)'), ('tr', 'Turkish'), ('vi', 'Vi=
+etnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chi=
+nese')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/nhat/Desktop/dmoj/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.jpg', '.png', '.gif'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DAUJ: Da Nang Architecture University'
+SITE_NAME =3D 'DAUJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/nhat/Desktop/dmoj/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.CachedStaticFil=
+esStorage'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/n=
+hat/Desktop/dmoj/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_ex=
+tension': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_process=
+ors': ['django.template.context_processors.media', 'django.template.context=
+_processors.tz', 'django.template.context_processors.i18n', 'django.templat=
+e.context_processors.request', 'django.contrib.messages.context_processors.=
+messages', 'judge.template_context.comet_location', 'judge.template_context=
+.get_resource', 'judge.template_context.general_info', 'judge.template_cont=
+ext.site', 'judge.template_context.site_name', 'judge.template_context.misc=
+_config', 'judge.template_context.math_setting', 'social_django.context_pro=
+cessors.backends', 'social_django.context_processors.login_redirect'], 'aut=
+oescape': <function select_autoescape.<locals>.autoescape at 0x7f33f8f60ca0=
+>, 'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.d=
+o', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.ex=
+tensions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension',=
+ 'django_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.=
+extensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtens=
+ion', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinj=
+a.builtins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ex=
+t.CompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spacele=
+ss.SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Dja=
+ngoTemplates', 'APP_DIRS': True, 'DIRS': ['/home/nhat/Desktop/dmoj/site/tem=
+plates'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_p=
+rocessors.auth', 'django.template.context_processors.media', 'django.templa=
+te.context_processors.tz', 'django.template.context_processors.i18n', 'djan=
+go.template.context_processors.request', 'django.contrib.messages.context_p=
+rocessors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 200278016 bytes/191MB} {rss usage: 102924288 bytes/98MB} [pid: 14496|app: 0|req: 1/2] 192.168.1.39 () {46 vars in 833 bytes} [Sat Dec 11 02:10:00 2021] GET / => generated 926 bytes in 891 msecs (HTTP/1.1 500) 6 headers in 349 bytes (2 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Sat Dec 11 02:12:42 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Dec 11 09:12:43 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55b755500120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55b755500120 pid: 15756 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15756)
+spawned uWSGI worker 1 (pid: 15765, cores: 1)
+spawned uWSGI worker 2 (pid: 15766, cores: 1)
+spawned uWSGI worker 3 (pid: 15767, cores: 1)
+spawned uWSGI worker 4 (pid: 15768, cores: 1)
+spawned uWSGI worker 5 (pid: 15769, cores: 1)
+worker 1 killed successfully (pid: 15765)
+uWSGI worker 1 cheaped.
+Sat Dec 11 02:12:46 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 15766)
+uWSGI worker 2 cheaped.
+Sat Dec 11 02:13:22 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.6) !!!
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Subject: [Django] ERROR (EXTERNAL IP): Internal Server Error: /
+From: DMOJ: Modern Online Judge <errors@dmoj.ca>
+To: nhat_1751220075@dau.edu.vn
+Date: Sat, 11 Dec 2021 02:13:22 -0000
+Message-ID: <163918880295.15768.10449813680841142944@nhat-Latitude-E6440>
+
+Internal Server Error: /
+
+ValueError at /
+The file 'style.3d1641c5cf1c.css' could not be found with <django.contrib.s=
+taticfiles.storage.CachedStaticFilesStorage object at 0x7fad9e0daf40>.
+
+Request Method: GET
+Request URL: http://192.168.1.6/
+Django Version: 2.2.24
+Python Executable: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+Python Version: 3.8.10
+Python Path: ['/home/nhat/Desktop/dmoj/site', '/home/nhat/Desktop/dmoj/site=
+/', '.', '', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/pytho=
+n3.8/lib-dynload', '/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-pac=
+kages', '/home/nhat/Desktop/dmoj/dmojsite/src/django-sortedm2m', '/home/nha=
+t/Desktop/dmoj/dmojsite/src/dmoj-wpadmin', '/home/nhat/Desktop/dmoj/dmojsit=
+e/src/ansi2html', '/home/nhat/Desktop/dmoj/dmojsite/src/martor']
+Server time: Sat, 11 Dec 2021 09:13:22 +0700
+Installed Applications:
+('wpadmin',
+ 'django.contrib.admin',
+ 'judge',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.flatpages',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.redirects',
+ 'django.contrib.staticfiles',
+ 'django.contrib.sites',
+ 'django.contrib.sitemaps',
+ 'registration',
+ 'mptt',
+ 'reversion',
+ 'django_social_share',
+ 'social_django',
+ 'compressor',
+ 'django_ace',
+ 'pagedown',
+ 'sortedm2m',
+ 'statici18n',
+ 'impersonate',
+ 'django_jinja',
+ 'martor')
+Installed Middleware:
+('judge.middleware.ShortCircuitMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.locale.LocaleMiddleware',
+ 'judge.middleware.APIMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'judge.middleware.DMOJLoginMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'judge.user_log.LogUserAccessMiddleware',
+ 'judge.timezone.TimezoneMiddleware',
+ 'impersonate.middleware.ImpersonateMiddleware',
+ 'judge.middleware.DMOJImpersonationMiddleware',
+ 'judge.middleware.ContestMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+ 'judge.social_auth.SocialAuthExceptionMiddleware',
+ 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')
+
+
+Traceback:
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/exception.py" in inner
+  34.             response =3D get_response(request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  145.                 response =3D self.process_exception_by_middleware(e,=
+ request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ore/handlers/base.py" in _get_response
+  143.                 response =3D response.render()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in render
+  106.             self.content =3D self.rendered_content
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/t=
+emplate/response.py" in rendered_content
+  83.         content =3D template.render(context, self._request)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in render
+  59.         return mark_safe(self._process_template(self.template.render,=
+ context, request))
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/backend.py" in _process_template
+  105.         return handler(context)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in render
+  1291.             self.environment.handle_exception()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/e=
+nvironment.py" in handle_exception
+  925.         raise rewrite_traceback_stack(source=3Dsource)
+
+File "/home/nhat/Desktop/dmoj/site/templates/home.html" in top-level templa=
+te code
+  1. {% extends "blog/list.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/blog/list.html" in top-level t=
+emplate code
+  1. {% extends "base.html" %}
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in top-level templa=
+te code
+  50.     {% compress css %}
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress_normal
+  75.         return self._compress(kind, mode, name, caller, False)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/compress=
+or/contrib/jinja2ext.py" in _compress
+  79.         original_content =3D caller()
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/jinja2/r=
+untime.py" in _invoke
+  828.         rv =3D self._func(*arguments)
+
+File "/home/nhat/Desktop/dmoj/site/templates/base.html" in template
+  51.         <link rel=3D"stylesheet" href=3D"{{ static('style.css') }}">
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django_j=
+inja/builtins/extensions.py" in _static
+  169.         return staticfiles_storage.url(path)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in url
+  153.         return self._url(self.stored_name, name, force)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in _url
+  132.                 hashed_name =3D hashed_name_func(*args)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in stored_name
+  356.                 self.hashed_name(name, content=3DNone, filename=3Din=
+termediate_name)
+
+File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/c=
+ontrib/staticfiles/storage.py" in hashed_name
+  93.                 raise ValueError("The file '%s' could not be found wi=
+th %r." % (filename, self))
+
+Exception Type: ValueError at /
+Exception Value: The file 'style.3d1641c5cf1c.css' could not be found with =
+<django.contrib.staticfiles.storage.CachedStaticFilesStorage object at 0x7f=
+ad9e0daf40>.
+Request information:
+USER: nhat
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken =3D 'KldwhaVSM6bHAkmQ2pSS28L6DkVpHNBegh1o2p4vbX46dw9w1XdEY6zsPeYC=
+4mjT'
+sessionid =3D 'dk28ei5uqqjhj8mzggdtbkhoib4qhy1q'
+
+META:
+CONTENT_LENGTH =3D ''
+CONTENT_TYPE =3D ''
+CSRF_COOKIE =3D 'KldwhaVSM6bHAkmQ2pSS28L6DkVpHNBegh1o2p4vbX46dw9w1XdEY6zsPe=
+YC4mjT'
+CSRF_COOKIE_USED =3D True
+DOCUMENT_ROOT =3D '/usr/share/nginx/html'
+HTTP_ACCEPT =3D 'text/html,application/xhtml+xml,application/xml;q=3D0.9,im=
+age/avif,image/webp,*/*;q=3D0.8'
+HTTP_ACCEPT_ENCODING =3D 'gzip, deflate'
+HTTP_ACCEPT_LANGUAGE =3D 'en-US,en;q=3D0.5'
+HTTP_CONNECTION =3D 'keep-alive'
+HTTP_COOKIE =3D 'csrftoken=3DKldwhaVSM6bHAkmQ2pSS28L6DkVpHNBegh1o2p4vbX46dw=
+9w1XdEY6zsPeYC4mjT; sessionid=3Ddk28ei5uqqjhj8mzggdtbkhoib4qhy1q'
+HTTP_HOST =3D '192.168.1.6'
+HTTP_UPGRADE_INSECURE_REQUESTS =3D '1'
+HTTP_USER_AGENT =3D 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko=
+/20100101 Firefox/95.0'
+PATH_INFO =3D '/'
+QUERY_STRING =3D ''
+REMOTE_ADDR =3D '192.168.1.6'
+REMOTE_PORT =3D '42252'
+REQUEST_METHOD =3D 'GET'
+REQUEST_SCHEME =3D 'http'
+REQUEST_URI =3D '/'
+SCRIPT_NAME =3D ''
+SERVER_NAME =3D '192.168.1.6'
+SERVER_PORT =3D '80'
+SERVER_PROTOCOL =3D 'HTTP/1.1'
+SERVER_SOFTWARE =3D 'nginx/1.18.0'
+uwsgi.node =3D b'nhat-Latitude-E6440'
+uwsgi.version =3D b'2.0.20'
+wsgi.errors =3D <_io.TextIOWrapper name=3D2 mode=3D'w' encoding=3D'UTF-8'>
+wsgi.file_wrapper =3D ''
+wsgi.input =3D <uwsgi._Input object at 0x7fada48b01b0>
+wsgi.multiprocess =3D True
+wsgi.multithread =3D False
+wsgi.run_once =3D False
+wsgi.url_scheme =3D 'http'
+wsgi.version =3D '(1, 0)'
+
+Settings:
+Using settings module dmoj.settings
+ABSOLUTE_URL_OVERRIDES =3D {}
+ACCOUNT_ACTIVATION_DAYS =3D 7
+ACE_URL =3D '//cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/'
+ADMINS =3D "(('nhat', 'nhat_1751220075@dau.edu.vn'),)"
+ALLOWED_HOSTS =3D ['192.168.1.6']
+APPEND_SLASH =3D True
+AUTHENTICATION_BACKENDS =3D "('social_core.backends.google.GoogleOAuth2', '=
+social_core.backends.facebook.FacebookOAuth2', 'judge.social_auth.GitHubSec=
+ureEmailOAuth2', 'django.contrib.auth.backends.ModelBackend')"
+AUTH_PASSWORD_VALIDATORS =3D '********************'
+AUTH_USER_MODEL =3D 'auth.User'
+BAD_MAIL_PROVIDERS =3D set()
+BAD_MAIL_PROVIDER_REGEX =3D '()'
+BASE_DIR =3D '/home/nhat/Desktop/dmoj/site'
+BRIDGED_DJANGO_ADDRESS =3D [('localhost', 9998)]
+BRIDGED_DJANGO_CONNECT =3D None
+BRIDGED_JUDGE_ADDRESS =3D [('localhost', 9999)]
+BRIDGED_JUDGE_PROXIES =3D None
+CACHES =3D {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMe=
+mCache'}}
+CACHE_MIDDLEWARE_ALIAS =3D 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX =3D '********************'
+CACHE_MIDDLEWARE_SECONDS =3D 600
+CELERY_BROKER_URL =3D 'redis://localhost:6379'
+CELERY_RESULT_BACKEND =3D 'redis://localhost:6379'
+CELERY_WORKER_HIJACK_ROOT_LOGGER =3D False
+COMPRESSORS =3D {'css': 'compressor.css.CssCompressor', 'js': 'compressor.j=
+s.JsCompressor'}
+COMPRESS_CACHEABLE_PRECOMPILERS =3D '()'
+COMPRESS_CACHE_BACKEND =3D 'default'
+COMPRESS_CACHE_KEY_FUNCTION =3D '********************'
+COMPRESS_CLEAN_CSS_ARGUMENTS =3D ''
+COMPRESS_CLEAN_CSS_BINARY =3D 'cleancss'
+COMPRESS_CLOSURE_COMPILER_ARGUMENTS =3D ''
+COMPRESS_CLOSURE_COMPILER_BINARY =3D 'java -jar compiler.jar'
+COMPRESS_CSS_FILTERS =3D ['compressor.filters.css_default.CssAbsoluteFilter=
+', 'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_HASHING_METHOD =3D 'mtime'
+COMPRESS_DATA_URI_MAX_SIZE =3D 1024
+COMPRESS_DEBUG_TOGGLE =3D None
+COMPRESS_ENABLED =3D True
+COMPRESS_FILTERS =3D {'js': ['compressor.filters.jsmin.JSMinFilter'], 'css'=
+: ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.=
+cssmin.CSSMinFilter']}
+COMPRESS_JINJA2_GET_ENVIRONMENT =3D <function CompressorConf.JINJA2_GET_ENV=
+IRONMENT at 0x7fada0c5f430>
+COMPRESS_JS_FILTERS =3D ['compressor.filters.jsmin.JSMinFilter']
+COMPRESS_MINT_DELAY =3D 30
+COMPRESS_MTIME_DELAY =3D 10
+COMPRESS_OFFLINE =3D False
+COMPRESS_OFFLINE_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_OFFLINE_MANIFEST =3D 'manifest.json'
+COMPRESS_OFFLINE_TIMEOUT =3D 31536000
+COMPRESS_OUTPUT_DIR =3D 'cache'
+COMPRESS_PARSER =3D 'compressor.parser.AutoSelectParser'
+COMPRESS_PRECOMPILERS =3D '()'
+COMPRESS_REBUILD_TIMEOUT =3D 2592000
+COMPRESS_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+COMPRESS_STORAGE =3D 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_TEMPLATE_FILTER_CONTEXT =3D {'STATIC_URL': '/static/'}
+COMPRESS_URL =3D '/static/'
+COMPRESS_URL_PLACEHOLDER =3D '/__compressor_url_placeholder__/'
+COMPRESS_VERBOSE =3D False
+COMPRESS_YUGLIFY_BINARY =3D 'yuglify'
+COMPRESS_YUGLIFY_CSS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS =3D '--terminal'
+COMPRESS_YUI_BINARY =3D 'java -jar yuicompressor.jar'
+COMPRESS_YUI_CSS_ARGUMENTS =3D ''
+COMPRESS_YUI_JS_ARGUMENTS =3D ''
+CSRF_COOKIE_AGE =3D 31449600
+CSRF_COOKIE_DOMAIN =3D None
+CSRF_COOKIE_HTTPONLY =3D False
+CSRF_COOKIE_NAME =3D 'csrftoken'
+CSRF_COOKIE_PATH =3D '/'
+CSRF_COOKIE_SAMESITE =3D 'Lax'
+CSRF_COOKIE_SECURE =3D False
+CSRF_FAILURE_VIEW =3D 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME =3D 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS =3D []
+CSRF_USE_SESSIONS =3D False
+DATABASES =3D {'default': {'ENGINE': 'django.db.backends.mysql', 'NAME': 'd=
+moj', 'USER': 'dmoj', 'PASSWORD': '********************', 'HOST': '127.0.0.=
+1', 'OPTIONS': {'charset': 'utf8mb4', 'sql_mode': 'STRICT_TRANS_TABLES,NO_E=
+NGINE_SUBSTITUTION'}, 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_M=
+AX_AGE': 0, 'TIME_ZONE': None, 'PORT': '', 'TEST': {'CHARSET': None, 'COLLA=
+TION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS =3D []
+DATA_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS =3D 1000
+DATETIME_FORMAT =3D 'N j, Y, P'
+DATETIME_INPUT_FORMATS =3D ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%=
+Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%=
+m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%=
+m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT =3D 'N j, Y'
+DATE_INPUT_FORMATS =3D ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b=
+ %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d=
+ %B, %Y']
+DEBUG =3D False
+DEBUG_PROPAGATE_EXCEPTIONS =3D False
+DECIMAL_SEPARATOR =3D '.'
+DEFAULT_CHARSET =3D 'utf-8'
+DEFAULT_CONTENT_TYPE =3D 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER =3D 'django.views.debug.SafeExceptionRepo=
+rterFilter'
+DEFAULT_EXTENSIONS =3D ['jinja2.ext.do', 'jinja2.ext.loopcontrols', 'jinja2=
+.ext.i18n', 'django_jinja.builtins.extensions.DebugExtension', 'django_jinj=
+a.builtins.extensions.CsrfExtension', 'django_jinja.builtins.extensions.Cac=
+heExtension', 'django_jinja.builtins.extensions.TimezoneExtension', 'django=
+_jinja.builtins.extensions.UrlsExtension', 'django_jinja.builtins.extension=
+s.StaticFilesExtension', 'django_jinja.builtins.extensions.DjangoFiltersExt=
+ension']
+DEFAULT_FILE_STORAGE =3D 'django.core.files.storage.FileSystemStorage'
+DEFAULT_FROM_EMAIL =3D 'webmaster@localhost'
+DEFAULT_INDEX_TABLESPACE =3D ''
+DEFAULT_SELECT2_CSS =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css=
+/select2.min.css'
+DEFAULT_TABLESPACE =3D ''
+DEFAULT_USER_LANGUAGE =3D 'PY3'
+DEFAULT_USER_TIME_ZONE =3D 'Asia/Ho_Chi_Minh'
+DISALLOWED_USER_AGENTS =3D []
+DMOJ_API_PAGE_SIZE =3D '********************'
+DMOJ_BLOG_NEW_PROBLEM_COUNT =3D 7
+DMOJ_BLOG_RECENTLY_ATTEMPTED_PROBLEMS_COUNT =3D 7
+DMOJ_CAMO_EXCLUDE =3D '()'
+DMOJ_CAMO_HTTPS =3D False
+DMOJ_CAMO_KEY =3D '********************'
+DMOJ_CAMO_URL =3D None
+DMOJ_CANONICAL =3D ''
+DMOJ_COMMENT_VOTE_HIDE_THRESHOLD =3D -5
+DMOJ_EMAIL_THROTTLING =3D '(10, 60)'
+DMOJ_NEWSLETTER_ID_ON_REGISTER =3D None
+DMOJ_PDF_PROBLEM_CACHE =3D ''
+DMOJ_PDF_PROBLEM_TEMP_DIR =3D '/tmp'
+DMOJ_PP_BONUS_FUNCTION =3D <function <lambda> at 0x7fada3c44790>
+DMOJ_PP_ENTRIES =3D 100
+DMOJ_PP_STEP =3D 0.95
+DMOJ_PROBLEM_DATA_ROOT =3D None
+DMOJ_PROBLEM_HOT_PROBLEM_COUNT =3D 7
+DMOJ_PROBLEM_MAX_MEMORY_LIMIT =3D 1048576
+DMOJ_PROBLEM_MAX_TIME_LIMIT =3D 60
+DMOJ_PROBLEM_MIN_MEMORY_LIMIT =3D 0
+DMOJ_PROBLEM_MIN_PROBLEM_POINTS =3D 0
+DMOJ_PROBLEM_MIN_TIME_LIMIT =3D 0
+DMOJ_RATING_COLORS =3D True
+DMOJ_REQUIRE_STAFF_2FA =3D True
+DMOJ_RESOURCES =3D '/home/nhat/Desktop/dmoj/site/resources'
+DMOJ_SSL =3D 0
+DMOJ_STATS_LANGUAGE_THRESHOLD =3D 10
+DMOJ_STATS_SUBMISSION_RESULT_COLORS =3D {'TLE': '#a3bcbd', 'AC': '#00a92a',=
+ 'WA': '#ed4420', 'CE': '#42586d', 'ERR': '#ffa71c'}
+DMOJ_SUBMISSIONS_REJUDGE_LIMIT =3D 10
+DMOJ_SUBMISSION_LIMIT =3D 2
+DMOJ_TOTP_TOLERANCE_HALF_MINUTES =3D 1
+DMOJ_USER_MAX_ORGANIZATION_COUNT =3D 3
+EMAIL_BACKEND =3D 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST =3D 'localhost'
+EMAIL_HOST_PASSWORD =3D '********************'
+EMAIL_HOST_USER =3D ''
+EMAIL_PORT =3D 25
+EMAIL_SSL_CERTFILE =3D None
+EMAIL_SSL_KEYFILE =3D '********************'
+EMAIL_SUBJECT_PREFIX =3D '[Django] '
+EMAIL_TIMEOUT =3D None
+EMAIL_USE_LOCALTIME =3D False
+EMAIL_USE_SSL =3D False
+EMAIL_USE_TLS =3D False
+ENABLE_FTS =3D True
+EVENT_DAEMON_AMQP_EXCHANGE =3D 'dmoj-events'
+EVENT_DAEMON_GET =3D 'ws://127.0.0.1/event/'
+EVENT_DAEMON_GET_SSL =3D 'wss://127.0.0.1/event/'
+EVENT_DAEMON_KEY =3D '********************'
+EVENT_DAEMON_POLL =3D '/channels/'
+EVENT_DAEMON_POST =3D 'ws://127.0.0.1:15101/'
+EVENT_DAEMON_SUBMISSION_KEY =3D '********************'
+EVENT_DAEMON_USE =3D True
+EXIFTOOL =3D '/usr/bin/exiftool'
+FILE_CHARSET =3D 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS =3D None
+FILE_UPLOAD_HANDLERS =3D ['django.core.files.uploadhandler.MemoryFileUpload=
+Handler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE =3D 2621440
+FILE_UPLOAD_PERMISSIONS =3D None
+FILE_UPLOAD_TEMP_DIR =3D None
+FIRST_DAY_OF_WEEK =3D 0
+FIXTURE_DIRS =3D []
+FONTAWESOME_CSS =3D '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-=
+awesome.min.css'
+FORCE_SCRIPT_NAME =3D None
+FORMAT_MODULE_PATH =3D None
+FORM_RENDERER =3D 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS =3D []
+IMPERSONATE_DISABLE_LOGGING =3D True
+IMPERSONATE_REQUIRE_SUPERUSER =3D True
+INLINE_FONTAWESOME =3D True
+INLINE_JQUERY =3D True
+INSTALLED_APPS =3D "('wpadmin', 'django.contrib.admin', 'judge', 'django.co=
+ntrib.auth', 'django.contrib.contenttypes', 'django.contrib.flatpages', 'dj=
+ango.contrib.sessions', 'django.contrib.messages', 'django.contrib.redirect=
+s', 'django.contrib.staticfiles', 'django.contrib.sites', 'django.contrib.s=
+itemaps', 'registration', 'mptt', 'reversion', 'django_social_share', 'soci=
+al_django', 'compressor', 'django_ace', 'pagedown', 'sortedm2m', 'statici18=
+n', 'impersonate', 'django_jinja', 'martor')"
+INTERNAL_IPS =3D []
+JQUERY_JS =3D '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+JUDGE_AMQP_PATH =3D None
+LANGUAGES =3D [('de', 'German'), ('en', 'English'), ('es', 'Spanish'), ('fr=
+', 'French'), ('hr', 'Croatian'), ('hu', 'Hungarian'), ('ja', 'Japanese'), =
+('ko', 'Korean'), ('pt', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru'=
+, 'Russian'), ('sr-latn', 'Serbian (Latin)'), ('tr', 'Turkish'), ('vi', 'Vi=
+etnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chi=
+nese')]
+LANGUAGES_BIDI =3D ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE =3D 'vi'
+LANGUAGE_COOKIE_AGE =3D None
+LANGUAGE_COOKIE_DOMAIN =3D None
+LANGUAGE_COOKIE_NAME =3D 'django_language'
+LANGUAGE_COOKIE_PATH =3D '/'
+LOCALE_PATHS =3D ['/home/nhat/Desktop/dmoj/site/locale']
+LOGGING =3D {'version': 1, 'disable_existing_loggers': False, 'formatters':=
+ {'file': {'format': '%(levelname)s %(asctime)s %(module)s %(message)s'}, '=
+simple': {'format': '%(levelname)s %(message)s'}}, 'handlers': {'bridge': {=
+'level': 'INFO', 'class': 'logging.handlers.RotatingFileHandler', 'filename=
+': 'logBridge.txt', 'maxBytes': 10485760, 'backupCount': 10, 'formatter': '=
+file'}, 'mail_admins': {'level': 'ERROR', 'class': 'dmoj.throttle_mail.Thro=
+ttledEmailHandler'}, 'console': {'level': 'DEBUG', 'class': 'logging.Stream=
+Handler', 'formatter': 'file'}}, 'loggers': {'django.request': {'handlers':=
+ ['mail_admins'], 'level': 'ERROR', 'propagate': False}, 'judge.bridge': {'=
+handlers': ['bridge', 'mail_admins'], 'level': 'INFO', 'propagate': True}, =
+'': {'handlers': ['console']}}}
+LOGGING_CONFIG =3D 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL =3D '/user'
+LOGIN_URL =3D '/accounts/login/'
+LOGOUT_REDIRECT_URL =3D None
+MANAGERS =3D []
+MARKDOWN_ADMIN_EDITABLE_STYLE =3D {'safe_mode': False, 'use_camo': True, 't=
+exoid': True, 'math': True}
+MARKDOWN_DEFAULT_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_camo'=
+: True, 'math': True}
+MARKDOWN_STYLES =3D {'default': {'safe_mode': True, 'nofollow': True, 'use_=
+camo': True, 'math': True}, 'comment': {'safe_mode': True, 'nofollow': True=
+, 'use_camo': True, 'math': True}, 'self-description': {'safe_mode': True, =
+'nofollow': True, 'use_camo': True, 'math': True}, 'problem': {'safe_mode':=
+ False, 'use_camo': True, 'texoid': True, 'math': True}, 'contest': {'safe_=
+mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'flatpage': =
+{'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}, 'lang=
+uage': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math': True}=
+, 'license': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'math':=
+ True}, 'judge': {'safe_mode': False, 'use_camo': True, 'texoid': True, 'ma=
+th': True}, 'blog': {'safe_mode': False, 'use_camo': True, 'texoid': True, =
+'math': True}, 'solution': {'safe_mode': False, 'use_camo': True, 'texoid':=
+ True, 'math': True}, 'contest_tag': {'safe_mode': False, 'use_camo': True,=
+ 'texoid': True, 'math': True}, 'organization-about': {'safe_mode': True, '=
+nofollow': True, 'use_camo': True, 'math': True}, 'ticket': {'safe_mode': T=
+rue, 'nofollow': True, 'use_camo': True, 'math': True}}
+MARKDOWN_USER_LARGE_STYLE =3D {'safe_mode': True, 'nofollow': True, 'use_ca=
+mo': True, 'math': True}
+MARTOR_ENABLE_CONFIGS =3D {'imgur': 'true', 'mention': 'true', 'jquery': 't=
+rue', 'living': 'false', 'spellcheck': 'false', 'hljs': 'false'}
+MARTOR_MARKDOWNIFY_URL =3D '/widgets/preview/default'
+MARTOR_MARKDOWN_BASE_MENTION_URL =3D '/user/'
+MARTOR_SEARCH_USERS_URL =3D '/widgets/martor/search-user'
+MARTOR_UPLOAD_MEDIA_DIR =3D 'martor'
+MARTOR_UPLOAD_SAFE_EXTS =3D {'.gif', '.jpg', '.png'}
+MARTOR_UPLOAD_URL =3D '/widgets/martor/upload-image'
+MATHOID_CACHE_ROOT =3D ''
+MATHOID_CACHE_URL =3D False
+MATHOID_CSS_CACHE =3D 'default'
+MATHOID_DEFAULT_TYPE =3D 'auto'
+MATHOID_GZIP =3D False
+MATHOID_MML_CACHE =3D None
+MATHOID_MML_CACHE_TTL =3D 86400
+MATHOID_URL =3D False
+MEDIA_ROOT =3D ''
+MEDIA_URL =3D ''
+MESSAGE_STORAGE =3D 'django.contrib.messages.storage.fallback.FallbackStora=
+ge'
+MIDDLEWARE =3D "('judge.middleware.ShortCircuitMiddleware', 'django.middlew=
+are.common.CommonMiddleware', 'django.contrib.sessions.middleware.SessionMi=
+ddleware', 'django.middleware.locale.LocaleMiddleware', 'judge.middleware.A=
+PIMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib=
+.auth.middleware.AuthenticationMiddleware', 'judge.middleware.DMOJLoginMidd=
+leware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.mi=
+ddleware.clickjacking.XFrameOptionsMiddleware', 'judge.user_log.LogUserAcce=
+ssMiddleware', 'judge.timezone.TimezoneMiddleware', 'impersonate.middleware=
+.ImpersonateMiddleware', 'judge.middleware.DMOJImpersonationMiddleware', 'j=
+udge.middleware.ContestMiddleware', 'django.contrib.flatpages.middleware.Fl=
+atpageFallbackMiddleware', 'judge.social_auth.SocialAuthExceptionMiddleware=
+', 'django.contrib.redirects.middleware.RedirectFallbackMiddleware')"
+MIGRATION_MODULES =3D {}
+MONTH_DAY_FORMAT =3D 'F j'
+MOSS_API_KEY =3D '********************'
+NODEJS =3D '/usr/bin/node'
+NOFOLLOW_EXCLUDED =3D set()
+NUMBER_GROUPING =3D 0
+PASSWORD_HASHERS =3D '********************'
+PASSWORD_RESET_TIMEOUT_DAYS =3D '********************'
+PHANTOMJS =3D ''
+PHANTOMJS_PAPER_SIZE =3D 'Letter'
+PHANTOMJS_PDF_TIMEOUT =3D 5.0
+PHANTOMJS_PDF_ZOOM =3D 0.75
+PREPEND_WWW =3D False
+PUPPETEER_MODULE =3D '/usr/lib/node_modules/puppeteer'
+PUPPETEER_PAPER_SIZE =3D 'Letter'
+PYGMENT_THEME =3D 'pygment-github.css'
+ROOT_URLCONF =3D 'dmoj.urls'
+SECRET_KEY =3D '********************'
+SECURE_BROWSER_XSS_FILTER =3D False
+SECURE_CONTENT_TYPE_NOSNIFF =3D False
+SECURE_HSTS_INCLUDE_SUBDOMAINS =3D False
+SECURE_HSTS_PRELOAD =3D False
+SECURE_HSTS_SECONDS =3D 0
+SECURE_PROXY_SSL_HEADER =3D None
+SECURE_REDIRECT_EXEMPT =3D []
+SECURE_SSL_HOST =3D None
+SECURE_SSL_REDIRECT =3D False
+SELECT2_CSS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/sel=
+ect2.min.css'
+SELECT2_JS_URL =3D '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/selec=
+t2.min.js'
+SELENIUM_CHROMEDRIVER_PATH =3D 'chromedriver'
+SELENIUM_CUSTOM_CHROME_PATH =3D None
+SERVER_EMAIL =3D 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SESSION_CACHE_ALIAS =3D 'default'
+SESSION_COOKIE_AGE =3D 1209600
+SESSION_COOKIE_DOMAIN =3D None
+SESSION_COOKIE_HTTPONLY =3D True
+SESSION_COOKIE_NAME =3D 'sessionid'
+SESSION_COOKIE_PATH =3D '/'
+SESSION_COOKIE_SAMESITE =3D 'Lax'
+SESSION_COOKIE_SECURE =3D False
+SESSION_ENGINE =3D 'django.contrib.sessions.backends.cached_db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE =3D False
+SESSION_FILE_PATH =3D None
+SESSION_SAVE_EVERY_REQUEST =3D False
+SESSION_SERIALIZER =3D 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE =3D 'dmoj.settings'
+SHORT_DATETIME_FORMAT =3D 'm/d/Y P'
+SHORT_DATE_FORMAT =3D 'm/d/Y'
+SIGNING_BACKEND =3D 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS =3D ['urls.W002', 'fields.W342']
+SITE_ADMIN_EMAIL =3D 'admin@example.com'
+SITE_ID =3D 1
+SITE_LONG_NAME =3D 'DAUJ: Da Nang Architecture University'
+SITE_NAME =3D 'DAUJ'
+SLIMERJS =3D ''
+SLIMERJS_FIREFOX_PATH =3D ''
+SLIMERJS_PAPER_SIZE =3D 'Letter'
+SLIMERJS_PDF_ZOOM =3D 0.75
+SOCIAL_AUTH_FACEBOOK_SCOPE =3D ['email']
+SOCIAL_AUTH_GITHUB_SECURE_SCOPE =3D ['user:email']
+SOCIAL_AUTH_PIPELINE =3D "('social_core.pipeline.social_auth.social_details=
+', 'social_core.pipeline.social_auth.social_uid', 'social_core.pipeline.soc=
+ial_auth.auth_allowed', 'judge.social_auth.verify_email', 'social_core.pipe=
+line.social_auth.social_user', 'social_core.pipeline.user.get_username', 's=
+ocial_core.pipeline.social_auth.associate_by_email', 'judge.social_auth.cho=
+ose_username', 'social_core.pipeline.user.create_user', 'judge.social_auth.=
+make_profile', 'social_core.pipeline.social_auth.associate_user', 'social_c=
+ore.pipeline.social_auth.load_extra_data', 'social_core.pipeline.user.user_=
+details')"
+SOCIAL_AUTH_SLUGIFY_FUNCTION =3D 'judge.social_auth.slugify_username'
+SOCIAL_AUTH_SLUGIFY_USERNAMES =3D True
+STATICFILES_DIRS =3D ['/home/nhat/Desktop/dmoj/site/resources']
+STATICFILES_FINDERS =3D "('django.contrib.staticfiles.finders.FileSystemFin=
+der', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compresso=
+r.finders.CompressorFinder')"
+STATICFILES_STORAGE =3D 'django.contrib.staticfiles.storage.CachedStaticFil=
+esStorage'
+STATICI18N_DOMAIN =3D 'djangojs'
+STATICI18N_FILENAME_FUNCTION =3D 'statici18n.utils.default_filename'
+STATICI18N_NAMESPACE =3D None
+STATICI18N_OUTPUT_DIR =3D 'jsi18n'
+STATICI18N_PACKAGES =3D 'django.conf'
+STATICI18N_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_ROOT =3D '/home/nhat/Desktop/dmoj/site/static'
+STATIC_URL =3D '/static/'
+TEMPLATES =3D [{'BACKEND': 'django_jinja.backend.Jinja2', 'DIRS': ['/home/n=
+hat/Desktop/dmoj/site/templates'], 'APP_DIRS': False, 'OPTIONS': {'match_ex=
+tension': ('.html', '.txt'), 'match_regex': '^(?!admin/)', 'context_process=
+ors': ['django.template.context_processors.media', 'django.template.context=
+_processors.tz', 'django.template.context_processors.i18n', 'django.templat=
+e.context_processors.request', 'django.contrib.messages.context_processors.=
+messages', 'judge.template_context.comet_location', 'judge.template_context=
+.get_resource', 'judge.template_context.general_info', 'judge.template_cont=
+ext.site', 'judge.template_context.site_name', 'judge.template_context.misc=
+_config', 'judge.template_context.math_setting', 'social_django.context_pro=
+cessors.backends', 'social_django.context_processors.login_redirect'], 'aut=
+oescape': <function select_autoescape.<locals>.autoescape at 0x7fada3b9dca0=
+>, 'trim_blocks': True, 'lstrip_blocks': True, 'extensions': ['jinja2.ext.d=
+o', 'jinja2.ext.loopcontrols', 'jinja2.ext.i18n', 'django_jinja.builtins.ex=
+tensions.DebugExtension', 'django_jinja.builtins.extensions.CsrfExtension',=
+ 'django_jinja.builtins.extensions.CacheExtension', 'django_jinja.builtins.=
+extensions.TimezoneExtension', 'django_jinja.builtins.extensions.UrlsExtens=
+ion', 'django_jinja.builtins.extensions.StaticFilesExtension', 'django_jinj=
+a.builtins.extensions.DjangoFiltersExtension', 'compressor.contrib.jinja2ex=
+t.CompressorExtension', 'judge.jinja2.DMOJExtension', 'judge.jinja2.spacele=
+ss.SpacelessExtension']}}, {'BACKEND': 'django.template.backends.django.Dja=
+ngoTemplates', 'APP_DIRS': True, 'DIRS': ['/home/nhat/Desktop/dmoj/site/tem=
+plates'], 'OPTIONS': {'context_processors': ['django.contrib.auth.context_p=
+rocessors.auth', 'django.template.context_processors.media', 'django.templa=
+te.context_processors.tz', 'django.template.context_processors.i18n', 'djan=
+go.template.context_processors.request', 'django.contrib.messages.context_p=
+rocessors.messages']}}]
+TERMS_OF_SERVICE_URL =3D '//dmoj.ca/tos'
+TEST_NON_SERIALIZED_APPS =3D []
+TEST_RUNNER =3D 'django.test.runner.DiscoverRunner'
+TEXOID_GZIP =3D False
+TEXOID_META_CACHE =3D 'default'
+TEXOID_META_CACHE_TTL =3D 86400
+THOUSAND_SEPARATOR =3D ','
+TIMEZONE_BG =3D None
+TIMEZONE_DETECT_BACKEND =3D None
+TIMEZONE_MAP =3D 'http://naturalearth.springercarto.com/ne3_data/8192/textu=
+res/3_no_ice_clouds_8k.jpg'
+TIME_FORMAT =3D 'P'
+TIME_INPUT_FORMATS =3D ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE =3D 'UTC'
+USE_I18N =3D True
+USE_L10N =3D True
+USE_SELENIUM =3D False
+USE_THOUSAND_SEPARATOR =3D False
+USE_TZ =3D True
+USE_X_FORWARDED_HOST =3D False
+USE_X_FORWARDED_PORT =3D False
+WEBAUTHN_RP_ID =3D None
+WPADMIN =3D {'admin': {'title': 'DMOJ Admin', 'menu': {'top': 'wpadmin.menu=
+.menus.BasicTopMenu', 'left': 'wpadmin.menu.custom.CustomModelLeftMenuWithD=
+ashboard'}, 'custom_menu': [{'model': 'judge.Problem', 'icon': 'fa-question=
+-circle', 'children': ['judge.ProblemGroup', 'judge.ProblemType']}, {'model=
+': 'judge.Submission', 'icon': 'fa-check-square-o', 'children': ['judge.Lan=
+guage', 'judge.Judge']}, {'model': 'judge.Contest', 'icon': 'fa-bar-chart',=
+ 'children': ['judge.ContestParticipation', 'judge.ContestTag']}, {'model':=
+ 'auth.User', 'icon': 'fa-user', 'children': ['auth.Group', 'registration.R=
+egistrationProfile']}, {'model': 'judge.Profile', 'icon': 'fa-user-plus', '=
+children': ['judge.Organization', 'judge.OrganizationRequest']}, {'model': =
+'judge.NavigationBar', 'icon': 'fa-bars', 'children': ['judge.MiscConfig', =
+'judge.License', 'sites.Site', 'redirects.Redirect']}, ('judge.BlogPost', '=
+fa-rss-square'), ('judge.Comment', 'fa-comment-o'), ('flatpages.FlatPage', =
+'fa-file-text-o'), ('judge.Solution', 'fa-pencil')], 'dashboard': {'breadcr=
+umbs': True}}}
+WSGI_APPLICATION =3D 'dmoj.wsgi.application'
+X_FRAME_OPTIONS =3D 'SAMEORIGIN'
+YEAR_MONTH_FORMAT =3D 'F Y'
+
+
+
+-------------------------------------------------------------------------------
+{address space usage: 200384512 bytes/191MB} {rss usage: 103194624 bytes/98MB} [pid: 15768|app: 0|req: 1/1] 192.168.1.6 () {44 vars in 799 bytes} [Sat Dec 11 02:13:22 2021] GET / => generated 4855 bytes in 893 msecs (HTTP/1.1 500) 6 headers in 350 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Sat Dec 11 02:14:46 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Sat Dec 11 02:14:46 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Dec 11 09:14:47 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x560c27061120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x560c27061120 pid: 16276 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 16276)
+spawned uWSGI worker 1 (pid: 16285, cores: 1)
+spawned uWSGI worker 2 (pid: 16286, cores: 1)
+spawned uWSGI worker 3 (pid: 16287, cores: 1)
+spawned uWSGI worker 4 (pid: 16288, cores: 1)
+spawned uWSGI worker 5 (pid: 16289, cores: 1)
+worker 1 killed successfully (pid: 16285)
+uWSGI worker 1 cheaped.
+Sat Dec 11 02:14:50 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 16286)
+uWSGI worker 2 cheaped.
+Sat Dec 11 02:14:57 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.6) !!!
+{address space usage: 204947456 bytes/195MB} {rss usage: 110559232 bytes/105MB} [pid: 16289|app: 0|req: 1/1] 192.168.1.6 () {46 vars in 830 bytes} [Sat Dec 11 02:14:57 2021] GET / => generated 15746 bytes in 920 msecs (HTTP/1.1 200) 6 headers in 332 bytes (2 switches on core 0)
+Sat Dec 11 02:15:55 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /submissions/ (ip 192.168.1.6) !!!
+{address space usage: 200376320 bytes/191MB} {rss usage: 104099840 bytes/99MB} [pid: 16288|app: 0|req: 1/2] 192.168.1.6 () {46 vars in 858 bytes} [Sat Dec 11 02:15:55 2021] GET /submissions/ => generated 29264 bytes in 936 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 204300288 bytes/194MB} {rss usage: 110669824 bytes/105MB} [pid: 16288|app: 0|req: 2/3] 192.168.1.6 () {46 vars in 874 bytes} [Sat Dec 11 02:15:58 2021] GET /problem/aplusb => generated 23795 bytes in 239 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 204562432 bytes/195MB} {rss usage: 110800896 bytes/105MB} [pid: 16288|app: 0|req: 3/4] 192.168.1.6 () {46 vars in 890 bytes} [Sat Dec 11 02:16:00 2021] GET /problem/aplusb/submit => generated 11958 bytes in 65 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+/home/nhat/Desktop/dmoj/site/judge/utils/diggpaginator.py:194: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'judge.models.problem.Problem'> TranslatedProblemQuerySet.
+  super(DiggPaginator, self).__init__(*args, **kwargs)
+{address space usage: 205086720 bytes/195MB} {rss usage: 111448064 bytes/106MB} [pid: 16288|app: 0|req: 4/5] 192.168.1.6 () {46 vars in 866 bytes} [Sat Dec 11 02:16:04 2021] GET /problems/ => generated 13845 bytes in 85 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 204947456 bytes/195MB} {rss usage: 110559232 bytes/105MB} [pid: 16289|app: 0|req: 2/6] 192.168.1.6 () {52 vars in 1023 bytes} [Sat Dec 11 02:16:13 2021] POST /accounts/logout/ => generated 0 bytes in 21 msecs (HTTP/1.1 302) 7 headers in 283 bytes (1 switches on core 0)
+Sat Dec 11 02:16:13 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /accounts/logout/ (ip 192.168.1.6) !!!
+{address space usage: 198676480 bytes/189MB} {rss usage: 102174720 bytes/97MB} [pid: 16287|app: 0|req: 1/7] 192.168.1.6 () {46 vars in 831 bytes} [Sat Dec 11 02:16:13 2021] GET /accounts/logout/ => generated 7042 bytes in 831 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+cheaper hard rss memory limit exceeded, cheap one of 3 workers
+worker 3 killed successfully (pid: 16287)
+uWSGI worker 3 cheaped.
+{address space usage: 205209600 bytes/195MB} {rss usage: 110587904 bytes/105MB} [pid: 16289|app: 0|req: 3/8] 192.168.1.6 () {46 vars in 806 bytes} [Sat Dec 11 02:17:15 2021] GET / => generated 14755 bytes in 47 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 205086720 bytes/195MB} {rss usage: 111448064 bytes/106MB} [pid: 16288|app: 0|req: 5/9] 192.168.1.6 () {46 vars in 833 bytes} [Sat Dec 11 02:17:33 2021] GET /accounts/login/?next=/ => generated 8616 bytes in 26 msecs (HTTP/1.1 200) 8 headers in 434 bytes (1 switches on core 0)
+{address space usage: 205148160 bytes/195MB} {rss usage: 113500160 bytes/108MB} [pid: 16288|app: 0|req: 6/10] 192.168.1.6 () {52 vars in 1005 bytes} [Sat Dec 11 02:17:39 2021] POST /accounts/login/?next=/ => generated 0 bytes in 287 msecs (HTTP/1.1 302) 10 headers in 592 bytes (1 switches on core 0)
+{address space usage: 205934592 bytes/196MB} {rss usage: 114262016 bytes/108MB} [pid: 16288|app: 0|req: 7/11] 192.168.1.6 () {46 vars in 856 bytes} [Sat Dec 11 02:17:39 2021] GET / => generated 15746 bytes in 190 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 205209600 bytes/195MB} {rss usage: 110587904 bytes/105MB} [pid: 16289|app: 0|req: 4/12] 192.168.1.6 () {52 vars in 1014 bytes} [Sat Dec 11 02:17:44 2021] POST /accounts/logout/ => generated 0 bytes in 16 msecs (HTTP/1.1 302) 7 headers in 283 bytes (1 switches on core 0)
+{address space usage: 205934592 bytes/196MB} {rss usage: 114262016 bytes/108MB} [pid: 16288|app: 0|req: 8/13] 192.168.1.6 () {46 vars in 822 bytes} [Sat Dec 11 02:17:44 2021] GET /accounts/logout/ => generated 7042 bytes in 25 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 205996032 bytes/196MB} {rss usage: 111448064 bytes/106MB} [pid: 16289|app: 0|req: 5/14] 192.168.1.6 () {46 vars in 842 bytes} [Sat Dec 11 02:17:48 2021] GET /accounts/register/ => generated 43832 bytes in 138 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+Content-Type: multipart/alternative;
+ boundary="===============0445713299114222395=="
+MIME-Version: 1.0
+Subject: Activate your DAUJ account
+From: webmaster@localhost
+To: trong@gmail.com
+Date: Sat, 11 Dec 2021 02:18:13 -0000
+Message-ID: <163918909382.16289.205033980500951969@nhat-Latitude-E6440>
+
+--===============0445713299114222395==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Please activate your DAUJ account in 7 days.
+
+Please click on the following link to activate your account:
+    http://192.168.1.39:80/accounts/activate/86f3fc2c53b6a07bfd8a43617c0cbdcbdd0dcb279123d84ddeba081b77d3956f/
+
+Alternatively, you can reply to this message to activate your account.
+Your reply must keep the following text intact for this to work:
+
+86f3fc2c53b6a07bfd8a43617c0cbdcbdd0dcb279123d84ddeba081b77d3956f
+--===============0445713299114222395==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<b>Thanks for registering on the DAUJ! We're glad to have you.</b>
+<br><br>
+The last step is activating your account. Please activate your DAUJ account in the next 7 days.
+<br><br>
+Please click on the following link to activate your account:
+<p style="margin-left:1em">
+      <a href="http://192.168.1.39:80/accounts/activate/86f3fc2c53b6a07bfd8a43617c0cbdcbdd0dcb279123d84ddeba081b77d3956f/">http://192.168.1.39:80/accounts/activate/86f3fc2c53b6a07bfd8a43617c0cbdcbdd0dcb279123d84ddeba081b77d3956f</a>
+</p>
+
+Alternatively, you can reply to this message to activate your account.
+Your reply must keep the following text intact for this to work:
+
+<pre style="margin-left:1em">
+86f3fc2c53b6a07bfd8a43617c0cbdcbdd0dcb279123d84ddeba081b77d3956f
+</pre>
+
+See you soon!
+<br>
+If you have problems activating your account, feel free to send us an email at <a href="mailto:admin@example.com">admin@example.com</a>.
+
+--===============0445713299114222395==--
+
+-------------------------------------------------------------------------------
+{address space usage: 206319616 bytes/196MB} {rss usage: 113786880 bytes/108MB} [pid: 16289|app: 0|req: 6/15] 192.168.1.6 () {52 vars in 994 bytes} [Sat Dec 11 02:18:13 2021] POST /accounts/register/ => generated 0 bytes in 401 msecs (HTTP/1.1 302) 6 headers in 203 bytes (1 switches on core 0)
+{address space usage: 205934592 bytes/196MB} {rss usage: 114262016 bytes/108MB} [pid: 16288|app: 0|req: 9/16] 192.168.1.6 () {46 vars in 862 bytes} [Sat Dec 11 02:18:13 2021] GET /accounts/register/complete/ => generated 7152 bytes in 15 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 205934592 bytes/196MB} {rss usage: 114262016 bytes/108MB} [pid: 16288|app: 0|req: 10/17] 192.168.1.6 () {42 vars in 744 bytes} [Sat Dec 11 02:18:27 2021] GET / => generated 14755 bytes in 71 msecs (HTTP/1.1 200) 6 headers in 332 bytes (2 switches on core 0)
+{address space usage: 205934592 bytes/196MB} {rss usage: 114262016 bytes/108MB} [pid: 16288|app: 0|req: 11/18] 192.168.1.6 () {46 vars in 911 bytes} [Sat Dec 11 02:18:30 2021] GET /accounts/login/?next=/ => generated 8616 bytes in 35 msecs (HTTP/1.1 200) 8 headers in 434 bytes (1 switches on core 0)
+{address space usage: 206319616 bytes/196MB} {rss usage: 113885184 bytes/108MB} [pid: 16289|app: 0|req: 7/19] 192.168.1.6 () {54 vars in 1114 bytes} [Sat Dec 11 02:18:37 2021] POST /accounts/login/?next=/ => generated 0 bytes in 374 msecs (HTTP/1.1 302) 10 headers in 592 bytes (1 switches on core 0)
+{address space usage: 205934592 bytes/196MB} {rss usage: 114262016 bytes/108MB} [pid: 16288|app: 0|req: 12/20] 192.168.1.6 () {48 vars in 965 bytes} [Sat Dec 11 02:18:38 2021] GET / => generated 15746 bytes in 101 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 206843904 bytes/197MB} {rss usage: 114290688 bytes/108MB} [pid: 16289|app: 0|req: 8/21] 192.168.1.6 () {46 vars in 924 bytes} [Sat Dec 11 02:18:40 2021] GET /admin/ => generated 33725 bytes in 169 msecs (HTTP/1.1 200) 7 headers in 267 bytes (1 switches on core 0)
+{address space usage: 207630336 bytes/198MB} {rss usage: 115109888 bytes/109MB} [pid: 16289|app: 0|req: 9/22] 192.168.1.6 () {46 vars in 950 bytes} [Sat Dec 11 02:18:44 2021] GET /admin/auth/user/ => generated 22200 bytes in 172 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 207630336 bytes/198MB} {rss usage: 115109888 bytes/109MB} [pid: 16289|app: 0|req: 10/23] 192.168.1.6 () {44 vars in 787 bytes} [Sat Dec 11 02:18:44 2021] GET /admin/jsi18n/ => generated 3305 bytes in 19 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 206458880 bytes/196MB} {rss usage: 114712576 bytes/109MB} [pid: 16288|app: 0|req: 13/24] 192.168.1.6 () {46 vars in 980 bytes} [Sat Dec 11 02:18:46 2021] GET /admin/auth/user/11/change/ => generated 44153 bytes in 341 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 207630336 bytes/198MB} {rss usage: 115109888 bytes/109MB} [pid: 16289|app: 0|req: 11/25] 192.168.1.6 () {44 vars in 797 bytes} [Sat Dec 11 02:18:47 2021] GET /admin/jsi18n/ => generated 3305 bytes in 19 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 206458880 bytes/196MB} {rss usage: 114712576 bytes/109MB} [pid: 16288|app: 0|req: 14/26] 192.168.1.6 () {54 vars in 1171 bytes} [Sat Dec 11 02:18:50 2021] POST /admin/auth/user/11/change/ => generated 0 bytes in 58 msecs (HTTP/1.1 302) 9 headers in 531 bytes (1 switches on core 0)
+{address space usage: 207630336 bytes/198MB} {rss usage: 115372032 bytes/110MB} [pid: 16289|app: 0|req: 12/27] 192.168.1.6 () {48 vars in 1192 bytes} [Sat Dec 11 02:18:50 2021] GET /admin/auth/user/ => generated 22371 bytes in 153 msecs (HTTP/1.1 200) 9 headers in 533 bytes (1 switches on core 0)
+{address space usage: 206458880 bytes/196MB} {rss usage: 114712576 bytes/109MB} [pid: 16288|app: 0|req: 15/28] 192.168.1.6 () {44 vars in 787 bytes} [Sat Dec 11 02:18:50 2021] GET /admin/jsi18n/ => generated 3305 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 207630336 bytes/198MB} {rss usage: 115372032 bytes/110MB} [pid: 16289|app: 0|req: 13/29] 192.168.1.6 () {46 vars in 858 bytes} [Sat Dec 11 02:19:00 2021] GET /accounts/login/?next= => generated 8612 bytes in 25 msecs (HTTP/1.1 200) 8 headers in 434 bytes (1 switches on core 0)
+{address space usage: 207630336 bytes/198MB} {rss usage: 115372032 bytes/110MB} [pid: 16289|app: 0|req: 14/30] 192.168.1.6 () {52 vars in 1002 bytes} [Sat Dec 11 02:19:06 2021] POST /accounts/login/?next= => generated 0 bytes in 323 msecs (HTTP/1.1 302) 10 headers in 596 bytes (1 switches on core 0)
+{address space usage: 208154624 bytes/198MB} {rss usage: 115683328 bytes/110MB} [pid: 16289|app: 0|req: 15/31] 192.168.1.6 () {46 vars in 863 bytes} [Sat Dec 11 02:19:07 2021] GET /user => generated 10247 bytes in 97 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 206721024 bytes/197MB} {rss usage: 114921472 bytes/109MB} [pid: 16288|app: 0|req: 16/32] 192.168.1.6 () {46 vars in 838 bytes} [Sat Dec 11 02:19:11 2021] GET / => generated 15669 bytes in 78 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+/home/nhat/Desktop/dmoj/site/judge/utils/diggpaginator.py:194: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'judge.models.problem.Problem'> TranslatedProblemQuerySet.
+  super(DiggPaginator, self).__init__(*args, **kwargs)
+{address space usage: 208416768 bytes/198MB} {rss usage: 116486144 bytes/111MB} [pid: 16289|app: 0|req: 16/33] 192.168.1.6 () {46 vars in 852 bytes} [Sat Dec 11 02:19:20 2021] GET /problems/ => generated 13426 bytes in 123 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 209203200 bytes/199MB} {rss usage: 117092352 bytes/111MB} [pid: 16289|app: 0|req: 17/34] 192.168.1.6 () {46 vars in 871 bytes} [Sat Dec 11 02:19:27 2021] GET /problem/aplusb => generated 19942 bytes in 253 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 209203200 bytes/199MB} {rss usage: 117092352 bytes/111MB} [pid: 16289|app: 0|req: 18/35] 192.168.1.6 () {46 vars in 890 bytes} [Sat Dec 11 02:19:37 2021] GET /problem/aplusb/submit => generated 11353 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 209203200 bytes/199MB} {rss usage: 117092352 bytes/111MB} [pid: 16289|app: 0|req: 19/36] 192.168.1.6 () {52 vars in 1047 bytes} [Sat Dec 11 02:19:59 2021] POST /problem/aplusb/submit => generated 0 bytes in 93 msecs (HTTP/1.1 302) 6 headers in 189 bytes (1 switches on core 0)
+{address space usage: 209465344 bytes/199MB} {rss usage: 117370880 bytes/111MB} [pid: 16289|app: 0|req: 20/37] 192.168.1.6 () {46 vars in 881 bytes} [Sat Dec 11 02:19:59 2021] GET /submission/16 => generated 8961 bytes in 198 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 209465344 bytes/199MB} {rss usage: 117329920 bytes/111MB} [pid: 16289|app: 0|req: 21/38] 192.168.1.6 () {48 vars in 912 bytes} [Sat Dec 11 02:20:06 2021] GET /submission/16 => generated 8961 bytes in 51 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 209465344 bytes/199MB} {rss usage: 117329920 bytes/111MB} [pid: 16289|app: 0|req: 22/39] 192.168.1.6 () {46 vars in 859 bytes} [Sat Dec 11 02:20:09 2021] GET /src/16 => generated 13057 bytes in 82 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 210980864 bytes/201MB} {rss usage: 118644736 bytes/113MB} [pid: 16289|app: 0|req: 23/40] 192.168.1.6 () {46 vars in 864 bytes} [Sat Dec 11 02:20:23 2021] GET /submissions/ => generated 24611 bytes in 165 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 206721024 bytes/197MB} {rss usage: 114880512 bytes/109MB} [pid: 16288|app: 0|req: 17/41] 192.168.1.6 () {46 vars in 874 bytes} [Sat Dec 11 02:20:26 2021] GET /problem/aplusb => generated 21014 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 210980864 bytes/201MB} {rss usage: 118644736 bytes/113MB} [pid: 16289|app: 0|req: 24/42] 192.168.1.6 () {46 vars in 914 bytes} [Sat Dec 11 02:20:28 2021] GET /problem/aplusb/submissions/trong/ => generated 15592 bytes in 81 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211243008 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 25/43] 192.168.1.6 () {46 vars in 885 bytes} [Sat Dec 11 02:20:37 2021] GET /contests/ => generated 11803 bytes in 157 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 207245312 bytes/197MB} {rss usage: 115646464 bytes/110MB} [pid: 16288|app: 0|req: 18/44] 192.168.1.6 () {46 vars in 865 bytes} [Sat Dec 11 02:20:43 2021] GET /contest/123 => generated 17087 bytes in 200 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 26/45] 192.168.1.6 () {46 vars in 879 bytes} [Sat Dec 11 02:20:48 2021] GET /contest/123/stats => generated 12179 bytes in 107 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 207245312 bytes/197MB} {rss usage: 115666944 bytes/110MB} [pid: 16288|app: 0|req: 19/46] 192.168.1.6 () {46 vars in 891 bytes} [Sat Dec 11 02:20:53 2021] GET /contest/123/ranking/ => generated 18340 bytes in 168 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 207245312 bytes/197MB} {rss usage: 115666944 bytes/110MB} [pid: 16288|app: 0|req: 20/47] 192.168.1.6 () {46 vars in 906 bytes} [Sat Dec 11 02:20:57 2021] GET /contest/123/participations => generated 17665 bytes in 64 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 207507456 bytes/197MB} {rss usage: 116207616 bytes/110MB} [pid: 16288|app: 0|req: 21/48] 192.168.1.6 () {46 vars in 878 bytes} [Sat Dec 11 02:21:02 2021] GET /contests/ => generated 11803 bytes in 166 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+cheaper hard rss memory limit exceeded, cheap one of 2 workers
+worker 4 killed successfully (pid: 16288)
+uWSGI worker 4 cheaped.
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 27/49] 192.168.1.6 () {46 vars in 877 bytes} [Sat Dec 11 02:21:05 2021] GET /contests/2021/12/ => generated 14646 bytes in 52 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 28/50] 192.168.1.6 () {46 vars in 869 bytes} [Sat Dec 11 02:21:08 2021] GET /contests/ => generated 11803 bytes in 63 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 29/51] 192.168.1.6 () {52 vars in 1023 bytes} [Sat Dec 11 02:21:10 2021] POST /contest/123/join => generated 0 bytes in 27 msecs (HTTP/1.1 302) 6 headers in 192 bytes (1 switches on core 0)
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 30/52] 192.168.1.6 () {46 vars in 875 bytes} [Sat Dec 11 02:21:10 2021] GET /contest/123/join => generated 8698 bytes in 46 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 31/53] 192.168.1.6 () {52 vars in 1032 bytes} [Sat Dec 11 02:21:14 2021] POST /contest/123/join => generated 0 bytes in 54 msecs (HTTP/1.1 302) 6 headers in 185 bytes (1 switches on core 0)
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 32/54] 192.168.1.6 () {46 vars in 868 bytes} [Sat Dec 11 02:21:14 2021] GET /problems/ => generated 12057 bytes in 64 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211505152 bytes/201MB} {rss usage: 118927360 bytes/113MB} [pid: 16289|app: 0|req: 33/55] 192.168.1.6 () {46 vars in 861 bytes} [Sat Dec 11 02:21:18 2021] GET /problems/ => generated 12057 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119414784 bytes/113MB} [pid: 16289|app: 0|req: 34/56] 192.168.1.6 () {46 vars in 865 bytes} [Sat Dec 11 02:21:20 2021] GET /contest/123 => generated 19069 bytes in 197 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119414784 bytes/113MB} [pid: 16289|app: 0|req: 35/57] 192.168.1.6 () {46 vars in 869 bytes} [Sat Dec 11 02:21:24 2021] GET /submissions/ => generated 17978 bytes in 72 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119365632 bytes/113MB} [pid: 16289|app: 0|req: 36/58] 192.168.1.6 () {46 vars in 868 bytes} [Sat Dec 11 02:21:29 2021] GET /contest/123 => generated 19069 bytes in 98 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119365632 bytes/113MB} [pid: 16289|app: 0|req: 37/59] 192.168.1.6 () {46 vars in 869 bytes} [Sat Dec 11 02:21:40 2021] GET /submissions/ => generated 17977 bytes in 70 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119365632 bytes/113MB} [pid: 16289|app: 0|req: 38/60] 192.168.1.6 () {46 vars in 868 bytes} [Sat Dec 11 02:21:43 2021] GET /contest/123 => generated 19069 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 39/61] 192.168.1.6 () {52 vars in 1027 bytes} [Sat Dec 11 02:21:46 2021] POST /contest/123/leave => generated 0 bytes in 48 msecs (HTTP/1.1 302) 6 headers in 187 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 40/62] 192.168.1.6 () {46 vars in 867 bytes} [Sat Dec 11 02:21:46 2021] GET /contest/123 => generated 17087 bytes in 98 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 41/63] 192.168.1.6 () {46 vars in 869 bytes} [Sat Dec 11 02:21:48 2021] GET /submissions/ => generated 24611 bytes in 64 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 42/64] 192.168.1.6 () {46 vars in 858 bytes} [Sat Dec 11 02:21:57 2021] GET /users/ => generated 14134 bytes in 58 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 43/65] 192.168.1.6 () {46 vars in 858 bytes} [Sat Dec 11 02:22:00 2021] GET /user/nhat => generated 10015 bytes in 46 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 44/66] 192.168.1.6 () {46 vars in 887 bytes} [Sat Dec 11 02:22:02 2021] GET /submissions/user/nhat/ => generated 20024 bytes in 86 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 45/67] 192.168.1.6 () {46 vars in 868 bytes} [Sat Dec 11 02:22:06 2021] GET /users/ => generated 14134 bytes in 29 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 46/68] 192.168.1.6 () {46 vars in 860 bytes} [Sat Dec 11 02:22:08 2021] GET /user/chieu => generated 10157 bytes in 49 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 211767296 bytes/201MB} {rss usage: 119349248 bytes/113MB} [pid: 16289|app: 0|req: 47/69] 192.168.1.6 () {46 vars in 878 bytes} [Sat Dec 11 02:22:10 2021] GET /user/chieu/solved => generated 12459 bytes in 122 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 212029440 bytes/202MB} {rss usage: 119599104 bytes/114MB} [pid: 16289|app: 0|req: 48/70] 192.168.1.6 () {46 vars in 877 bytes} [Sat Dec 11 02:22:21 2021] GET /edit/profile/ => generated 55705 bytes in 166 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 212029440 bytes/202MB} {rss usage: 119599104 bytes/114MB} [pid: 16289|app: 0|req: 49/71] 192.168.1.6 () {52 vars in 1023 bytes} [Sat Dec 11 02:22:31 2021] POST /edit/profile/ => generated 0 bytes in 106 msecs (HTTP/1.1 302) 6 headers in 189 bytes (1 switches on core 0)
+{address space usage: 212029440 bytes/202MB} {rss usage: 119599104 bytes/114MB} [pid: 16289|app: 0|req: 50/72] 192.168.1.6 () {46 vars in 873 bytes} [Sat Dec 11 02:22:31 2021] GET /edit/profile/ => generated 55718 bytes in 142 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 212029440 bytes/202MB} {rss usage: 119599104 bytes/114MB} [pid: 16289|app: 0|req: 51/73] 192.168.1.6 () {54 vars in 1079 bytes} [Sat Dec 11 02:22:32 2021] POST /widgets/preview/profile => generated 123 bytes in 33 msecs (HTTP/1.1 200) 5 headers in 162 bytes (1 switches on core 0)
+{address space usage: 212029440 bytes/202MB} {rss usage: 119599104 bytes/114MB} [pid: 16289|app: 0|req: 52/74] 192.168.1.6 () {46 vars in 867 bytes} [Sat Dec 11 02:22:34 2021] GET /user/trong => generated 10222 bytes in 45 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 212029440 bytes/202MB} {rss usage: 119599104 bytes/114MB} [pid: 16289|app: 0|req: 53/75] 192.168.1.6 () {52 vars in 1020 bytes} [Sat Dec 11 02:22:47 2021] POST /i18n/setlang/ => generated 0 bytes in 90 msecs (HTTP/1.1 302) 8 headers in 372 bytes (1 switches on core 0)
+{address space usage: 212652032 bytes/202MB} {rss usage: 120602624 bytes/115MB} [pid: 16289|app: 0|req: 54/76] 192.168.1.6 () {46 vars in 884 bytes} [Sat Dec 11 02:22:48 2021] GET /user/trong => generated 10330 bytes in 79 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 212652032 bytes/202MB} {rss usage: 120602624 bytes/115MB} [pid: 16289|app: 0|req: 55/77] 192.168.1.6 () {52 vars in 1040 bytes} [Sat Dec 11 02:22:57 2021] POST /i18n/setlang/ => generated 0 bytes in 22 msecs (HTTP/1.1 302) 8 headers in 372 bytes (1 switches on core 0)
+{address space usage: 212652032 bytes/202MB} {rss usage: 120602624 bytes/115MB} [pid: 16289|app: 0|req: 56/78] 192.168.1.6 () {46 vars in 884 bytes} [Sat Dec 11 02:22:57 2021] GET /user/trong => generated 10222 bytes in 66 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 212652032 bytes/202MB} {rss usage: 120602624 bytes/115MB} [pid: 16289|app: 0|req: 57/79] 192.168.1.6 () {46 vars in 970 bytes} [Sat Dec 11 02:23:13 2021] GET /admin/auth/user/ => generated 22200 bytes in 152 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 212652032 bytes/202MB} {rss usage: 120602624 bytes/115MB} [pid: 16289|app: 0|req: 58/80] 192.168.1.6 () {46 vars in 940 bytes} [Sat Dec 11 02:23:15 2021] GET /admin/ => generated 33727 bytes in 131 msecs (HTTP/1.1 200) 7 headers in 267 bytes (1 switches on core 0)
+{address space usage: 212652032 bytes/202MB} {rss usage: 120602624 bytes/115MB} [pid: 16289|app: 0|req: 59/81] 192.168.1.6 () {46 vars in 952 bytes} [Sat Dec 11 02:23:18 2021] GET /admin/sites/site/ => generated 17564 bytes in 124 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 212652032 bytes/202MB} {rss usage: 120602624 bytes/115MB} [pid: 16289|app: 0|req: 60/82] 192.168.1.6 () {44 vars in 788 bytes} [Sat Dec 11 02:23:18 2021] GET /admin/jsi18n/ => generated 3305 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 212914176 bytes/203MB} {rss usage: 120610816 bytes/115MB} [pid: 16289|app: 0|req: 61/83] 192.168.1.6 () {46 vars in 981 bytes} [Sat Dec 11 02:23:20 2021] GET /admin/sites/site/1/change/ => generated 15855 bytes in 169 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 212914176 bytes/203MB} {rss usage: 120610816 bytes/115MB} [pid: 16289|app: 0|req: 62/84] 192.168.1.6 () {44 vars in 797 bytes} [Sat Dec 11 02:23:20 2021] GET /admin/jsi18n/ => generated 3305 bytes in 12 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 212914176 bytes/203MB} {rss usage: 120610816 bytes/115MB} [pid: 16289|app: 0|req: 63/85] 192.168.1.6 () {54 vars in 1171 bytes} [Sat Dec 11 02:23:29 2021] POST /admin/sites/site/1/change/ => generated 0 bytes in 31 msecs (HTTP/1.1 302) 9 headers in 541 bytes (1 switches on core 0)
+{address space usage: 212914176 bytes/203MB} {rss usage: 120610816 bytes/115MB} [pid: 16289|app: 0|req: 64/86] 192.168.1.6 () {48 vars in 1203 bytes} [Sat Dec 11 02:23:29 2021] GET /admin/sites/site/ => generated 17741 bytes in 107 msecs (HTTP/1.1 200) 9 headers in 533 bytes (1 switches on core 0)
+{address space usage: 212914176 bytes/203MB} {rss usage: 120610816 bytes/115MB} [pid: 16289|app: 0|req: 65/87] 192.168.1.6 () {44 vars in 788 bytes} [Sat Dec 11 02:23:29 2021] GET /admin/jsi18n/ => generated 3305 bytes in 14 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 212914176 bytes/203MB} {rss usage: 120610816 bytes/115MB} [pid: 16289|app: 0|req: 66/88] 192.168.1.6 () {46 vars in 929 bytes} [Sat Dec 11 02:23:31 2021] GET / => generated 15744 bytes in 84 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 212914176 bytes/203MB} {rss usage: 120872960 bytes/115MB} [pid: 16289|app: 0|req: 67/89] 192.168.1.6 () {46 vars in 930 bytes} [Sat Dec 11 02:23:35 2021] GET /problems/ => generated 13845 bytes in 63 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 120872960 bytes/115MB} [pid: 16289|app: 0|req: 68/90] 192.168.1.6 () {46 vars in 945 bytes} [Sat Dec 11 02:23:37 2021] GET /submissions/ => generated 30683 bytes in 74 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 120872960 bytes/115MB} [pid: 16289|app: 0|req: 69/91] 192.168.1.6 () {46 vars in 950 bytes} [Sat Dec 11 02:23:42 2021] GET /submission/16 => generated 10820 bytes in 61 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 121167872 bytes/115MB} [pid: 16289|app: 0|req: 70/92] 192.168.1.6 () {46 vars in 951 bytes} [Sat Dec 11 02:23:45 2021] GET /simulation/16 => generated 21102 bytes in 211 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 121167872 bytes/115MB} [pid: 16289|app: 0|req: 71/93] 192.168.1.6 () {46 vars in 951 bytes} [Sat Dec 11 02:23:55 2021] GET /submission/14 => generated 10810 bytes in 51 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 121167872 bytes/115MB} [pid: 16289|app: 0|req: 72/94] 192.168.1.6 () {46 vars in 937 bytes} [Sat Dec 11 02:23:57 2021] GET /src/14 => generated 13671 bytes in 44 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 121167872 bytes/115MB} [pid: 16289|app: 0|req: 73/95] 192.168.1.6 () {46 vars in 943 bytes} [Sat Dec 11 02:24:09 2021] GET /problems/ => generated 13845 bytes in 45 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 121167872 bytes/115MB} [pid: 16289|app: 0|req: 74/96] 192.168.1.6 () {46 vars in 961 bytes} [Sat Dec 11 02:24:13 2021] GET /admin/judge/problem/ => generated 20011 bytes in 160 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 213463040 bytes/203MB} {rss usage: 121167872 bytes/115MB} [pid: 16289|app: 0|req: 75/97] 192.168.1.6 () {44 vars in 791 bytes} [Sat Dec 11 02:24:13 2021] GET /admin/jsi18n/ => generated 3305 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 213987328 bytes/204MB} {rss usage: 121430016 bytes/115MB} [pid: 16289|app: 0|req: 76/98] 192.168.1.6 () {46 vars in 980 bytes} [Sat Dec 11 02:24:15 2021] GET /admin/judge/problem/add/ => generated 103456 bytes in 356 msecs (HTTP/1.1 200) 8 headers in 436 bytes (1 switches on core 0)
+{address space usage: 213987328 bytes/204MB} {rss usage: 121430016 bytes/115MB} [pid: 16289|app: 0|req: 77/99] 192.168.1.6 () {44 vars in 795 bytes} [Sat Dec 11 02:24:16 2021] GET /admin/jsi18n/ => generated 3305 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 213987328 bytes/204MB} {rss usage: 121430016 bytes/115MB} [pid: 16289|app: 0|req: 78/100] 192.168.1.6 () {44 vars in 857 bytes} [Sat Dec 11 02:24:17 2021] GET /admin/judge/problem/add/snippets/markdown.js => generated 0 bytes in 4 msecs (HTTP/1.1 301) 3 headers in 151 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 79/101] 192.168.1.6 () {52 vars in 1074 bytes} [Sat Dec 11 02:24:17 2021] POST /widgets/preview/problem => generated 113 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 162 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 80/102] 192.168.1.6 () {44 vars in 859 bytes} [Sat Dec 11 02:24:17 2021] GET /admin/judge/problem/add/snippets/markdown.js/ => generated 0 bytes in 20 msecs (HTTP/1.1 302) 8 headers in 331 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 81/103] 192.168.1.6 () {44 vars in 873 bytes} [Sat Dec 11 02:24:17 2021] GET /admin/judge/problem/add/snippets/markdown.js/change/ => generated 0 bytes in 23 msecs (HTTP/1.1 302) 9 headers in 512 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 82/104] 192.168.1.6 () {44 vars in 963 bytes} [Sat Dec 11 02:24:17 2021] GET /admin/ => generated 34009 bytes in 169 msecs (HTTP/1.1 200) 8 headers in 365 bytes (1 switches on core 0)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/django/views/generic/list.py:86: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'judge.models.profile.Profile'> QuerySet.
+  return self.paginator_class(
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 83/105] 192.168.1.6 () {46 vars in 989 bytes} [Sat Dec 11 02:24:26 2021] GET /judge-select2/profile/?field_id=MTQwMDYyODE1MTQyMTQ0%3A1mvs3c%3Aaw-wl7XfyuAlk52S2VXWUi1JMxc => generated 219 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 154 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 84/106] 192.168.1.6 () {46 vars in 989 bytes} [Sat Dec 11 02:24:27 2021] GET /judge-select2/profile/?field_id=MTQwMDYyODE4MjgyODAw%3A1mvs3c%3AX91tN_EKfwQT35SDb9htvufn_vU => generated 219 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 154 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 85/107] 192.168.1.6 () {46 vars in 989 bytes} [Sat Dec 11 02:24:28 2021] GET /judge-select2/profile/?field_id=MTQwMDYyODE2MjM5MDg4%3A1mvs3c%3AbxMVxrEQwCUY9cfOAjWuLOJwYho => generated 219 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 154 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 86/108] 192.168.1.6 () {52 vars in 1076 bytes} [Sat Dec 11 02:24:42 2021] POST /widgets/preview/problem => generated 1068 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 163 bytes (1 switches on core 0)
+{address space usage: 214249472 bytes/204MB} {rss usage: 121692160 bytes/116MB} [pid: 16289|app: 0|req: 87/109] 192.168.1.6 () {46 vars in 989 bytes} [Sat Dec 11 02:25:01 2021] GET /judge-select2/profile/?field_id=MTQwMDYyODE1MTQ1MzEy%3A1mvs3c%3AXw_1XmijuhJzgAe4TKJP5hyx4TY => generated 219 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 154 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 88/110] 192.168.1.6 () {54 vars in 1167 bytes} [Sat Dec 11 02:25:04 2021] POST /admin/judge/problem/add/ => generated 0 bytes in 616 msecs (HTTP/1.1 302) 9 headers in 541 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 89/111] 192.168.1.6 () {48 vars in 1204 bytes} [Sat Dec 11 02:25:05 2021] GET /admin/judge/problem/ => generated 20679 bytes in 169 msecs (HTTP/1.1 200) 9 headers in 533 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 90/112] 192.168.1.6 () {44 vars in 791 bytes} [Sat Dec 11 02:25:05 2021] GET /admin/jsi18n/ => generated 3305 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 91/113] 192.168.1.6 () {46 vars in 958 bytes} [Sat Dec 11 02:25:08 2021] GET /problem/amulb => generated 16122 bytes in 96 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 92/114] 192.168.1.6 () {46 vars in 965 bytes} [Sat Dec 11 02:25:13 2021] GET /problem/amulb/submit => generated 9389 bytes in 50 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 93/115] 192.168.1.6 () {46 vars in 836 bytes} [Sat Dec 11 02:25:14 2021] GET /widgets/template => generated 8009 bytes in 62 msecs (HTTP/1.1 404) 6 headers in 338 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 94/116] 192.168.1.6 () {48 vars in 996 bytes} [Sat Dec 11 02:25:52 2021] GET /problem/amulb/submit => generated 13351 bytes in 68 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 95/117] 192.168.1.6 () {46 vars in 845 bytes} [Sat Dec 11 02:25:53 2021] GET /widgets/template?id=8 => generated 0 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 146 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 96/118] 192.168.1.6 () {54 vars in 1153 bytes} [Sat Dec 11 02:26:17 2021] POST /problem/amulb/submit => generated 0 bytes in 60 msecs (HTTP/1.1 302) 6 headers in 189 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122744832 bytes/117MB} [pid: 16289|app: 0|req: 97/119] 192.168.1.6 () {48 vars in 989 bytes} [Sat Dec 11 02:26:17 2021] GET /submission/17 => generated 9632 bytes in 65 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122458112 bytes/116MB} [pid: 16289|app: 0|req: 98/120] 192.168.1.6 () {46 vars in 937 bytes} [Sat Dec 11 02:26:24 2021] GET /src/17 => generated 13665 bytes in 56 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122458112 bytes/116MB} [pid: 16289|app: 0|req: 99/121] 192.168.1.6 () {46 vars in 944 bytes} [Sat Dec 11 02:26:27 2021] GET /submission/17 => generated 9711 bytes in 47 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122458112 bytes/116MB} [pid: 16289|app: 0|req: 100/122] 192.168.1.6 () {46 vars in 937 bytes} [Sat Dec 11 02:26:33 2021] GET /src/17 => generated 13665 bytes in 46 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122458112 bytes/116MB} [pid: 16289|app: 0|req: 101/123] 192.168.1.6 () {46 vars in 944 bytes} [Sat Dec 11 02:26:35 2021] GET /submission/17 => generated 9711 bytes in 62 msecs (HTTP/1.1 200) 6 headers in 331 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122699776 bytes/117MB} [pid: 16289|app: 0|req: 102/124] 192.168.1.6 () {46 vars in 949 bytes} [Sat Dec 11 02:26:37 2021] GET /submissions/ => generated 32119 bytes in 76 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
+{address space usage: 215298048 bytes/205MB} {rss usage: 122699776 bytes/117MB} [pid: 16289|app: 0|req: 103/125] 192.168.1.6 () {46 vars in 936 bytes} [Sat Dec 11 02:26:47 2021] GET /admin/ => generated 33837 bytes in 125 msecs (HTTP/1.1 200) 7 headers in 267 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 104/126] 192.168.1.6 () {46 vars in 958 bytes} [Sat Dec 11 02:26:49 2021] GET /admin/judge/problem/ => generated 20502 bytes in 143 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 105/127] 192.168.1.6 () {44 vars in 791 bytes} [Sat Dec 11 02:26:49 2021] GET /admin/jsi18n/ => generated 3305 bytes in 19 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 106/128] 192.168.1.6 () {46 vars in 982 bytes} [Sat Dec 11 02:26:52 2021] GET /admin/judge/problemgroup/ => generated 16464 bytes in 105 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 107/129] 192.168.1.6 () {44 vars in 796 bytes} [Sat Dec 11 02:26:52 2021] GET /admin/jsi18n/ => generated 3305 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 108/130] 192.168.1.6 () {46 vars in 985 bytes} [Sat Dec 11 02:26:55 2021] GET /admin/judge/problemtype/ => generated 16450 bytes in 130 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 109/131] 192.168.1.6 () {44 vars in 795 bytes} [Sat Dec 11 02:26:55 2021] GET /admin/jsi18n/ => generated 3305 bytes in 19 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 110/132] 192.168.1.6 () {46 vars in 982 bytes} [Sat Dec 11 02:26:57 2021] GET /admin/judge/submission/ => generated 31048 bytes in 154 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 111/133] 192.168.1.6 () {44 vars in 794 bytes} [Sat Dec 11 02:26:57 2021] GET /admin/jsi18n/ => generated 3305 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 112/134] 192.168.1.6 () {46 vars in 977 bytes} [Sat Dec 11 02:27:00 2021] GET /admin/judge/language/ => generated 23281 bytes in 120 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 113/135] 192.168.1.6 () {44 vars in 792 bytes} [Sat Dec 11 02:27:00 2021] GET /admin/jsi18n/ => generated 3305 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 114/136] 192.168.1.6 () {46 vars in 969 bytes} [Sat Dec 11 02:27:02 2021] GET /admin/judge/judge/ => generated 19655 bytes in 146 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 115/137] 192.168.1.6 () {44 vars in 789 bytes} [Sat Dec 11 02:27:03 2021] GET /admin/jsi18n/ => generated 3305 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 116/138] 192.168.1.6 () {46 vars in 970 bytes} [Sat Dec 11 02:27:05 2021] GET /admin/judge/contest/ => generated 20156 bytes in 131 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 122765312 bytes/117MB} [pid: 16289|app: 0|req: 117/139] 192.168.1.6 () {44 vars in 791 bytes} [Sat Dec 11 02:27:06 2021] GET /admin/jsi18n/ => generated 3305 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215560192 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 118/140] 192.168.1.6 () {46 vars in 998 bytes} [Sat Dec 11 02:27:08 2021] GET /admin/judge/contestparticipation/ => generated 21947 bytes in 166 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 119/141] 192.168.1.6 () {44 vars in 804 bytes} [Sat Dec 11 02:27:08 2021] GET /admin/jsi18n/ => generated 3305 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 120/142] 192.168.1.6 () {46 vars in 991 bytes} [Sat Dec 11 02:27:10 2021] GET /admin/judge/contesttag/ => generated 14336 bytes in 131 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 121/143] 192.168.1.6 () {44 vars in 794 bytes} [Sat Dec 11 02:27:10 2021] GET /admin/jsi18n/ => generated 3305 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 122/144] 192.168.1.6 () {46 vars in 967 bytes} [Sat Dec 11 02:27:12 2021] GET /admin/auth/user/ => generated 22198 bytes in 132 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 123/145] 192.168.1.6 () {44 vars in 787 bytes} [Sat Dec 11 02:27:12 2021] GET /admin/jsi18n/ => generated 3305 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 124/146] 192.168.1.6 () {46 vars in 962 bytes} [Sat Dec 11 02:27:15 2021] GET /admin/auth/group/ => generated 14652 bytes in 148 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 125/147] 192.168.1.6 () {44 vars in 788 bytes} [Sat Dec 11 02:27:15 2021] GET /admin/jsi18n/ => generated 3305 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 126/148] 192.168.1.6 () {46 vars in 1007 bytes} [Sat Dec 11 02:27:16 2021] GET /admin/registration/registrationprofile/ => generated 18719 bytes in 126 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 215822336 bytes/205MB} {rss usage: 123027456 bytes/117MB} [pid: 16289|app: 0|req: 127/149] 192.168.1.6 () {44 vars in 810 bytes} [Sat Dec 11 02:27:16 2021] GET /admin/jsi18n/ => generated 3305 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 128/150] 192.168.1.6 () {46 vars in 991 bytes} [Sat Dec 11 02:27:19 2021] GET /admin/judge/profile/ => generated 25872 bytes in 134 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 129/151] 192.168.1.6 () {44 vars in 791 bytes} [Sat Dec 11 02:27:20 2021] GET /admin/jsi18n/ => generated 3305 bytes in 13 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 130/152] 192.168.1.6 () {46 vars in 982 bytes} [Sat Dec 11 02:27:24 2021] GET /admin/judge/organization/ => generated 18989 bytes in 115 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 131/153] 192.168.1.6 () {44 vars in 796 bytes} [Sat Dec 11 02:27:25 2021] GET /admin/jsi18n/ => generated 3305 bytes in 13 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 132/154] 192.168.1.6 () {46 vars in 1001 bytes} [Sat Dec 11 02:27:26 2021] GET /admin/judge/organizationrequest/ => generated 14410 bytes in 138 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 133/155] 192.168.1.6 () {44 vars in 803 bytes} [Sat Dec 11 02:27:27 2021] GET /admin/jsi18n/ => generated 3305 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 134/156] 192.168.1.6 () {46 vars in 996 bytes} [Sat Dec 11 02:27:29 2021] GET /admin/judge/navigationbar/ => generated 19967 bytes in 167 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 135/157] 192.168.1.6 () {44 vars in 797 bytes} [Sat Dec 11 02:27:29 2021] GET /admin/jsi18n/ => generated 3305 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 136/158] 192.168.1.6 () {46 vars in 984 bytes} [Sat Dec 11 02:27:33 2021] GET /admin/judge/miscconfig/ => generated 14396 bytes in 120 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 137/159] 192.168.1.6 () {44 vars in 794 bytes} [Sat Dec 11 02:27:33 2021] GET /admin/jsi18n/ => generated 3305 bytes in 17 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 138/160] 192.168.1.6 () {46 vars in 969 bytes} [Sat Dec 11 02:27:36 2021] GET /admin/sites/site/ => generated 17561 bytes in 121 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 139/161] 192.168.1.6 () {44 vars in 788 bytes} [Sat Dec 11 02:27:36 2021] GET /admin/jsi18n/ => generated 3305 bytes in 13 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 140/162] 192.168.1.6 () {46 vars in 971 bytes} [Sat Dec 11 02:27:38 2021] GET /admin/judge/blogpost/ => generated 18883 bytes in 127 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 141/163] 192.168.1.6 () {44 vars in 792 bytes} [Sat Dec 11 02:27:38 2021] GET /admin/jsi18n/ => generated 3305 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 142/164] 192.168.1.6 () {46 vars in 973 bytes} [Sat Dec 11 02:27:42 2021] GET /admin/judge/comment/ => generated 19474 bytes in 114 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 143/165] 192.168.1.6 () {44 vars in 791 bytes} [Sat Dec 11 02:27:42 2021] GET /admin/jsi18n/ => generated 3305 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 144/166] 192.168.1.6 () {46 vars in 982 bytes} [Sat Dec 11 02:27:46 2021] GET /admin/flatpages/flatpage/ => generated 15426 bytes in 130 msecs (HTTP/1.1 200) 8 headers in 435 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 145/167] 192.168.1.6 () {44 vars in 796 bytes} [Sat Dec 11 02:27:46 2021] GET /admin/jsi18n/ => generated 3305 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 171 bytes (1 switches on core 0)
+{address space usage: 216084480 bytes/206MB} {rss usage: 123285504 bytes/117MB} [pid: 16289|app: 0|req: 146/168] 192.168.1.6 () {46 vars in 949 bytes} [Sat Dec 11 02:27:48 2021] GET /admin/ => generated 33837 bytes in 131 msecs (HTTP/1.1 200) 7 headers in 267 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Dec 11 11:08:03 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5560c9f07120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x5560c9f07120 pid: 1695 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1695)
+spawned uWSGI worker 1 (pid: 1883, cores: 1)
+spawned uWSGI worker 2 (pid: 1884, cores: 1)
+spawned uWSGI worker 3 (pid: 1885, cores: 1)
+spawned uWSGI worker 4 (pid: 1886, cores: 1)
+spawned uWSGI worker 5 (pid: 1887, cores: 1)
+worker 1 killed successfully (pid: 1883)
+uWSGI worker 1 cheaped.
+Sat Dec 11 04:08:08 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 1884)
+uWSGI worker 2 cheaped.
+SIGINT/SIGTERM received...killing workers...
+Sat Dec 11 05:53:05 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Sat Dec 11 05:53:05 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+Sat Dec 11 05:53:05 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Dec 11 15:47:52 2021] ***
+compiled with version: 9.3.0 on 15 November 2021 04:36:44
+os: Linux-5.11.0-41-generic #45~20.04.1-Ubuntu SMP Wed Nov 10 10:20:10 UTC 2021
+nodename: nhat-Latitude-E6440
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/nhat/Desktop/dmoj/site
+writing pidfile to /home/nhat/Desktop/dmoj/site/dmoj-site.pid
+detected binary path: /home/nhat/Desktop/dmoj/dmojsite/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/nhat/Desktop/dmoj/site
+your processes number limit is 31185
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/nhat/Desktop/dmoj/site/dmoj-site.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Sep 28 2021, 16:10:42)  [GCC 9.3.0]
+PEP 405 virtualenv detected: /home/nhat/Desktop/dmoj/dmojsite
+Set PythonHome to /home/nhat/Desktop/dmoj/dmojsite
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55ac93869120
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 583360 bytes (569 KB) for 7 cores
+*** Operational MODE: preforking ***
+added /home/nhat/Desktop/dmoj/site/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x55ac93869120 pid: 1699 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1699)
+spawned uWSGI worker 1 (pid: 1925, cores: 1)
+spawned uWSGI worker 2 (pid: 1926, cores: 1)
+spawned uWSGI worker 3 (pid: 1927, cores: 1)
+spawned uWSGI worker 4 (pid: 1928, cores: 1)
+spawned uWSGI worker 5 (pid: 1929, cores: 1)
+worker 1 killed successfully (pid: 1925)
+uWSGI worker 1 cheaped.
+Sat Dec 11 08:47:57 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) !!!
+worker 2 killed successfully (pid: 1926)
+uWSGI worker 2 cheaped.
+Sat Dec 11 08:48:18 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request / (ip 192.168.1.6) !!!
+{address space usage: 204324864 bytes/194MB} {rss usage: 109838336 bytes/104MB} [pid: 1928|app: 0|req: 1/1] 192.168.1.6 () {44 vars in 799 bytes} [Sat Dec 11 08:48:18 2021] GET / => generated 15741 bytes in 1658 msecs (HTTP/1.1 200) 6 headers in 332 bytes (1 switches on core 0)
