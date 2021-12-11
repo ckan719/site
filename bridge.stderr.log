@@ -136,5 +136,3 @@ INFO 2021-11-30 04:06:16,970 judge_handler Judge disconnected from: ('127.0.0.1'
 INFO 2021-11-30 07:07:57,378 judge_handler Judge connected from: ('127.0.0.1', 37706)
 INFO 2021-11-30 07:07:57,383 judge_handler Judge authenticated: ('127.0.0.1', 37706) (DAUJ)
 INFO 2021-11-30 07:23:24,024 judge_handler Judge disconnected from: ('127.0.0.1', 37706) with name DAUJ
-INFO 2021-12-09 01:23:50,742 judge_handler Judge connected from: ('127.0.0.1', 33064)
-INFO 2021-12-09 01:23:50,746 judge_handler Judge authenticated: ('127.0.0.1', 33064) (DAUJ)
