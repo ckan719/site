@@ -85,3 +85,25 @@ INFO 2021-11-30 07:07:57,378 judge_handler Judge connected from: ('127.0.0.1', 3
 INFO 2021-11-30 07:07:57,383 judge_handler Judge authenticated: ('127.0.0.1', 37706) (DAUJ)
 INFO 2021-11-30 07:23:24,024 judge_handler Judge disconnected from: ('127.0.0.1', 37706) with name DAUJ
 INFO 2021-12-11 05:53:09,131 daemon Exiting due to SIGINT
+INFO 2021-12-11 09:01:35,340 judge_handler Judge connected from: ('127.0.0.1', 42596)
+INFO 2021-12-11 09:01:35,344 judge_handler Judge authenticated: ('127.0.0.1', 42596) (DAUJ)
+INFO 2021-12-11 09:03:32,643 judge_list Free judges: 1
+INFO 2021-12-11 09:03:32,643 judge_list Dispatched submission 18 to: DAUJ
+INFO 2021-12-11 09:03:32,650 judge_handler Submission acknowledged: 18
+INFO 2021-12-11 09:03:34,227 judge_handler DAUJ: Submission generated compiler messages: 18
+INFO 2021-12-11 09:03:34,235 judge_handler DAUJ: Grading has begun on: 18
+INFO 2021-12-11 09:03:34,269 judge_handler DAUJ: 3 test case(s) completed on: 18
+INFO 2021-12-11 09:03:34,278 judge_handler DAUJ: Grading has ended on: 18
+INFO 2021-12-11 09:03:34,278 judge_list Judge available after grading 18: DAUJ
+INFO 2021-12-11 09:05:55,450 judge_list Free judges: 1
+INFO 2021-12-11 09:05:55,450 judge_list Dispatched submission 19 to: DAUJ
+INFO 2021-12-11 09:05:55,456 judge_handler Submission acknowledged: 19
+INFO 2021-12-11 09:05:56,924 judge_handler DAUJ: Submission generated compiler messages: 19
+INFO 2021-12-11 09:05:56,930 judge_handler DAUJ: Grading has begun on: 19
+INFO 2021-12-11 09:05:56,969 judge_handler DAUJ: 3 test case(s) completed on: 19
+INFO 2021-12-11 09:05:56,978 judge_handler DAUJ: Grading has ended on: 19
+INFO 2021-12-11 09:05:56,979 judge_list Judge available after grading 19: DAUJ
+INFO 2021-12-11 11:08:30,852 judge_handler Judge disconnected from: ('127.0.0.1', 42596) with name DAUJ
+INFO 2021-12-11 11:08:43,834 daemon Exiting due to SIGINT
+INFO 2021-12-12 08:12:03,159 judge_handler Judge connected from: ('127.0.0.1', 56568)
+INFO 2021-12-12 08:12:03,163 judge_handler Judge authenticated: ('127.0.0.1', 56568) (DAUJ)

@@ -81,6 +81,28 @@ class SubmissionSource(SubmissionDetailBase):
         context['highlighted_source'] = highlight_code(submission.source.source, submission.language.pygments)
         return context
 
+class GetListSimulation():
+    def getList(self):
+        arr = Submission.objects.all()
+        rs = []
+        for x in arr:
+            x.max_simular = 0.0
+            for y in arr:
+                if x.user != y.user:
+                    s = str(y.source.source)
+                    dmp = diff_match_patch()
+                    text1 = x.source.source
+                    diff = dmp.diff_main(text1, s)
+                    idiff = dmp.diff_levenshtein(diff)
+                    per = 100 - (idiff / max(len(text1), len(s)) * 100)
+                    y.simulation = float("{:.2f}".format(per))
+                    if y.simulation > x.max_simular:
+                        x.max_simular = y.simulation
+                        x.user_simular = y
+                        x.user_simular_raw_source = y.source.source.rstrip('\n')
+                        x.user_simular_highlighted_source = highlight_code(y.source.source, y.language.pygments)
+            rs.append(x)
+        return rs
 
 class SimulationDetail(SubmissionDetailBase):
     template_name = 'submission/simulation.html'
@@ -93,8 +115,9 @@ class SimulationDetail(SubmissionDetailBase):
         submission = self.object
         context['raw_source'] = submission.source.source.rstrip('\n')
         context['highlighted_source'] = highlight_code(submission.source.source, submission.language.pygments)
-        list_diff = []
         arr = Submission.objects.all()
+        context['max_simular'] = 0.0
+        context['name_simular'] = '#'
         for x in arr:
             if x.user != submission.user:
                 s = str(x.source.source)
@@ -104,8 +127,12 @@ class SimulationDetail(SubmissionDetailBase):
                 idiff = dmp.diff_levenshtein(diff)
                 per = 100 - (idiff / max(len(text1), len(s)) * 100)
                 x.simulation = float("{:.2f}".format(per))
-                list_diff.append(x)
-        context['allsm'] = list_diff
+                if x.simulation > context['max_simular']:
+                    context['max_simular'] = x.simulation
+                    context['user_simular'] = x
+                    context['user_simular_raw_source'] = x.source.source.rstrip('\n')
+                    context['user_simular_highlighted_source'] = highlight_code(x.source.source, x.language.pygments)
+
         return context
 
 
@@ -321,6 +348,7 @@ class SubmissionsListBase(DiggPaginatorMixin, TitleMixin, ListView):
         context['my_submissions_link'] = self.get_my_submissions_page()
         context['all_submissions_link'] = self.get_all_submissions_page()
         context['tab'] = self.tab
+        context['list_all_simulation'] = GetListSimulation().getList()
         return context
 
     def get(self, request, *args, **kwargs):

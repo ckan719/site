@@ -4294,6 +4294,14 @@ msgstr "Bài nộp đã bị huỷ!"
 msgid "View Simular"
 msgstr "Xem độ tương đồng"
 
+#: templates/submission/simulation.html:27 templates/submission/simulation.html:46
+msgid "Source of"
+msgstr "Mã nguồn của"
+
+#: templates/submission/simulation.html:25
+msgid "Simularity"
+msgstr "Độ tương đồng"
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr "Xem nguồn"

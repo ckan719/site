@@ -4395,6 +4395,14 @@ msgstr ""
 msgid "View Simular"
 msgstr ""
 
+#: templates/submission/simulation.html:27 templates/submission/simulation.html:46
+msgid "Source of"
+msgstr ""
+
+#: templates/submission/simulation.html:25
+msgid "Simularity"
+msgstr ""
+
 #: templates/submission/status.html:59
 msgid "View source"
 msgstr ""
