@@ -81,6 +81,7 @@ class SubmissionSource(SubmissionDetailBase):
         context['highlighted_source'] = highlight_code(submission.source.source, submission.language.pygments)
         return context
 
+
 class GetListSimulation():
     def getList(self):
         arr = Submission.objects.all()
@@ -103,6 +104,7 @@ class GetListSimulation():
                         x.user_simular_highlighted_source = highlight_code(y.source.source, y.language.pygments)
             rs.append(x)
         return rs
+
 
 class SimulationDetail(SubmissionDetailBase):
     template_name = 'submission/simulation.html'
