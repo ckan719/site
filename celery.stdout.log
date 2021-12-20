@@ -430,3 +430,227 @@
                 .> celery           exchange=celery(direct) key=celery
                 
 
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-13 00:53:45
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fccdb052130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-14 00:59:41
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7f92e160b130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-14 13:19:55
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fdcc2eca130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-14 15:51:29
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7f054d244130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-15 00:56:14
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fe72a054130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-15 12:18:33
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fcb63083130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-15 12:31:49
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fd0e4da2130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-15 16:02:19
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7f2404e4b130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-16 01:13:12
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7f1a96e50130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-41-generic-x86_64-with-glibc2.29 2021-12-16 16:16:23
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7febe96d2130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-43-generic-x86_64-with-glibc2.29 2021-12-17 01:03:27
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fe10770f130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-43-generic-x86_64-with-glibc2.29 2021-12-18 03:40:45
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fc0e67e4130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-43-generic-x86_64-with-glibc2.29 2021-12-18 05:14:27
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fa94122d130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@nhat-Latitude-E6440 v5.2.0 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-43-generic-x86_64-with-glibc2.29 2021-12-20 01:30:31
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7fe2bd2f2130
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+

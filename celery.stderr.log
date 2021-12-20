@@ -1604,3 +1604,860 @@ WARNING 2021-12-12 08:11:18,147 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/py
   deprecated.warn(description=f'The {setting!r} setting',
 
 WARNING 2021-12-12 08:11:18,148 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-12 13:04:19,409 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-12 13:04:19,449 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-12 13:04:19,494 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-12 13:04:21,497 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-13 00:53:45,178 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-13 00:53:45,178 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-13 10:54:54,807 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-13 10:54:55,146 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-13 10:54:55,230 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-13 10:54:57,234 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-14 00:59:41,721 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-14 00:59:41,722 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-14 13:19:14,897 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-14 13:19:15,266 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-14 13:19:15,556 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-14 13:19:17,562 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-14 13:19:55,764 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-14 13:19:55,764 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-14 15:29:14,659 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-14 15:29:15,110 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-14 15:29:15,174 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-14 15:51:29,468 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-14 15:51:29,468 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-14 18:30:27,243 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-14 18:30:27,588 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-14 18:30:27,672 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-14 18:30:29,675 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-15 00:56:14,993 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-15 00:56:14,993 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-15 12:16:53,252 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-15 12:16:53,921 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-15 12:16:54,523 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-15 12:16:56,527 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-15 12:18:33,563 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-15 12:18:33,563 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-15 12:30:20,521 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-15 12:30:20,580 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-15 12:30:20,588 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-15 12:30:22,593 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-15 12:31:49,334 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-15 12:31:49,334 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-15 15:33:52,158 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-15 15:33:52,720 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-15 15:33:52,834 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-15 15:33:54,837 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-15 16:02:19,950 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-15 16:02:19,950 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-15 18:24:33,643 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-15 18:24:34,016 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-15 18:24:34,184 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-15 18:24:36,189 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-16 01:13:12,891 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-16 01:13:12,892 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-16 15:56:45,063 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-16 15:56:45,551 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-16 15:56:45,934 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-16 15:56:47,940 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-16 16:16:23,386 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-16 16:16:23,390 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-16 19:16:34,349 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-16 19:16:34,775 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-16 19:16:34,934 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-16 19:16:36,937 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-17 01:03:27,768 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-17 01:03:27,768 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-17 09:43:31,786 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-17 09:43:32,383 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-17 09:43:32,616 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-17 09:43:34,619 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-18 03:40:45,395 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-18 03:40:45,396 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-18 05:14:27,057 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-18 05:14:27,057 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-18 06:11:43,925 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3505, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/client.py", line 3479, in _execute
+    return command(*args, **kwargs)
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 739, in read_response
+    response = self._parser.read_response()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 324, in read_response
+    raw = self._buffer.readline()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 256, in readline
+    self._read_from_socket()
+  File "/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 201, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-18 06:11:43,980 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-18 06:11:44,003 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-18 06:11:46,007 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-20 01:30:32,062 warnings /home/nhat/Desktop/dmoj/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-20 01:30:32,062 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
