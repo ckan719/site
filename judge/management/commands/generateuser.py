@@ -13,12 +13,11 @@ class Command(BaseCommand):
         parser.add_argument('password', help='password for the user')
         parser.add_argument('language', nargs='?', default=settings.DEFAULT_USER_LANGUAGE,
                             help='default language ID for user')
-        
 
     def handle(self, *args, **options):
         files = open(options['directory'], 'r')
         line = files.readline()
-        while True :
+        while True:
             if not line:
                 break
             name = line.split("@")[0]
@@ -32,5 +31,5 @@ class Command(BaseCommand):
                 profile.save()
                 line = files.readline()
             except:
-                line = files.readline()           
+                line = files.readline()
         files.close()
