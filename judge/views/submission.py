@@ -83,6 +83,17 @@ class SubmissionSource(SubmissionDetailBase):
 
 
 class GetListSimulation():
+    def preTreatment(self, source):
+        s = source.split('\n')
+        rs = []
+        for i in s:
+            i = i.strip()
+            if i[0] == '/' or i[0] == '#':
+                continue
+            else:
+                rs.append(i)
+        return rs
+
     def getList(self):
         arr = Submission.objects.all()
         rs = []
@@ -90,9 +101,9 @@ class GetListSimulation():
             x.max_simular = 0.0
             for y in arr:
                 if x.user != y.user:
-                    s = str(y.source.source)
+                    s = self.preTreatment(str(y.source.source))
                     dmp = diff_match_patch()
-                    text1 = x.source.source
+                    text1 = self.preTreatment(str(x.source.source))
                     diff = dmp.diff_main(text1, s)
                     idiff = dmp.diff_levenshtein(diff)
                     per = 100 - (idiff / max(len(text1), len(s)) * 100)
@@ -122,9 +133,9 @@ class SimulationDetail(SubmissionDetailBase):
         context['name_simular'] = '#'
         for x in arr:
             if x.user != submission.user:
-                s = str(x.source.source)
+                s = self.preTreatment(str(x.source.source))
                 dmp = diff_match_patch()
-                text1 = submission.source.source
+                text1 = self.preTreatment(submission.source.source)
                 diff = dmp.diff_main(text1, s)
                 idiff = dmp.diff_levenshtein(diff)
                 per = 100 - (idiff / max(len(text1), len(s)) * 100)
