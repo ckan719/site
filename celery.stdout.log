@@ -654,3 +654,35 @@
                 .> celery           exchange=celery(direct) key=celery
                 
 
+ 
+ -------------- celery@ip-172-31-42-251 v5.2.1 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2021-12-23 02:07:33
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7f4eb31bbeb0
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+ 
+ -------------- celery@ip-172-31-42-251 v5.2.1 (dawn-chorus)
+--- ***** ----- 
+-- ******* ---- Linux-5.11.0-1022-aws-x86_64-with-glibc2.29 2021-12-23 05:52:59
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         dmoj:0x7f8f31a57eb0
+- ** ---------- .> transport:   redis://localhost:6379//
+- ** ---------- .> results:     redis://localhost:6379/
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+

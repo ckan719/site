@@ -708,9 +708,9 @@ math {
 
 @font-face {
   font-family: "Latin Modern Math";
-  src: url("libs/latinmodernmath/latinmodern-math.eot");
+  src: url("libs/latinmodernmath/latinmodern-math.b7b56b02ecf6.eot");
   /* IE9 Compat Modes */
-  src: local("Latin Modern Math"), local("LatinModernMath-Regular"), url("libs/latinmodernmath/latinmodern-math.eot?#iefix") format("embedded-opentype"), url("libs/latinmodernmath/latinmodern-math.woff2") format("woff2"), url("libs/latinmodernmath/latinmodern-math.woff") format("woff"), url("libs/latinmodernmath/latinmodern-math.ttf") format("truetype");
+  src: local("Latin Modern Math"), local("LatinModernMath-Regular"), url("libs/latinmodernmath/latinmodern-math.b7b56b02ecf6.eot?#iefix") format("embedded-opentype"), url("libs/latinmodernmath/latinmodern-math.bcba1a30b7bb.woff2") format("woff2"), url("libs/latinmodernmath/latinmodern-math.b40f611758be.woff") format("woff"), url("libs/latinmodernmath/latinmodern-math.91a52117e179.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal;
