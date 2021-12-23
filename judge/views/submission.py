@@ -101,9 +101,9 @@ class GetListSimulation():
             x.max_simular = 0.0
             for y in arr:
                 if x.user != y.user:
-                    s = self.preTreatment(str(y.source.source))
+                    s = str(y.source.source)
                     dmp = diff_match_patch()
-                    text1 = self.preTreatment(str(x.source.source))
+                    text1 = x.source.source
                     diff = dmp.diff_main(text1, s)
                     idiff = dmp.diff_levenshtein(diff)
                     per = 100 - (idiff / max(len(text1), len(s)) * 100)
@@ -133,9 +133,9 @@ class SimulationDetail(SubmissionDetailBase):
         context['name_simular'] = '#'
         for x in arr:
             if x.user != submission.user:
-                s = self.preTreatment(str(x.source.source))
+                s = str(x.source.source)
                 dmp = diff_match_patch()
-                text1 = self.preTreatment(submission.source.source)
+                text1 = submission.source.source
                 diff = dmp.diff_main(text1, s)
                 idiff = dmp.diff_levenshtein(diff)
                 per = 100 - (idiff / max(len(text1), len(s)) * 100)
