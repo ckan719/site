@@ -21,7 +21,7 @@ class Command(BaseCommand):
             if not line:
                 break
             name = line.split("@")[0]
-            name = name.split(".").join("")
+            name = "".join(name.split("."))
             try:
                 usr = User(username=name, email=line, is_active=True)
                 usr.set_password(options['password'])
