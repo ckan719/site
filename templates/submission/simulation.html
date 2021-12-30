@@ -22,16 +22,43 @@
 
 {% block body %}
     <br>
-    <h2>Similar id <a href="{{ url('submission_status', submission.id) }}">{{submission.id}}</a> of user <a href="{{ url('user_page', submission.user) }}">{{submission.user}}</a></h2>
+    <h2>{{ _('Simularity') }} : <strong>{{max_simular}} %</strong></h2>
     <br>
-    <div id="submissions-table">
-        {% set profile_id = request.profile.id if request.user.is_authenticated else 0 %}
-        {% for submission in allsm %}
-            <div class="submission-row" id="{{ submission.id }}">
-                {% with problem_name=show_problem and submission.problem.i18n_name %}
-                    {% include "submission/row-cusstom.html" %}
-                {% endwith %}
-            </div>
-        {% endfor %}
+    <h3># {{_('Source of')}} : <strong>{{submission.user}}</strong></h3>
+    <br>
+    <div class="source-wrap">
+        <table>
+            <tr>
+                <td class="source-ln">
+                    <div>
+                        {% for line in raw_source.split('\n') %}
+                            <a href="#line-{{ loop.index }}" name="line-{{ loop.index }}">
+                                <pre class="line">{{ loop.index }}</pre>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </td>
+                <td class="source-code">{{ highlighted_source }}</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <h3># {{_('Source of')}} : <strong>{{user_simular.user}}</strong></h3>
+    <br>
+    <div class="source-wrap">
+        <table>
+            <tr>
+                <td class="source-ln">
+                    <div>
+                        {% for line in user_simular_raw_source.split('\n') %}
+                            <a href="#line-{{ loop.index }}" name="line-{{ loop.index }}">
+                                <pre class="line">{{ loop.index }}</pre>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </td>
+                <td class="source-code">{{ user_simular_highlighted_source }}</td>
+            </tr>
+        </table>
     </div>
 {% endblock %}

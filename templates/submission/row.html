@@ -77,4 +77,9 @@
         <div class="memory">{{ (submission.memory_bytes|filesizeformat(True)).replace('i', '') }}</div>
     {% endif %}
 </div>
+{% if perms.judge.rejudge_submission and can_edit %} ·
+    <div class="sub-usage">
+        <a href="{{url('simulation_detail', submission.id)}}">{{submission.max_simular}}%</a>
+    </div>
+{% endif %}
 
