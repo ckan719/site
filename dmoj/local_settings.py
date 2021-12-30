@@ -169,7 +169,7 @@ EVENT_DAEMON_USE = True
 #EVENT_DAEMON_POST = '<ws:// URL to post to>'
 
 # If you are using the defaults from the guide, it is this:
-EVENT_DAEMON_POST = 'ws://18.183.132.176:15101/'
+EVENT_DAEMON_POST = 'ws://127.0.0.1:15101/'
 
 # These are the publicly accessed interface configurations.
 # They should match those used by the script.
@@ -179,8 +179,8 @@ EVENT_DAEMON_POST = 'ws://18.183.132.176:15101/'
 # i.e. the path to /channels/ exposed by the daemon, through whatever proxy setup you have.
 
 # Using our standard nginx configuration, these should be.
-EVENT_DAEMON_GET = 'ws://127.0.0.1/event/'
-EVENT_DAEMON_GET_SSL = 'wss://127.0.0.1/event/' # Optional
+EVENT_DAEMON_GET = 'ws://dauj.cf/event/'
+EVENT_DAEMON_GET_SSL = 'wss://dauj.cf/event/' # Optional
 EVENT_DAEMON_POLL = '/channels/'
 
 # If you would like to use the AMQP-based event server from <https://github.com/DMOJ/event-server>,
