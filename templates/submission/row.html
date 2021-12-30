@@ -79,7 +79,7 @@
 </div>
 {% if perms.judge.rejudge_submission and can_edit %} ·
     <div class="sub-usage">
-        <a href="{{url('simulation_detail', submission.id)}}">{{submission.max_simular}}%</a>
+        <a href="{{url('simulation_detail', submission.id)}}">View simular</a>
     </div>
 {% endif %}
 
