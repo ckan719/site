@@ -2491,3 +2491,78 @@ WARNING 2021-12-23 05:52:59,246 warnings /home/ubuntu/dmojsite/lib/python3.8/sit
   deprecated.warn(description=f'The {setting!r} setting',
 
 WARNING 2021-12-23 05:52:59,247 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+WARNING 2021-12-24 03:25:03,371 consumer consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 326, in start
+    blueprint.start(self)
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 618, in start
+    c.loop(*c.loop_args())
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 362, in create_loop
+    cb(*cbargs)
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 1252, in on_readable
+    self.cycle.on_readable(fileno)
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 500, in on_readable
+    chan.handlers[type]()
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 841, in _receive
+    ret.append(self._receive_one(c))
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/kombu/transport/redis.py", line 851, in _receive_one
+    response = c.parse_response()
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/client.py", line 1302, in parse_response
+    response = self._execute(conn, conn.read_response)
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/client.py", line 1283, in _execute
+    return conn.retry.call_with_retry(
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/retry.py", line 35, in call_with_retry
+    fail(error)
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/client.py", line 1285, in <lambda>
+    lambda error: self._disconnect_raise_connect(conn, error))
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/client.py", line 1272, in _disconnect_raise_connect
+    raise error
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/retry.py", line 32, in call_with_retry
+    return do()
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/client.py", line 1284, in <lambda>
+    lambda: command(*args, **kwargs),
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 748, in read_response
+    response = self._parser.read_response()
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 318, in read_response
+    raw = self._buffer.readline()
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 250, in readline
+    self._read_from_socket()
+  File "/home/ubuntu/dmojsite/lib/python3.8/site-packages/redis/connection.py", line 195, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+WARNING 2021-12-24 03:25:03,496 warnings /home/ubuntu/dmojsite/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:361: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered back to the queue.
+You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss setting.
+In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+ERROR 2021-12-24 03:25:03,760 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+ERROR 2021-12-24 03:25:05,764 consumer consumer: Cannot connect to redis://localhost:6379//: Error 111 connecting to localhost:6379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+/home/ubuntu/dmojsite/lib/python3.8/site-packages/celery/platforms.py:840: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+WARNING 2021-12-24 03:26:04,929 warnings /home/ubuntu/dmojsite/lib/python3.8/site-packages/celery/app/utils.py:204: CDeprecationWarning: 
+    The 'CELERY_RESULT_BACKEND' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the result_backend instead
+
+  deprecated.warn(description=f'The {setting!r} setting',
+
+WARNING 2021-12-24 03:26:04,929 worker Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.

@@ -213,3 +213,253 @@ INFO 2021-12-23 07:02:38,137 judge_handler DAUJ: 1 test case(s) completed on: 3
 INFO 2021-12-23 07:02:38,146 judge_handler DAUJ: Grading has ended on: 3
 INFO 2021-12-23 07:02:38,146 judge_list Judge available after grading 3: DAUJ
 INFO 2021-12-23 07:47:54,806 judge_handler Judge disconnected from: ('127.0.0.1', 52832) with name DAUJ
+INFO 2021-12-23 07:55:54,042 judge_handler Judge connected from: ('127.0.0.1', 53084)
+INFO 2021-12-23 07:55:54,047 judge_handler Judge authenticated: ('127.0.0.1', 53084) (DAUJ)
+INFO 2021-12-23 07:56:41,375 judge_list Specified judge DAUJ is available
+INFO 2021-12-23 07:56:41,375 judge_list Dispatched submission 4 to: DAUJ
+INFO 2021-12-23 07:56:41,383 judge_handler Submission acknowledged: 4
+INFO 2021-12-23 07:56:43,652 judge_handler DAUJ: Submission generated compiler messages: 4
+INFO 2021-12-23 07:56:43,660 judge_handler DAUJ: Grading has begun on: 4
+INFO 2021-12-23 07:56:43,723 judge_handler DAUJ: 3 test case(s) completed on: 4
+INFO 2021-12-23 07:56:43,730 judge_handler DAUJ: Grading has ended on: 4
+INFO 2021-12-23 07:56:43,731 judge_list Judge available after grading 4: DAUJ
+INFO 2021-12-23 07:57:00,249 judge_handler Judge disconnected from: ('127.0.0.1', 53084) with name DAUJ
+INFO 2021-12-23 08:15:25,734 judge_handler Judge connected from: ('127.0.0.1', 53220)
+INFO 2021-12-23 08:15:25,738 judge_handler Judge authenticated: ('127.0.0.1', 53220) (DAUJ)
+INFO 2021-12-23 08:15:51,694 judge_list Specified judge DAUJ is available
+INFO 2021-12-23 08:15:51,694 judge_list Dispatched submission 5 to: DAUJ
+INFO 2021-12-23 08:15:51,702 judge_handler Submission acknowledged: 5
+INFO 2021-12-23 08:15:54,010 judge_handler DAUJ: Submission generated compiler messages: 5
+INFO 2021-12-23 08:15:54,016 judge_handler DAUJ: Grading has begun on: 5
+INFO 2021-12-23 08:15:54,104 judge_handler DAUJ: 4 test case(s) completed on: 5
+INFO 2021-12-23 08:15:54,113 judge_handler DAUJ: Grading has ended on: 5
+INFO 2021-12-23 08:15:54,114 judge_list Judge available after grading 5: DAUJ
+INFO 2021-12-23 08:17:19,711 judge_list Free judges: 1
+INFO 2021-12-23 08:17:19,711 judge_list Dispatched submission 5 to: DAUJ
+INFO 2021-12-23 08:17:19,722 judge_handler Submission acknowledged: 5
+INFO 2021-12-23 08:17:21,762 judge_handler DAUJ: Submission generated compiler messages: 5
+INFO 2021-12-23 08:17:21,766 judge_handler DAUJ: Grading has begun on: 5
+INFO 2021-12-23 08:17:21,810 judge_handler DAUJ: 4 test case(s) completed on: 5
+INFO 2021-12-23 08:17:21,822 judge_handler DAUJ: Grading has ended on: 5
+INFO 2021-12-23 08:17:21,822 judge_list Judge available after grading 5: DAUJ
+INFO 2021-12-23 08:51:53,117 judge_handler Judge disconnected from: ('127.0.0.1', 53220) with name DAUJ
+INFO 2021-12-23 08:52:03,801 judge_handler Judge connected from: ('127.0.0.1', 53432)
+INFO 2021-12-23 08:52:03,805 judge_handler Judge authenticated: ('127.0.0.1', 53432) (DAUJ)
+INFO 2021-12-23 08:52:10,078 judge_list Free judges: 1
+INFO 2021-12-23 08:52:10,079 judge_list Dispatched submission 5 to: DAUJ
+INFO 2021-12-23 08:52:10,086 judge_handler Submission acknowledged: 5
+INFO 2021-12-23 08:52:12,293 judge_handler DAUJ: Submission generated compiler messages: 5
+INFO 2021-12-23 08:52:12,303 judge_handler DAUJ: Grading has begun on: 5
+INFO 2021-12-23 08:52:12,354 judge_handler DAUJ: 3 test case(s) completed on: 5
+INFO 2021-12-23 08:52:12,361 judge_handler DAUJ: Grading has ended on: 5
+INFO 2021-12-23 08:52:12,362 judge_list Judge available after grading 5: DAUJ
+INFO 2021-12-23 08:55:19,161 judge_list Free judges: 1
+INFO 2021-12-23 08:55:19,162 judge_list Dispatched submission 6 to: DAUJ
+INFO 2021-12-23 08:55:19,174 judge_handler Submission acknowledged: 6
+INFO 2021-12-23 08:55:21,440 judge_handler DAUJ: Submission generated compiler messages: 6
+INFO 2021-12-23 08:55:21,445 judge_handler DAUJ: Grading has begun on: 6
+INFO 2021-12-23 08:55:21,480 judge_handler DAUJ: 3 test case(s) completed on: 6
+INFO 2021-12-23 08:55:21,498 judge_handler DAUJ: Grading has ended on: 6
+INFO 2021-12-23 08:55:21,499 judge_list Judge available after grading 6: DAUJ
+INFO 2021-12-23 09:08:21,388 judge_handler Judge disconnected from: ('127.0.0.1', 53432) with name DAUJ
+INFO 2021-12-23 09:41:06,765 judge_handler Judge connected from: ('127.0.0.1', 53730)
+INFO 2021-12-23 09:41:06,850 judge_handler Judge authenticated: ('127.0.0.1', 53730) (DAUJ)
+INFO 2021-12-23 09:41:16,732 judge_handler Judge disconnected from: ('127.0.0.1', 53730) with name DAUJ
+INFO 2021-12-23 09:42:16,345 judge_handler Judge connected from: ('127.0.0.1', 53734)
+INFO 2021-12-23 09:42:16,375 judge_handler Judge authenticated: ('127.0.0.1', 53734) (DAUJ)
+INFO 2021-12-23 09:46:14,116 judge_list Specified judge DAUJ is available
+INFO 2021-12-23 09:46:14,117 judge_list Dispatched submission 7 to: DAUJ
+INFO 2021-12-23 09:46:14,129 judge_handler Submission acknowledged: 7
+INFO 2021-12-23 09:46:14,252 judge_handler DAUJ: Grading has begun on: 7
+INFO 2021-12-23 09:46:14,300 judge_handler DAUJ: 2 test case(s) completed on: 7
+INFO 2021-12-23 09:46:14,313 judge_handler DAUJ: 1 test case(s) completed on: 7
+INFO 2021-12-23 09:46:14,323 judge_handler DAUJ: Grading has ended on: 7
+INFO 2021-12-23 09:46:14,323 judge_list Judge available after grading 7: DAUJ
+INFO 2021-12-23 09:46:24,394 judge_list Free judges: 1
+INFO 2021-12-23 09:46:24,395 judge_list Dispatched submission 7 to: DAUJ
+INFO 2021-12-23 09:46:24,406 judge_handler Submission acknowledged: 7
+INFO 2021-12-23 09:46:24,439 judge_handler DAUJ: Grading has begun on: 7
+INFO 2021-12-23 09:46:24,509 judge_handler DAUJ: 3 test case(s) completed on: 7
+INFO 2021-12-23 09:46:24,518 judge_handler DAUJ: Grading has ended on: 7
+INFO 2021-12-23 09:46:24,519 judge_list Judge available after grading 7: DAUJ
+INFO 2021-12-23 09:46:59,585 judge_list Specified judge DAUJ is available
+INFO 2021-12-23 09:46:59,585 judge_list Dispatched submission 8 to: DAUJ
+INFO 2021-12-23 09:46:59,596 judge_handler Submission acknowledged: 8
+INFO 2021-12-23 09:46:59,631 judge_handler DAUJ: Grading has begun on: 8
+INFO 2021-12-23 09:46:59,701 judge_handler DAUJ: 3 test case(s) completed on: 8
+INFO 2021-12-23 09:46:59,712 judge_handler DAUJ: Grading has ended on: 8
+INFO 2021-12-23 09:46:59,713 judge_list Judge available after grading 8: DAUJ
+INFO 2021-12-23 09:47:07,315 judge_list Free judges: 1
+INFO 2021-12-23 09:47:07,315 judge_list Dispatched submission 8 to: DAUJ
+INFO 2021-12-23 09:47:07,327 judge_handler Submission acknowledged: 8
+INFO 2021-12-23 09:47:07,353 judge_handler DAUJ: Grading has begun on: 8
+INFO 2021-12-23 09:47:07,424 judge_handler DAUJ: 3 test case(s) completed on: 8
+INFO 2021-12-23 09:47:07,432 judge_handler DAUJ: Grading has ended on: 8
+INFO 2021-12-23 09:47:07,433 judge_list Judge available after grading 8: DAUJ
+INFO 2021-12-23 09:47:11,546 judge_list Free judges: 1
+INFO 2021-12-23 09:47:11,546 judge_list Dispatched submission 8 to: DAUJ
+INFO 2021-12-23 09:47:11,557 judge_handler Submission acknowledged: 8
+INFO 2021-12-23 09:47:11,584 judge_handler DAUJ: Grading has begun on: 8
+INFO 2021-12-23 09:47:11,631 judge_handler DAUJ: 2 test case(s) completed on: 8
+INFO 2021-12-23 09:47:11,662 judge_handler DAUJ: 1 test case(s) completed on: 8
+INFO 2021-12-23 09:47:11,670 judge_handler DAUJ: Grading has ended on: 8
+INFO 2021-12-23 09:47:11,671 judge_list Judge available after grading 8: DAUJ
+INFO 2021-12-23 09:53:20,962 judge_list Specified judge DAUJ is available
+INFO 2021-12-23 09:53:20,962 judge_list Dispatched submission 9 to: DAUJ
+INFO 2021-12-23 09:53:20,973 judge_handler Submission acknowledged: 9
+INFO 2021-12-23 09:53:21,012 judge_handler DAUJ: Grading has begun on: 9
+INFO 2021-12-23 09:53:21,180 judge_handler DAUJ: 2 test case(s) completed on: 9
+INFO 2021-12-23 09:53:21,421 judge_handler DAUJ: 1 test case(s) completed on: 9
+INFO 2021-12-23 09:53:21,430 judge_handler DAUJ: Grading has ended on: 9
+INFO 2021-12-23 09:53:21,431 judge_list Judge available after grading 9: DAUJ
+INFO 2021-12-23 10:12:17,692 judge_handler Judge disconnected from: ('127.0.0.1', 53734) with name DAUJ
+INFO 2021-12-23 10:12:25,443 judge_handler Judge connected from: ('127.0.0.1', 54090)
+INFO 2021-12-23 10:12:25,450 judge_handler Judge authenticated: ('127.0.0.1', 54090) (DAUJ)
+INFO 2021-12-23 10:14:54,626 judge_list Specified judge DAUJ is available
+INFO 2021-12-23 10:14:54,627 judge_list Dispatched submission 10 to: DAUJ
+INFO 2021-12-23 10:14:54,634 judge_handler Submission acknowledged: 10
+INFO 2021-12-23 10:14:54,704 judge_handler DAUJ: Grading has begun on: 10
+INFO 2021-12-23 10:14:54,754 judge_handler DAUJ: 1 test case(s) completed on: 10
+INFO 2021-12-23 10:14:54,821 judge_handler DAUJ: 2 test case(s) completed on: 10
+INFO 2021-12-23 10:14:54,830 judge_handler DAUJ: Grading has ended on: 10
+INFO 2021-12-23 10:14:54,830 judge_list Judge available after grading 10: DAUJ
+INFO 2021-12-23 10:15:20,982 judge_list Specified judge DAUJ is available
+INFO 2021-12-23 10:15:20,983 judge_list Dispatched submission 11 to: DAUJ
+INFO 2021-12-23 10:15:20,994 judge_handler Submission acknowledged: 11
+INFO 2021-12-23 10:15:21,029 judge_handler DAUJ: Grading has begun on: 11
+INFO 2021-12-23 10:15:21,280 judge_handler DAUJ: 3 test case(s) completed on: 11
+INFO 2021-12-23 10:15:21,293 judge_handler DAUJ: Grading has ended on: 11
+INFO 2021-12-23 10:15:21,293 judge_list Judge available after grading 11: DAUJ
+INFO 2021-12-23 10:46:46,852 judge_handler Judge disconnected from: ('127.0.0.1', 54090) with name DAUJ
+INFO 2021-12-24 03:25:10,167 daemon Exiting due to SIGINT
+INFO 2021-12-24 06:22:07,221 daemon Exiting due to SIGINT
+INFO 2021-12-24 06:30:24,531 judge_handler Judge connected from: ('127.0.0.1', 43446)
+INFO 2021-12-24 06:30:24,536 judge_handler Judge authenticated: ('127.0.0.1', 43446) (DAUJ)
+INFO 2021-12-24 06:33:08,973 judge_list Specified judge DAUJ is available
+INFO 2021-12-24 06:33:08,973 judge_list Dispatched submission 12 to: DAUJ
+INFO 2021-12-24 06:33:08,982 judge_handler Submission acknowledged: 12
+INFO 2021-12-24 06:33:10,857 judge_handler DAUJ: Submission generated compiler messages: 12
+INFO 2021-12-24 06:33:10,871 judge_handler DAUJ: Grading has begun on: 12
+INFO 2021-12-24 06:33:11,125 judge_handler DAUJ: 2 test case(s) completed on: 12
+INFO 2021-12-24 06:33:11,276 judge_handler DAUJ: 1 test case(s) completed on: 12
+INFO 2021-12-24 06:33:11,286 judge_handler DAUJ: Grading has ended on: 12
+INFO 2021-12-24 06:33:11,286 judge_list Judge available after grading 12: DAUJ
+INFO 2021-12-24 06:42:51,088 judge_handler Judge disconnected from: ('127.0.0.1', 43446) with name DAUJ
+INFO 2021-12-24 06:59:45,648 judge_handler Judge connected from: ('127.0.0.1', 43556)
+INFO 2021-12-24 06:59:45,655 judge_handler Judge authenticated: ('127.0.0.1', 43556) (DAUJ)
+INFO 2021-12-24 07:07:23,736 judge_handler Judge disconnected from: ('127.0.0.1', 43556) with name DAUJ
+INFO 2021-12-24 07:12:44,441 judge_handler Judge connected from: ('127.0.0.1', 43640)
+INFO 2021-12-24 07:12:44,445 judge_handler Judge authenticated: ('127.0.0.1', 43640) (DAUJ)
+INFO 2021-12-24 07:30:49,528 judge_list Free judges: 1
+INFO 2021-12-24 07:30:49,528 judge_list Dispatched submission 13 to: DAUJ
+INFO 2021-12-24 07:30:49,535 judge_handler Submission acknowledged: 13
+INFO 2021-12-24 07:30:51,179 judge_handler DAUJ: Submission generated compiler messages: 13
+INFO 2021-12-24 07:30:51,184 judge_handler DAUJ: Grading has begun on: 13
+INFO 2021-12-24 07:30:51,333 judge_handler DAUJ: 2 test case(s) completed on: 13
+INFO 2021-12-24 07:30:51,605 judge_handler DAUJ: 1 test case(s) completed on: 13
+INFO 2021-12-24 07:30:51,613 judge_handler DAUJ: Grading has ended on: 13
+INFO 2021-12-24 07:30:51,613 judge_list Judge available after grading 13: DAUJ
+INFO 2021-12-24 07:31:12,827 judge_list Free judges: 1
+INFO 2021-12-24 07:31:12,827 judge_list Dispatched submission 14 to: DAUJ
+INFO 2021-12-24 07:31:12,838 judge_handler Submission acknowledged: 14
+INFO 2021-12-24 07:31:12,871 judge_handler DAUJ: Grading has begun on: 14
+INFO 2021-12-24 07:31:13,117 judge_handler DAUJ: 2 test case(s) completed on: 14
+INFO 2021-12-24 07:31:13,204 judge_handler DAUJ: 1 test case(s) completed on: 14
+INFO 2021-12-24 07:31:13,213 judge_handler DAUJ: Grading has ended on: 14
+INFO 2021-12-24 07:31:13,213 judge_list Judge available after grading 14: DAUJ
+INFO 2021-12-24 07:52:13,072 judge_handler Judge disconnected from: ('127.0.0.1', 43640) with name DAUJ
+INFO 2021-12-27 07:00:23,400 judge_handler Judge connected from: ('127.0.0.1', 46070)
+INFO 2021-12-27 07:00:23,407 judge_handler Judge authenticated: ('127.0.0.1', 46070) (DAUJ)
+INFO 2021-12-27 07:00:51,095 judge_handler Judge disconnected from: ('127.0.0.1', 46070) with name DAUJ
+INFO 2021-12-27 08:33:41,280 judge_handler Judge connected from: ('127.0.0.1', 46178)
+INFO 2021-12-27 08:33:41,284 judge_handler Judge authenticated: ('127.0.0.1', 46178) (DAUJ)
+INFO 2021-12-27 08:34:09,093 judge_list Specified judge DAUJ is available
+INFO 2021-12-27 08:34:09,094 judge_list Dispatched submission 15 to: DAUJ
+INFO 2021-12-27 08:34:09,101 judge_handler Submission acknowledged: 15
+INFO 2021-12-27 08:34:11,519 judge_handler DAUJ: Submission generated compiler messages: 15
+INFO 2021-12-27 08:34:11,526 judge_handler DAUJ: Grading has begun on: 15
+INFO 2021-12-27 08:34:11,592 judge_handler DAUJ: 5 test case(s) completed on: 15
+INFO 2021-12-27 08:34:11,600 judge_handler DAUJ: Grading has ended on: 15
+INFO 2021-12-27 08:34:11,600 judge_list Judge available after grading 15: DAUJ
+INFO 2021-12-27 08:35:34,231 judge_list Specified judge DAUJ is available
+INFO 2021-12-27 08:35:34,231 judge_list Dispatched submission 16 to: DAUJ
+INFO 2021-12-27 08:35:34,240 judge_handler Submission acknowledged: 16
+INFO 2021-12-27 08:35:34,865 judge_handler DAUJ: Submission generated compiler messages: 16
+INFO 2021-12-27 08:35:34,873 judge_handler DAUJ: Grading has begun on: 16
+INFO 2021-12-27 08:35:34,930 judge_handler DAUJ: 5 test case(s) completed on: 16
+INFO 2021-12-27 08:35:34,940 judge_handler DAUJ: Grading has ended on: 16
+INFO 2021-12-27 08:35:34,940 judge_list Judge available after grading 16: DAUJ
+INFO 2021-12-27 09:25:38,962 judge_handler Judge disconnected from: ('127.0.0.1', 46178) with name DAUJ
+INFO 2021-12-27 09:31:01,815 judge_handler Judge connected from: ('127.0.0.1', 46686)
+INFO 2021-12-27 09:31:01,820 judge_handler Judge authenticated: ('127.0.0.1', 46686) (DAUJ)
+INFO 2021-12-27 10:10:57,694 judge_list Free judges: 1
+INFO 2021-12-27 10:10:57,696 judge_list Dispatched submission 17 to: DAUJ
+INFO 2021-12-27 10:10:57,710 judge_handler Submission acknowledged: 17
+INFO 2021-12-27 10:10:57,818 judge_handler DAUJ: Grading has begun on: 17
+INFO 2021-12-27 10:10:57,991 judge_handler DAUJ: 4 test case(s) completed on: 17
+INFO 2021-12-27 10:10:58,007 judge_handler DAUJ: 1 test case(s) completed on: 17
+INFO 2021-12-27 10:10:58,013 judge_handler DAUJ: Grading has ended on: 17
+INFO 2021-12-27 10:10:58,013 judge_list Judge available after grading 17: DAUJ
+INFO 2021-12-27 10:11:43,009 judge_list Abort request: 17
+INFO 2021-12-27 10:12:33,575 judge_list Free judges: 1
+INFO 2021-12-27 10:12:33,575 judge_list Dispatched submission 18 to: DAUJ
+INFO 2021-12-27 10:12:33,589 judge_handler Submission acknowledged: 18
+INFO 2021-12-27 10:12:33,622 judge_handler DAUJ: Grading has begun on: 18
+INFO 2021-12-27 10:12:33,691 judge_handler DAUJ: 5 test case(s) completed on: 18
+INFO 2021-12-27 10:12:33,699 judge_handler DAUJ: Grading has ended on: 18
+INFO 2021-12-27 10:12:33,699 judge_list Judge available after grading 18: DAUJ
+INFO 2021-12-27 10:19:14,366 judge_list Free judges: 1
+INFO 2021-12-27 10:19:14,367 judge_list Dispatched submission 19 to: DAUJ
+INFO 2021-12-27 10:19:14,379 judge_handler Submission acknowledged: 19
+INFO 2021-12-27 10:19:14,409 judge_handler DAUJ: Grading has begun on: 19
+INFO 2021-12-27 10:19:14,484 judge_handler DAUJ: 2 test case(s) completed on: 19
+INFO 2021-12-27 10:19:14,540 judge_handler DAUJ: 3 test case(s) completed on: 19
+INFO 2021-12-27 10:19:14,549 judge_handler DAUJ: Grading has ended on: 19
+INFO 2021-12-27 10:19:14,550 judge_list Judge available after grading 19: DAUJ
+INFO 2021-12-27 10:19:40,994 judge_list Free judges: 1
+INFO 2021-12-27 10:19:40,995 judge_list Dispatched submission 20 to: DAUJ
+INFO 2021-12-27 10:19:41,006 judge_handler Submission acknowledged: 20
+INFO 2021-12-27 10:19:41,039 judge_handler DAUJ: Grading has begun on: 20
+INFO 2021-12-27 10:19:41,131 judge_handler DAUJ: 5 test case(s) completed on: 20
+INFO 2021-12-27 10:19:41,141 judge_handler DAUJ: Grading has ended on: 20
+INFO 2021-12-27 10:19:41,141 judge_list Judge available after grading 20: DAUJ
+INFO 2021-12-27 10:48:31,601 judge_list Specified judge DAUJ is available
+INFO 2021-12-27 10:48:31,602 judge_list Dispatched submission 21 to: DAUJ
+INFO 2021-12-27 10:48:31,618 judge_handler Submission acknowledged: 21
+INFO 2021-12-27 10:48:31,672 judge_handler DAUJ: Grading has begun on: 21
+INFO 2021-12-27 10:48:31,856 judge_handler DAUJ: 2 test case(s) completed on: 21
+INFO 2021-12-27 10:48:31,929 judge_handler DAUJ: 3 test case(s) completed on: 21
+INFO 2021-12-27 10:48:31,938 judge_handler DAUJ: Grading has ended on: 21
+INFO 2021-12-27 10:48:31,939 judge_list Judge available after grading 21: DAUJ
+INFO 2021-12-27 10:49:29,579 judge_list Specified judge DAUJ is available
+INFO 2021-12-27 10:49:29,580 judge_list Dispatched submission 22 to: DAUJ
+INFO 2021-12-27 10:49:29,591 judge_handler Submission acknowledged: 22
+INFO 2021-12-27 10:49:29,622 judge_handler DAUJ: Grading has begun on: 22
+INFO 2021-12-27 10:49:29,689 judge_handler DAUJ: 3 test case(s) completed on: 22
+INFO 2021-12-27 10:49:29,726 judge_handler DAUJ: 2 test case(s) completed on: 22
+INFO 2021-12-27 10:49:29,733 judge_handler DAUJ: Grading has ended on: 22
+INFO 2021-12-27 10:49:29,734 judge_list Judge available after grading 22: DAUJ
+INFO 2021-12-27 10:50:03,028 judge_list Specified judge DAUJ is available
+INFO 2021-12-27 10:50:03,029 judge_list Dispatched submission 23 to: DAUJ
+INFO 2021-12-27 10:50:03,039 judge_handler Submission acknowledged: 23
+INFO 2021-12-27 10:50:03,066 judge_handler DAUJ: Grading has begun on: 23
+INFO 2021-12-27 10:50:03,154 judge_handler DAUJ: 5 test case(s) completed on: 23
+INFO 2021-12-27 10:50:03,163 judge_handler DAUJ: Grading has ended on: 23
+INFO 2021-12-27 10:50:03,163 judge_list Judge available after grading 23: DAUJ
+INFO 2021-12-27 10:51:28,899 judge_list Specified judge DAUJ is available
+INFO 2021-12-27 10:51:28,899 judge_list Dispatched submission 24 to: DAUJ
+INFO 2021-12-27 10:51:28,911 judge_handler Submission acknowledged: 24
+INFO 2021-12-27 10:51:28,941 judge_handler DAUJ: Grading has begun on: 24
+INFO 2021-12-27 10:51:29,030 judge_handler DAUJ: 5 test case(s) completed on: 24
+INFO 2021-12-27 10:51:29,042 judge_handler DAUJ: Grading has ended on: 24
+INFO 2021-12-27 10:51:29,042 judge_list Judge available after grading 24: DAUJ
+INFO 2021-12-28 03:39:21,595 judge_list Free judges: 1
+INFO 2021-12-28 03:39:21,596 judge_list Dispatched submission 25 to: DAUJ
+INFO 2021-12-28 03:39:21,612 judge_handler Submission acknowledged: 25
+INFO 2021-12-28 03:39:21,700 judge_handler DAUJ: Grading has begun on: 25
+INFO 2021-12-28 03:39:21,882 judge_handler DAUJ: 5 test case(s) completed on: 25
+INFO 2021-12-28 03:39:21,891 judge_handler DAUJ: Grading has ended on: 25
+INFO 2021-12-28 03:39:21,891 judge_list Judge available after grading 25: DAUJ
+INFO 2021-12-28 03:39:36,236 judge_list Abort request: 25
+INFO 2021-12-28 05:01:19,049 judge_handler Judge disconnected from: ('127.0.0.1', 46686) with name DAUJ
+INFO 2021-12-30 13:16:08,005 daemon Exiting due to SIGINT
