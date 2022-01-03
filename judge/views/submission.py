@@ -132,7 +132,7 @@ class SimulationDetail(SubmissionDetailBase):
         context['max_simular'] = 0.0
         context['name_simular'] = '#'
         for x in arr:
-            if x.user != submission.user:
+            if x.user != submission.user and x.id == submission.id:
                 s = str(x.source.source)
                 dmp = diff_match_patch()
                 text1 = submission.source.source
