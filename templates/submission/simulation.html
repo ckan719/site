@@ -20,45 +20,50 @@
     </style>
 {% endblock %}
 
-{% block body %}
-    <br>
-    <h2>{{ _('Simularity') }} : <strong>{{max_simular}} %</strong></h2>
-    <br>
-    <h3># {{_('Source of')}} : <strong>{{submission.user}}</strong></h3>
-    <br>
-    <div class="source-wrap">
-        <table>
-            <tr>
-                <td class="source-ln">
-                    <div>
-                        {% for line in raw_source.split('\n') %}
-                            <a href="#line-{{ loop.index }}" name="line-{{ loop.index }}">
-                                <pre class="line">{{ loop.index }}</pre>
-                            </a>
-                        {% endfor %}
-                    </div>
-                </td>
-                <td class="source-code">{{ highlighted_source }}</td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <h3># {{_('Source of')}} : <strong>{{user_simular.user}}</strong></h3>
-    <br>
-    <div class="source-wrap">
-        <table>
-            <tr>
-                <td class="source-ln">
-                    <div>
-                        {% for line in user_simular_raw_source.split('\n') %}
-                            <a href="#line-{{ loop.index }}" name="line-{{ loop.index }}">
-                                <pre class="line">{{ loop.index }}</pre>
-                            </a>
-                        {% endfor %}
-                    </div>
-                </td>
-                <td class="source-code">{{ user_simular_highlighted_source }}</td>
-            </tr>
-        </table>
-    </div>
-{% endblock %}
+{% if user_simular %}
+    {% block body %}
+        <br>
+        <h2>{{ _('Simularity') }} : <strong>{{max_simular}} %</strong></h2>
+        <br>
+        <h3># {{_('Source of')}} : <strong>{{submission.user}}</strong></h3>
+        <br>
+        <div class="source-wrap">
+            <table>
+                <tr>
+                    <td class="source-ln">
+                        <div>
+                            {% for line in raw_source.split('\n') %}
+                                <a href="#line-{{ loop.index }}" name="line-{{ loop.index }}">
+                                    <pre class="line">{{ loop.index }}</pre>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </td>
+                    <td class="source-code">{{ highlighted_source }}</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <h3># {{_('Source of')}} : <strong>{{user_simular.user}}</strong></h3>
+        <br>
+        <div class="source-wrap">
+            <table>
+                <tr>
+                    <td class="source-ln">
+                        <div>
+                            {% for line in user_simular_raw_source.split('\n') %}
+                                <a href="#line-{{ loop.index }}" name="line-{{ loop.index }}">
+                                    <pre class="line">{{ loop.index }}</pre>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </td>
+                    <td class="source-code">{{ user_simular_highlighted_source }}</td>
+                </tr>
+            </table>
+        </div>
+    {% endblock %}
+{% endif %}
+{% if !user_simular %}
+        <p>Nothing!</p>
+{% endif %}
