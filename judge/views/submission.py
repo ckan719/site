@@ -131,6 +131,7 @@ class SimulationDetail(SubmissionDetailBase):
         arr = Submission.objects.all()
         context['max_simular'] = 0.0
         context['name_simular'] = '#'
+        context['user_simular'] = ''
         for x in arr:
             if x.user != submission.user:
                 if x.id == submission.id:
