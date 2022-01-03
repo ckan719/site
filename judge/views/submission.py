@@ -136,7 +136,7 @@ class SimulationDetail(SubmissionDetailBase):
         context['user_simular_highlighted_source'] = ''
         for x in arr:
             if x.user != submission.user:
-                if x.id == submission.id:
+                if x.problem.code == submission.problem.code:
                     s = str(x.source.source)
                     dmp = diff_match_patch()
                     text1 = submission.source.source
